@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>:: Vimeo Media Player with JWP</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <script src="scripts/$urls.js"></script>
+  <script src="scripts/$functions.js"></script>
+
+  <script src="//jwpsrv.com/library/F8dsHGqsEeSMvAoORWfmyA.js"></script>
+
+  <script>
+    var _url, _width, _height;
+
+    function setup() {
+
+      _url = decodeURIComponent($.getUrlVar("url"));
+      if (!isOk(_url)) {
+        _url = "//player.vimeo.com/external/111560735.hd.mp4?s=d56bcfb93208e85ddaf204d9fb3a1d3f";
+      };
+
+      // set size as big as possible and resize whenever the browser size changes
+      _width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0;
+      _height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+      $("#videoPlayer").attr("width", _width).attr("height", _height);
+
+      jwplayer("ele_video").setup({
+        file: _url,
+        width: _width,
+        height: _height,
+        autostart: true
+      });
+
+    };
+
+    $(function () {
+      setup();
+
+      $(window).resize(function () {
+        console.log("window resized");
+        var resizeTimer;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setup(), 1000);
+      });
+
+      $("#ele_close").on("click", function () {
+        window.close();
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- launch video here -->
+  <div id="ele_video" style="position:absolute; top:0px; left:0px; right:0px; background-color:black;"></div>
+
+  <!-- Overlay the X button -->
+  <div id="ele_div" class="ui-alt-icon ui-nodisc-icon" style="position:absolute; top:10px; right:0;">
+    <a id="ele_close" class="ui-btn ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-notext" href="#">[[Close]]</a>
+  </div>
+
+</body>
+</html>

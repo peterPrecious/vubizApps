@@ -1,0 +1,83 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <p class="c2">
+    This report defaults to the Online version which displays learners whose last name starts with "A". The online version allows you edit a learner [coming].&emsp;
+    If you wish to generate the Excel version, note that it will contain ALL learners.
+  </p>
+
+  <table class="$$_selector" style="width:400px; margin:auto;">
+    <tr>
+      <td style="text-align:center; padding:10px;">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+          <label><input class="$$_rept" type="radio" name="$$_rept" id="$$_rept_O" value="O">Online</label>
+          <label><input class="$$_rept" type="radio" name="$$_rept" id="$$_rept_E" value="E">Excel</label>
+        </fieldset>
+      </td>
+      <td class="$$_type" style="text-align:left; padding:10px; display:none;">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+          <label><input class="$$_type" type="radio" name="$$_type" id="$$_type_M" value="M">Members</label>
+          <label><input class="$$_type" type="radio" name="$$_type" id="$$_type_E" value="E">Employees</label>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
+
+  <ul class="$$_tileSet">
+    <li class="$$_tile">A</li>
+    <li class="$$_tile">B</li>
+    <li class="$$_tile">C</li>
+    <li class="$$_tile">D</li>
+    <li class="$$_tile">E</li>
+    <li class="$$_tile">F</li>
+    <li class="$$_tile">G</li>
+    <li class="$$_tile">H</li>
+    <li class="$$_tile">I</li>
+    <li class="$$_tile">J</li>
+    <li class="$$_tile">K</li>
+    <li class="$$_tile">L</li>
+    <li class="$$_tile">M</li>
+    <li class="$$_tile">N</li>
+    <li class="$$_tile">O</li>
+    <li class="$$_tile">P</li>
+    <li class="$$_tile">Q</li>
+    <li class="$$_tile">R</li>
+    <li class="$$_tile">S</li>
+    <li class="$$_tile">T</li>
+    <li class="$$_tile">U</li>
+    <li class="$$_tile">V</li>
+    <li class="$$_tile">W</li>
+    <li class="$$_tile">X</li>
+    <li class="$$_tile">Y</li>
+    <li class="$$_tile">Z</li>
+  </ul>
+
+  <div class="$$_setXLearners" style="width:300px; margin:auto; padding:20px; display:none;">
+    <a id="$$_setXLearners" class="ui-btn show-page-loading-msg" data-ajax="false" href="#">Generate Learner Report</a>
+  </div>
+
+  <div class="$$_getXLearners" style="width:300px; margin:auto; padding:20px; display:none;">
+    <a target="_blank" id="$$_getXLearners" class="ui-btn" data-ajax="false" href="*">Download Learner Spreadsheet</a>
+  </div>
+
+  <table class="$$_table">
+    <thead>
+      <tr>
+        <th style="text-align:left; width:20%;">First Name</th>
+        <th style="text-align:left; width:20%;">Last Name</th>
+        <th style="text-align:left; width:30%;">Email</th>
+        <th style="text-align:center; width:15%;"> Active</th>
+        <!--<th style="text-align:center; width:15%;">Edit&ensp;</th>-->
+      </tr>
+    </thead>
+    <tbody id="ele_$$_tbody"></tbody>
+  </table>
+
+</div>
+
+<style>
+  .$$_tileSet { list-style-type: none; text-align: center; padding: 0; margin: 0; }
+    .$$_tileSet .$$_tile { display: table-row; vertical-align: top; margin: 0 8px 8px 0; padding: 5px 5px 2px 5px; width: 20px; height: 20px; border-style: outset; border-width: 1px; display: inline-block; cursor: pointer; text-align: center; color: #4c8be8; }
+  .$$_online, .$$_excel, .$$_members, .$$_employees { padding: 3px; border-style: outset; border-width: 1px; cursor: pointer; color: #4c8be8; }
+  .$$_table tbody tr td { height: 20px; }
+</style>

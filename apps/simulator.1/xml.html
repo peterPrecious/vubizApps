@@ -1,0 +1,30 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content" style="background-color:white; padding:30px;">
+
+	<h2 style="text-align:left; font-weight:normal;">
+		This allows you to post a single XML transaction and check the results. 
+    Each XML transaction must contain an Action=V or Action=C but these can be overwritted here.
+		Select <span class="jit">VALIDATE</span> (which will NOT update any databases) or 
+    <span class="jit">COMMIT</span> (which WILL UPDATE all relevant databases). 
+    Be cautious if running this LIVE.
+	</h2>
+
+	<form>
+		<fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+			<legend>Action Override (blue shows selected value):</legend>
+			<input name="$$_action" id="$$_actionV" value="V" checked="checked" type="radio">
+			<label for="$$_actionV">Validate</label>
+			<input name="$$_action" id="$$_actionC" value="C" type="radio">
+			<label for="$$_actionC">Commit</label>
+		</fieldset>
+	</form>
+
+	<br />
+
+	<iframe name="$$_iframe" id="$$_iframe" style="width:80%; height:900px; border:none;" src="apps/simulator.1/xml.aspx?Action=V"></iframe>
+
+</div>
+
+<style>
+	.jit { font-family: Courier New, Courier, monospace; color: black; }
+</style>

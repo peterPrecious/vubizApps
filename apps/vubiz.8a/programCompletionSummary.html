@@ -1,0 +1,59 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <div class="logoBcO noPhone"><img id="img_$$_logo"></div>
+  <h2 class="c2">
+    This creates an Excel report of active Learners and the number of Programs they have Completed.
+    You can select either All Programs completed or those Programs that were completed between the specified dates.
+    <span style="font-weight:bold" class="$$_guests">You can also include Guest Program Completion in the Learner (Member) Totals.</span>
+  </h2>
+
+  <div class="$$_guests" style="text-align:center; ">
+    <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+      <label><input class="$$_guests" type="radio" name="$$_guests" id="$$_guests_0" value="0">Don't Include Guest Completions...</label>
+      <label><input class="$$_guests" type="radio" name="$$_guests" id="$$_guests_1" value="1">Include Guest Completions...<br /><br /></label>
+    </fieldset>
+  </div>
+
+  <div class="$$_dates" style="text-align:center; ">
+    <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+      <label><input class="$$_dates" type="radio" name="$$_dates" id="$$_dates_0" value="0">All programs<br /> completed...</label>
+      <label><input class="$$_dates" type="radio" name="$$_dates" id="$$_dates_1" value="1">Programs completed<br /> between...</label>
+    </fieldset>
+    <table class="ele_$$_table" style="width:220px; margin:auto; display:none;">
+      <tr>
+        <th>&ensp;Start Date</th>
+        <th>&ensp;End Date</th>
+      </tr>
+      <tr>
+        <td><input id="ele_$$_strDate" type="text" data-role="date" readonly="readonly"></td>
+        <td><input id="ele_$$_endDate" type="text" data-role="date" readonly="readonly"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="$$_setProgramCompletions" style="width:300px; margin:auto; padding:20px; display:none;">
+    <a id="$$_setProgramCompletions" class="ui-btn show-page-loading-msg" data-ajax="false" href="#">Generate Program Completion Report</a>
+  </div>
+
+  <div class="$$_getProgramCompletions" style="width:300px; margin:auto; padding:20px; display:none;">
+    <a target="_blank" id="$$_getProgramCompletions" class="ui-btn" data-ajax="false" href="*">Download Program Completion Spreadsheet</a>
+  </div>
+
+</div>
+
+<style>
+  .ele_$$_table tr th {
+    text-align: left;
+  }
+
+  .$$_dates fieldset label {
+    width: 200px;
+    text-align: center;
+  }
+
+  .$$_guests fieldset label {
+    width: 200px;
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,20 @@
+﻿
+#content_samplers table { width: 850px; margin: auto; margin-bottom:20px; }
+
+.tit_samplers th { white-space: nowrap; font-size: 1.2em; }
+  .tit_samplers th:nth-child(1) { text-align: right; }
+  .tit_samplers th:nth-child(3) { text-align: right; }
+  .tit_samplers th:nth-child(4) .ui-input-text { width: 200px; }
+  .tit_samplers th:nth-child(5) { text-align: left; }
+  .tit_samplers th:nth-child(6) { text-align: right; }
+
+.tab_samplers th { text-align: center; width: 45px; max-width: 45px; white-space: nowrap; background-color: #4380c1; color: white; padding-bottom: 8px; padding-left: 3px; }
+  .tab_samplers th:nth-child(1) { text-align: center; width: 60px; max-width: 60px; }
+  .tab_samplers th:nth-child(2) { text-align: left; width: 150px; max-width: 30%; }
+  .tab_samplers th:nth-child(3) { text-align: left; width: 250px; max-width: 40%; }
+
+.tab_samplers td { text-align: right; padding-right: 3px; }
+  .tab_samplers td:nth-child(1) { text-align: center; padding: 0; }
+    .tab_samplers td:nth-child(1) img { max-width: 50px; max-height: 40px; }
+  .tab_samplers td:nth-child(2) { text-align: left; white-space: nowrap; }
+  .tab_samplers td:nth-child(3) { text-align: left; }

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="vubiz.apps.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="vubiz_apps_com_v8server" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://corporate.vubiz.com/vubizWs/v8server.asmx</Value>
+    </Setting>
+    <Setting Name="vubiz_apps_sim_Exchange" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost/webservice/vuecommerce.asmx</Value>
+    </Setting>
+    <Setting Name="vubiz_apps_simulate_Exchange" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/webservice/vuecommerce.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

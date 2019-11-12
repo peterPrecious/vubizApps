@@ -1,0 +1,90 @@
+﻿[
+	{
+		"videoPage"  : "home",
+		"videoEn"    : "//player.vimeo.com/external/111560735.hd.mp4?s=d56bcfb93208e85ddaf204d9fb3a1d3f",
+		"videoFr"    : "//player.vimeo.com/external/111774791.hd.mp4?s=51ba751ff1215cb8dbf9a10ab8474a70",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "profile",
+		"videoEn"    : "//player.vimeo.com/external/111527763.hd.mp4?s=0501fe186197404a854bd7a1f2fe82b2",
+		"videoFr"    : "//player.vimeo.com/external/111773822.hd.mp4?s=286443e9c1a39876f12bf5a03cdf5da4",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "catalogue",
+		"videoEn"    : "//player.vimeo.com/external/111527392.hd.mp4?s=9d05ed701f9b186713fe17855b45733b",
+		"videoFr"    : "//player.vimeo.com/external/111772206.hd.mp4?s=07c2e9bdea40e3d9626e669c00eb342b",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+
+
+	{
+		"videoPage"  : "catalogue_0",
+		"videoEn"    : "//player.vimeo.com/external/111527393.hd.mp4?s=6434fc66a46533802d9ebf1e38a32f32",
+		"videoFr"    : "//player.vimeo.com/external/111772207.hd.mp4?s=78feda72eb86173e05a738260b1255d8",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "catalogue_1",
+		"videoEn"    : "//player.vimeo.com/external/111527487.hd.mp4?s=e80bbfbe2dd443cd51345cae481182a2",
+		"videoFr"    : "//player.vimeo.com/external/111772208.hd.mp4?s=d54c15d7b9439678b466ef9e40e5db4b",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "catalogue_2",
+		"videoEn"    : "//player.vimeo.com/external/111527488.hd.mp4?s=b9daf92615b1366307d0fa1ee62199e6",
+		"videoFr"    : "//player.vimeo.com/external/111772841.hd.mp4?s=db06f3db8b8f0eafc8ee763c23947c55",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "catalogue_3",
+		"videoEn"    : "//player.vimeo.com/external/111527489.hd.mp4?s=068eb8b35d1cae269795d63b5bce971c",
+		"videoFr"    : "//player.vimeo.com/external/111775191.hd.mp4?s=55ba9cff3cd34d739480c84e072d252a",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "catalogue_4",
+		"videoEn"    : "//player.vimeo.com/external/111527761.hd.mp4?s=1f09dbc7d8c8ac3b7b59cee001b32232",
+		"videoFr"    : "//player.vimeo.com/external/111773239.hd.mp4?s=dcdad379c57d57289cbdb0bde3c64d67",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "catalogue_5",
+		"videoEn"    : "//player.vimeo.com/external/111527760.hd.mp4?s=84e01e076e7668eab17abf440df189ae",
+		"videoFr"    : "//player.vimeo.com/external/111773278.hd.mp4?s=68dde7250ac83cccaf4ab6eb5291089e",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+
+
+	{
+		"videoPage"  : "jitCatalogue",
+		"videoEn"    : "//player.vimeo.com/external/111527762.hd.mp4?s=075ba4e52019427b02bcec4b0a6fee05",
+		"videoFr"    : "//player.vimeo.com/external/111773698.hd.mp4?s=be07965db8f85c40f0a777c33b833061",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "historyPrograms",
+		"videoEn"    : "//player.vimeo.com/external/111527976.hd.mp4?s=71547f80f9f8a7ccecf6d6550780e154",
+		"videoFr"    : "//player.vimeo.com/external/111773882.hd.mp4?s=4cde979ec15396c342fc3737ffa7baab",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	},
+	{
+		"videoPage"  : "myGuests",
+		"videoEn"    : "//player.vimeo.com/external/111527977.hd.mp4?s=efbb9e4a8ebcb0316a4fa863ca92d5d8",
+		"videoFr"    : "//player.vimeo.com/external/111774302.hd.mp4?s=4224733096c36b39005e8bf3dec9a644",
+		"videoEs"    : "",
+		"videoPt"    : ""
+	}
+]

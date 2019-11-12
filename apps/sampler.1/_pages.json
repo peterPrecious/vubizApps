@@ -1,0 +1,38 @@
+﻿[
+  {
+    "pageId": "home",
+    "pageName": "Welcome!"
+  },
+  {
+    "pageId": "signIn",
+    "pageName": "Sampler Administration"
+  },
+  {
+    "pageId": "samplers",
+    "pageName": "List 50 Samplers"
+  },
+  {
+    "pageId": "profile",
+    "pageName": "Sampler Profile"
+  },
+  {
+    "pageId": "upload",
+    "pageName": "Upload Sampler Logo"
+  },
+  {
+    "pageId": "settings",
+    "pageName": "Sampler Settings"
+  },
+  {
+    "pageId": "history",
+    "pageName": "Sampler History"
+  },
+  {
+    "pageId": "content",
+    "pageName": "Sampler Content"
+  },
+  {
+    "pageId": "module",
+    "pageName": "The Modules"
+  }
+]

@@ -1,0 +1,156 @@
+﻿{
+  "americold": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "n",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "y"
+  },
+  "cf": {
+    "email": "<a href='mailto:ITservicedesk@cadillacfairview.com'>ITservicedesk@cadillacfairview.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "chrome": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "y",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "n",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "default": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "n",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "etp": {
+    "email": "<a target='_blank' href='http://etrainingportal.onlinelearninghelp.com'>etrainingportal.onlinelearninghelp.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "indigo": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "y",
+    "testJava": "n"
+  },
+  "james": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "n",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "kmx": {
+    "email": "<a target='_blank' href='http://kmx.onlinelearninghelp.com'>kmx.onlinelearninghelp.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "kmx_noflash": {
+    "email": "<a target='_blank' href='http://kmx.onlinelearninghelp.com'>kmx.onlinelearninghelp.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "n",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "manasha": {
+    "email": "<a href='mailto:kuljit.sidhu@menasha.com'>Kuljit.Sidhu@menasha.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "secondcup": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "y",
+    "testJava": "n"
+  },
+  "unifor": {
+    "email": "<a href='mailto:education@unifor.org'>education@unifor.org</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "y",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "vubiz": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "n",
+    "testFlash": "y",
+    "testIE": "n",
+    "testIEc": "n",
+    "testJava": "n"
+  },
+  "vubuild": {
+    "email": "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>",
+    "testChrome": "n",
+    "testChrome54": "n",
+    "testEcom": "n",
+    "testFF31": "n",
+    "testFlash": "y",
+    "testIE": "y",
+    "testIEc": "y",
+    "testJava": "n"
+  }
+}

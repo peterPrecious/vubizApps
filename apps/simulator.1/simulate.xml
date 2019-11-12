@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SalesTransaction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" TransactionSource="CCOHS" Action="C" OrderDate="2016-10-31T09:45:37-04:00" UserID="" CompanyID="" OrderID="148144" UserFirstName="Vanessa" UserLastName="De Carvalho" UserEmail="vdecarvalho@lallemand.com" Password="vdecarvalho@lallemand.com" TransactionType="G" CustomerID="CCHS2544" Memo="" Currency="CAD" Language="EN-CA" TransactionGroup="Group2" Organization="Lallemand Health Solutions">
+  <CreditCardPayment CardHolderName="Vanessa De Carvalho" CardHolderAddress="6100 Royalmount Av" CardHolderCity="Montreal" CardHolderPostalCode="H4P 2R2" CardHolderProvince="QC" CardHolderCountry="Canada" CardHolderPhone="514 283 6181 " />
+  <LineItemTotal SeatsTotal="8" ExtendedTotal="80" GSTTotal="0" PSTTotal="0" HSTTotal="0" OrderTotal="80" />
+  <LineItem OrderID="3468{6}33{7}25" ProgramID="P3281EN" Seats="5" UnitPrice="10" GSTAmount="0" ExtendedPrice="50" HSTAmount="0" PSTAmount="0" LineTotal="50" />
+  <LineItem OrderID="3468{6}33{7}26" ProgramID="P3281FR" Seats="3" UnitPrice="10" GSTAmount="0" ExtendedPrice="30" HSTAmount="0" PSTAmount="0" LineTotal="30" />
+</SalesTransaction>

@@ -1,0 +1,44 @@
+﻿{
+  "vubuild": {     
+    "testIE" : "y",
+    "testIEc" : "y",
+    "testFlash" : "y",
+    "testChrome" : "n",
+    "email" : "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>"
+  },
+  "james": {    
+    "testIE" : "n",
+    "testIEc" : "n",
+    "testFlash" : "y",
+    "testChrome" : "n",
+    "email" : "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>"
+	},
+  "vubiz": {
+    "testIE" : "n",
+    "testIEc" : "n",
+    "testFlash" : "y",
+    "testChrome" : "n",
+    "email" : "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>"
+	},
+  "secondcup": {
+    "testIE" : "n",
+    "testIEc" : "y",
+    "testFlash" : "y",
+    "testChrome" : "n",
+    "email" : "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>"
+	},
+  "chrome": {
+    "testIE" : "n",
+    "testIEc" : "n",
+    "testFlash" : "y",
+    "testChrome" : "y",
+    "email" : "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>"
+	},
+  "default": {
+    "testIE" : "n",
+    "testIEc" : "n",
+    "testFlash" : "y",
+    "testChrome" : "n",
+    "email" : "<a href='mailto:support@vubiz.com'>support@vubiz.com</a>"
+  }    
+} 

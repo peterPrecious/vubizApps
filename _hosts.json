@@ -1,0 +1,78 @@
+﻿[
+  {
+    "hostId": "cloudweb.vubiz.com",
+    "startUpAppId": "vubiz.8",
+    "debug": true
+  },
+  {
+    "hostId": "vubiz.com",
+    "startUpAppId": "vubiz.8",
+    "debug": true
+  },
+
+  {
+    "hostId": "localhost",
+    "startUpAppId": "credentials.1",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "credentials.2",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "browser.3",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "vubiz.8a",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "archives.1",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "isGovernment.1",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "simulator.1",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "nopAccount",
+    "debug": true
+  },
+  {
+    "hostId": "corporate.vubiz.com",
+    "startUpAppId": "nopAccount",
+    "debug": true
+  },
+  {
+    "hostId": "corporate.vubiz.com",
+    "startUpAppId": "sampler.1",
+    "debug": true
+  },
+  {
+    "hostId": "corporate.vubiz.com",
+    "startUpAppId": "vubiz.8",
+    "debug": true
+  },
+  {
+    "hostId": "localhost",
+    "startUpAppId": "vubiz.8",
+    "debug": true
+  },
+  {
+    "hostId": "__default__",
+    "startUpAppId": "vubiz.8",
+    "debug": true
+  }
+]

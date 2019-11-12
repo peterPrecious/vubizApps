@@ -1,0 +1,5 @@
+﻿.tab_profile { width: 80%; margin: auto; }
+  .tab_profile tr th { padding-top: 20px; vertical-align: top; white-space: nowrap; }
+
+.del_profile { cursor: pointer; }
+#lab1_profile_sampId { margin-left: 10px; display: inline-block; background-color: yellow; }

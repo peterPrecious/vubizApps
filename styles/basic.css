@@ -1,0 +1,100 @@
+﻿.aspx_header { color: white !important; font-size: 1.2em; font-weight: 100 !important; letter-spacing: .9px; text-shadow: none !important; text-align: center; margin-top: 10px; }
+
+body * { font: 1.0em "Trebuchet MS", sans-serif; text-shadow: none !important; }
+
+/*.ui-page { max-width: 1000px; }*/
+.ui-content { margin: 20px; }
+
+.ui-header { height: 45px !important; letter-spacing: .9px; font-size: 1.4em; font-weight: bold !important; }
+
+.ui-footer { height: 35px; position: absolute !important; bottom: 0; width: 100%; text-align: center; font-size: 0.95em; }
+
+.ui-btn-corner-all, .ui-btn.ui-corner-all { border-radius: 0px !important; }
+
+.ui-popup { max-width: 80% !important; margin: auto; }
+
+h1, h2, h3, .c1, .c2, .c3 { font-weight: bold; }
+
+h1, h2, h3 { text-align: center; }
+
+.c1, .c2, .c3 { text-align: left; }
+
+h1, .c1 { font-size: 1.50em; }
+
+h2, .c2 { font-size: 1.30em; }
+
+h3, .c3 { font-size: 1.25em; }
+
+hr { height: 1px; background-color: #ccc; border: none; width: 80%; }
+
+.yellow { background-color: yellow; }
+
+.tileSet .tile { border-radius: 0; }
+
+table { width: 100%; }
+
+table, tr, td { padding: 0; margin: 0; }
+
+td { padding-top: 10px; }
+
+th { font-weight: bolder !important; }
+
+th { padding-top: 12px; text-align: right; padding-right: 5px; }
+
+label { font-weight: bolder !important; }
+
+.debug { color: orange !important; text-decoration: none; }
+
+.popup { font-weight: 900; cursor: pointer; color: blue; text-decoration: underline; }
+
+.icons { text-align: center; margin-top: 40px; cursor: pointer; }
+
+  .icons > div { margin: 0 20px 20px 20px; }
+
+#ele_home_profile td { padding: 5px; }
+
+.langButtons { position: absolute; top: 8px; right: 8px; margin: 0; padding: 0; }
+
+.langButton { border-radius: 0.2em; margin: 2px !important; padding: 0; }
+
+.langButtonShadow { /* first two are xy offset, we want no offset, 3rd is for intensity of blur and 4th is for the size of the blur */ box-shadow: 0 0 10px 1px aliceblue; }
+
+.checked-list, .checked-tile, .certificate-list { /* used when item is completed */ background-repeat: no-repeat; }
+.checked-list { /* used on list elements (blue) */ background-image: url("check_b.png"); background-position: 99%; }
+.certificate-list { /* used on list elements */ background-image: url("certificate_sm.png"); background-position: 99.5%; }
+.checked-tile { /* used on tile elements (green) */ background-image: url("check_g.png"); background-position: 96% 15%; }
+
+/*.code, .ui-btn { font-family: 'Courier New' !important; font-weight: bold !important; text-transform: uppercase; }*/
+.code, .ui-btn { font-weight: bold !important; text-transform: uppercase; font-size: smaller; }
+
+/* puts a soft background in text boxes*/
+.ui-mini .ui-input-text input, .ui-mini .ui-input-search input, .ui-input-text.ui-mini input, .ui-input-search.ui-mini input, .ui-mini textarea.ui-input-text, textarea.ui-mini { width: 350px; max-width: 100%; background: #f6f6f6; }
+
+
+/* this is to position the logo - top/table bottom/page bottom */
+.logoBcR { position: absolute; bottom: 50px; width: 93%; text-align: center; max-width: 400px; max-height: 400px; opacity: 1.0; }
+
+.logoBcO { position: absolute; bottom: 50px; width: 93%; text-align: center; max-width: 400px; max-height: 400px; opacity: 0.3; }
+
+.logoBrO { position: absolute; bottom: 50px; right: 50px; max-width: 400px; max-height: 400px; opacity: 0.3; }
+
+.logoTcO { text-align: center; opacity: 0.3; }
+
+/* this is when the logo is put in the footer of a table  */
+.logoTrR { position: absolute; top: 100px; right: 50px; max-width: 400px; max-height: 400px; opacity: 1.0; }
+
+.logoTrO { position: absolute; top: 100px; right: 50px; max-width: 400px; max-height: 400px; opacity: 0.3; }
+
+#globalPopup { width: 400px; margin: auto; }
+
+#globalPopupText { font-size: 1.1em; font-weight: normal; margin: 40px 30px 30px 30px; }
+
+#globalPopupClose { margin: 18px 18px 0 0 !important; }
+
+/* used for passwords, etc */
+.upper { text-transform: uppercase; }
+.lower { text-transform: lowercase; }
+
+@media (max-width:40em) {
+  .noPhone { display: none; }
+}

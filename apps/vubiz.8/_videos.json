@@ -1,0 +1,86 @@
+﻿[
+  {
+    "videoPage": "home",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/0b06d008-4d5d-4ba1-8411-f91f7c2daedc/CFIB Video Intro 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/138861a9-c10c-4701-a249-adced23789be/CFIB Video Intro 1080 FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/9909c459-93cf-4b46-a73c-457e62e6cccd/1 My Learning Themes v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/a3ef5de6-8cd1-4de9-a791-a2abdddf1a95/1 My Learning Themes v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue_0",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/de4bf41c-a8a0-49ff-9dcb-96ba984c44df/2 Starting Business My Learning Programs v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/21c1f35c-1901-4e0e-afce-b0b2a0992bcb/2 Starting Business My Learning Themes v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue_1",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/2846c228-f153-414e-99a4-4f8cbafed5ac/3 Managaing people My LP v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/f02d4650-ca4e-4a4c-9a6d-6e9c4debad82/3 Managing people My LP v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue_2",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/63d36588-feb5-4f30-b0c0-76b4c4b3777e/4 HealthandSafety My LT v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/1a287adf-1b59-4141-a011-51a4578937bf/4 HealthAndSafety My LP v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue_3",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/78461291-2046-42f7-a9e7-5bd1329cbc53/5 Managing Cust Relations My LT v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/b8f50501-5563-4e05-9e54-54566f261c9f/5 Managing Cust Relations My LP v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue_4",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/b4bcb479-c94d-4e61-8229-9c0a4165d216/6 Growing Your Business My LT v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/d3f1b464-0752-43f0-89f9-dd69c4275e3b/6 Growing Your Business My LP v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "catalogue_5",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/295e8ecf-95bd-4fad-a600-f5bfc9fac4fd/7 Compliance My LT v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/9986c5be-9c9b-4525-a75b-16af1b230dbc/7 Compliance My LP v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "jitCatalogue",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/b80b6b9e-c132-4905-b89d-939e6fb22b9b/8 Just In Time Learning v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/474a1e8d-7519-47e3-a594-855d8b8f89f7/8 Just in Time Learning v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "profile",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/00600ef2-1b0e-405c-894d-5dd3e9abd2d1/9 My Profile v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/add13d9a-8ea3-4e3a-98cb-a741d38b3c02/9 My Profile v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "historyPrograms",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/2deb43b2-08eb-4402-9c20-75e180ad7856/10 My Report Card v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/5d29d029-ca70-4dca-95e5-d63cfbe04784/10 My Report Card v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  },
+  {
+    "videoPage": "myGuests",
+    "videoEn": "//ms01.streaming.mediaservices.windows.net/73c6b3d9-0719-48a4-8386-912b1648695e/11 My Employees v1 1080.ism/manifest",
+    "videoFr": "//ms01.streaming.mediaservices.windows.net/d592a563-7df2-442c-87e7-066f3a48e6e9/11 My Employees v1 1080FR.ism/manifest",
+    "videoEs": "",
+    "videoPt": ""
+  }
+]

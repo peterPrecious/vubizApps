@@ -1,0 +1,44 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <img class="noPhone logoTrR" id="img_$$_logo">
+  <div style="margin-top:20px;" class="c2" id="ele_$$_welcome"></div>
+
+  <table style="width:80%;margin:0 0 20px 30px;" id="ele_$$_myProfile">
+    <tr><th>[[Learner ID:]]</th><td id="ele_$$_membId"></td></tr>
+    <tr><th>[[First Name:]]</th><td id="ele_$$_membFirstName"></td></tr>
+    <tr><th>[[Last Name:]]</th><td id="ele_$$_membLastName"></td></tr>
+    <tr><th>[[Email Address:]]</th><td id="ele_$$_membEmail"></td></tr>
+    <tr><th>[[No. Visits:]]</th><td id="ele_$$_membNoVisits"></td></tr>
+  </table>
+
+  <!-- We need a proper secure GUID to allow this option - not available via VUBIZ backdoor -->
+  <div id="div_$$_profile" style="display:none">
+    <p class="c2">[[My Password]]</p>
+    <p>
+      [[To change your password, enter your current password, then enter the new password (TWICE) and then tap the Check icon.]]&ensp;
+      [[Note: Passwords are NOT case sensitive.]]
+    </p>
+    <table style="width:400px;margin-left:50px;">
+      <tr><th style="white-space:nowrap">[[Current Password:]]</th><td><input type="password" name="ele_$$_passwordOld" id="ele_$$_passwordOld" value="" autofocus></td><td>&ensp;</td></tr>
+      <tr><th style="white-space:nowrap">[[New Password:]]</th><td><input type="password" name="ele_$$_passwordNew" id="ele_$$_passwordNew" value=""></td><td>&ensp;</td></tr>
+      <tr><th style="white-space:nowrap">[[Confirm New Password:]]</th><td><input type="password" name="ele_$$_passwordCon" id="ele_$$_passwordCon" value=""></td><td class="ui-alt-icon ui-nodisc-icon"><a id="ele_$$_check" class="ui-btn ui-shadow ui-btn-icon-notext ui-btn-inline ui-icon-check" href="#">[[Update]]</a></td></tr>
+    </table>
+  </div>
+
+  <div id="div_$$_privacy" style="display:none">
+    <p class="c2">[[Privacy]]</p>
+    <p>
+      [[This service maintains a small set of data in this browser.]]
+      [[If this is NOT your personal device, you should clear this data when finished by tapping the Sign Out tile on the home page.]]
+      [[Otherwise, it is best to leave the data intact so you can revisit the service and continue where you left off.]]
+    </p>
+    <div class="c2">[[Access Issues?]]</div>
+    <p>
+      [[Since some tablets do not support Flash (such as the iPad), you may need to view this service on a computer.]]
+      [[All major browsers are supported, the newer the better.]]
+    </p>
+    <button id="ele_$$_browser" data-theme="a" style="margin-left:30px; width:150px;">[[Browser Tester]]</button>
+  </div>
+
+</div>

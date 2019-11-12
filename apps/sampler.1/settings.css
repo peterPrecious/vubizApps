@@ -1,0 +1,6 @@
+﻿  .tab_settings { width: 80%; margin: auto; }
+    .tab_settings tr th { padding-top: 20px; vertical-align: top; white-space: nowrap; }
+    .tab_settings th { width: 40%; }
+    .tab_settings .ui-input-text{ width: 60px; }
+
+  .clearId, .setValue { color: #4380c1; cursor: pointer; font-weight: bold; }

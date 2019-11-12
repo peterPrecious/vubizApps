@@ -1,0 +1,97 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <h2>
+    These settings apply to all content within this Sampler Profile.<br />
+    If you run this sampler on Staging then you will see content hosted on Staging.<br />
+    Remember to <span class="code">Update</span> when finished
+  </h2>
+
+  <table class="tab_$$">
+    <tr>
+      <th style="padding-top:35px;">Sampler expires in : </th>
+      <td>
+        <table>
+          <tr>
+            <td style="width:60px; vertical-align:top;">
+              <div style="width:50px">
+                <input id="ele_$$_numDays" type="number" value="30" min="1" max="365" />
+              </div>
+            </td>
+            <td>&nbsp;days, on <div style="display:inline-block; font-weight:bold;" id="ele_$$_sampExpires"></div></td>
+          </tr>
+        </table>
+        Quickset days to :&emsp;
+        <span class="setValue" data="ele_$$_numDays">10</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">20</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">30</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">45</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">60</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">90</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">180</span>&emsp;
+        <span class="setValue" data="ele_$$_numDays">365</span>
+      </td>
+    </tr>
+    <tr>
+      <th>Limit all Content views to first X pages :</th>
+      <td>
+        <div style="width:50px">
+          <input id="ele_$$_sampLimitPages" type="number" value="10" min="0" max="26" />
+        </div>
+        Set to <span class="clearId" data="ele_$$_sampLimitPages">zero</span> unless you wish to limit access to the first x pages.
+      </td>
+    </tr>
+    <tr>
+      <th>Start all Content views at page :</th>
+      <td>
+        <div style="width:50px"><input id="ele_$$_sampStartPage" type="number" value="0" min="0" /></div>
+        Set to <span class="clearId" data="ele_$$_sampStartPage">zero</span> if you not limitting access (above), otherwise start access at page X.
+      </td>
+    </tr>
+    <tr>
+      <th>End all Content views at page :</th>
+      <td>
+        <div style="width:50px"><input id="ele_$$_sampEndPage" type="number" value="0" min="0" /></div>
+        Set to <span class="clearId" data="ele_$$_sampEndPage">zero</span> or optionally greater than Starting page (above).
+      </td>
+    </tr>
+    <tr>
+      <th>Limit number of Sampler visits to :</th>
+      <td>
+        <div style="width:50px">
+          <input id="ele_$$_sampMaxVisits" type="number" value="25" min="1" />
+        </div>
+        Set to <span class="clearId" data="ele_$$_sampMaxVisits">zero</span> for unlimited visits.
+      </td>
+    </tr>
+    <tr>
+      <th>Limit number of viewing minutes to :</th>
+      <td>
+        <div style="width:60px">
+          <input id="ele_$$_sampMaxMinutes" type="number" value="120" min="1" />
+        </div>
+        Set to <span class="clearId" data="ele_$$_sampMaxMinutes">zero</span> for unlimited viewing.
+      </td>
+    </tr>
+
+    <tr>
+      <th>Get Content from :</th>
+      <td>
+        <div style="width:200px">
+          <label><input type="radio" id="ele_$$_sampProduction-y" name="ele_$$_sampProduction" checked>Production Server</label>
+          <label><input type="radio" id="ele_$$_sampProduction-n" name="ele_$$_sampProduction">Build Server</label>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <th colspan="2" style="text-align:center;">
+        <a id="ele_$$_res" class="ui-alt-icon ui-btn ui-shadow ui-btn-inline ui-nodisc-icon" href="#">Reset</a>
+        <a id="ele_$$_can" class="ui-alt-icon ui-btn ui-shadow ui-btn-inline ui-nodisc-icon" href="#">Cancel</a>
+        <a id="ele_$$_upd" class="ui-alt-icon ui-btn ui-shadow ui-btn-inline ui-nodisc-icon" href="#">Update</a>
+      </th>
+    </tr>
+  </table>
+
+</div>
+

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <link href="styles/vubiz.less" rel="stylesheet/less" />
+</head>
+<body>
+  <div id="content" data-role="main" class="ui-content" style="background-color:white;">
+
+    <ul id="header" data-role="listview" data-inset="true">
+      <li>
+        <div>
+          <div class="header module">Module Name</div>
+          <div class="header timeSpent">Time<br />Spent</div>
+          <div class="header score">Last<br />Score</div>
+          <div class="header date">Date</div>
+          <div class="header certificate">Cert</div>
+        </div>
+      </li>
+    </ul>
+
+    <ul id="details" data-inset="true" data-role="listview">
+      <li>
+        <div>
+          <div class="detail module">4598EN : AODA Accessible Customer Service Regulation E-training</div>
+          <div class="detail timeSpent">46</div>
+          <div class="detail score"></div>
+          <div class="detail date">Apr 9, 2014</div>
+          <div class="detail certificate"></div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+
+
+  <style>
+    #content ul li div {
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #details li div .module:hover {
+      cursor: pointer;
+      background-color: cyan;
+    }
+
+    #header .header {
+      font-weight: bold;
+    }
+
+    #content .module {
+      width: 50%;
+    }
+
+    #content .date {
+      text-align: center;
+      width: 15%;
+    }
+
+    #content .score {
+      text-align: center;
+      width: 10%;
+    }
+
+    #content .timeSpent {
+      text-align: center;
+      width: 10%;
+    }
+
+    #content .certificate {
+      text-align: center;
+      width: 10%;
+    }
+
+    div {
+      border: 1px solid red;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿
+
+
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <h2 class="c2">
+    This will generate a spreadsheet containing the details of Ecommerce Transactions for all <span class="ele_$$_cust jit">xxxx</span> Accounts and Content.&ensp;
+    Select your date range then tap Generate Spreadsheet.<br /><br />
+    First, the number of rows required will be calculated and displayed.
+    If you'd like to continue then reports containing 5000 or less rows will be generated in formatted Excel while reports with more than 5000 rows will be generated in unformatted CSV.
+  </h2>
+  <div class="logoBcO noPhone"><img id="img_$$_logo"></div>
+
+  <table class="ele_$$_table" style="width:300px; margin:auto;">
+    <tr>
+      <th>&ensp;Start Date</th>
+      <th>&ensp;End Date</th>
+    </tr>
+    <tr>
+      <td><input id="ele_$$_strDate" type="text" data-role="date" readonly="readonly"></td>
+      <td><input id="ele_$$_endDate" type="text" data-role="date" readonly="readonly"></td>
+    </tr>
+  </table>
+
+  <div class="ele_$$_setExcel" style="width:300px; margin:auto; padding:20px;">
+    <a id="ele_$$_setExcel" class="ui-btn show-page-loading-msg" data-ajax="false" href="#">Generate Spreadsheet</a>
+  </div>
+
+  <div class="ele_$$_getExcel" style="width:300px; margin:auto; padding:20px; display:none;">
+    <a target="_blank" id="ele_$$_getExcel" class="ui-btn" data-ajax="false" href="*">Download Spreadsheet</a>
+  </div>
+
+</div>
+
+<style>
+  .ele_$$_table tr th {
+    text-align: left;
+  }
+
+
+  .jit {
+    font-family: Courier New, Courier, monospace;
+    font-size: larger;
+    color: black;
+  }
+</style>

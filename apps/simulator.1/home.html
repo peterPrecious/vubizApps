@@ -1,0 +1,28 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content" style="background-color:white; padding:30px;">
+
+	<h2 style="text-align:left;">
+		The Vubiz Ecommerce Web Service accepts XML that it converts and passes via a URL to the Ecom Engine.
+		This app provides a way to simulate/recreate these transactions using either XML or URL.<br /><br />
+		This is typically only used by Vubiz staff.<br /><br />
+	</h2>
+
+	<table style="text-align:center; width:600px; margin:auto;">
+		<tr>
+			<th style="width:50%; text-align:center;">Enter Access Id</th>
+			<th style="width:50%; text-align:center;" colspan="2">Then Select either service.</th>
+		</tr>
+		<tr>
+			<td style="width:50%"><input type="password" id="accessId" value="ecomSimulator" /></td>
+			<td><input id="$$_xml" data-inline="true" type="button" value="XML" style="text-align:center;"></td>
+			<td><input id="$$_url" data-inline="true" type="button" value="URL"></td>
+		</tr>
+	</table>
+
+</div>
+
+<style>
+	#content_$$ .ui-input-text { width: 90%; margin: auto; margin-top: 6px; }
+	#content_$$ input[type="password"] { text-align: center; height: 34px; }
+	#content_$$ .ui-btn { width: 100px !important; }
+</style>

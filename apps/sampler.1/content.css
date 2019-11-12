@@ -1,0 +1,27 @@
+﻿#content_content .tileSet {
+  list-style-type: none;
+  text-align: left;
+  padding: 0 !important;
+  margin: 20px 0 0 30px !important;
+}
+
+  #content_content .tileSet .tile {
+    text-align: center;
+    display: table-row;
+    vertical-align: bottom;
+    margin: 0 8px 8px 0;
+    width: 120px;
+    height: 60px;
+    padding: 5px 5px 2px 5px;
+    border-radius: 0.3em;
+    border-style: outset;
+    border-width: 1px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: aqua;
+  }
+
+#content_content table * {
+  padding: 0;
+  margin: 0;
+}

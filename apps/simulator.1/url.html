@@ -1,0 +1,51 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content" style="background-color:white; padding:30px;">
+
+	<h3 style="text-align:left;">
+		Enter the transaction string that comes from the XML Web Service. Typically starts with fields like: <span class="jit">vEcom_LastName=</span>.
+		The response from the ecommerce engine will be rendered in the textbox at bottom.<br /><br />
+
+		Note: it is best to "Validate" the transactions since "Commit" will update the relevant databases!
+
+	</h3>
+
+  <!--
+    ...grab one of these
+
+    ...Online example
+    <textarea name="ele_$$_trans" id="ele_$$_trans">vEcom_Memo=&vEcom_CustId=CCHS2544&vAction=V&vEcom_LastName=Zhu&vEcom_Memo=&vEcom_Currency=CA&vEcom_Organization=&vEcom_Email=leoz%40ccohs.ca&vEcom_Memo=&vEcom_Memo=&vEcom_Lang=EN&vEcom_Media=Online&vEcom_Memo=2016-02-02T13%3a36%3a09-05%3a00&vEcom_FirstName=Leo&vPST=0&vEcom_Quantity=1&vHST=0&vEcom_Programs=P2072EN&vEcom_Amount=49&vGST=0&vEcom_Prices=49&vPrice=49&vTot_HST=0&vTot_GST=0&vTot_Prices=49&vTot_PST=0&vTot_Quantity=1&vTot_Amount=49&LogNo=252516&vEcom_Postal=&vEcom_CardName=+&vEcom_Address=&vEcom_Phone=&vEcom_Country=&vEcom_City=&vEcom_Province=</textarea>
+
+    ...Group2 example  
+    <textarea name="ele_$$_trans" id="ele_$$_trans">vEcom_Memo=&vEcom_LastName=Thangiah&vEcom_Memo=2016-02-16T15%3a43%3a30-05%3a00&vEcom_Organization=Stahl+Peterbilt+Inc&vEcom_Source=C&vEcom_Media=Group2&vEcom_Currency=CA&vEcom_Memo=&vEcom_Lang=EN&vEcom_Memo=&vAction=C&vEcom_Memo=122741&vEcom_Email=barb%40stahlpeterbilt.com&vEcom_FirstName=Ruth&vEcom_CustId=CCHS2544&vEcom_Amount=51.45&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=49&vPrice=49&vGST=2.45&vEcom_Programs=P1254EN&vEcom_Amount=103.95&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=99&vPrice=99&vGST=4.95&vEcom_Programs=P2119EN&vEcom_Amount=67.2&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=64&vPrice=64&vGST=3.2&vEcom_Programs=P1662EN&vEcom_Amount=51.45&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=49&vPrice=49&vGST=2.45&vEcom_Programs=P1789EN&vEcom_Amount=51.45&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=49&vPrice=49&vGST=2.45&vEcom_Programs=P1245EN&vEcom_Amount=51.45&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=49&vPrice=49&vGST=2.45&vEcom_Programs=P1405EN&vEcom_Amount=51.45&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=49&vPrice=49&vGST=2.45&vEcom_Programs=P2121EN&vEcom_Amount=67.2&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=64&vPrice=64&vGST=3.2&vEcom_Programs=P1271EN&vTot_Amount=495.6&vTot_PST=0&vTot_Quantity=8&vTot_HST=0&vTot_Prices=472&vTot_GST=23.6&LogNo=325016&vEcom_Postal=T5S+2G2&vEcom_Phone=780+483+6666+&vEcom_City=Edmonton&vEcom_Country=Canada&vEcom_Province=AB&vEcom_Address=18020+118+Avenue&vEcom_CardName=Ruth+Thangiah</textarea>
+
+    ...AddOn2 example
+    <textarea name="ele_$$_trans" id="ele_$$_trans">vEcom_Memo=isGovernment&vEcom_LastName=&vEcom_Memo=2016-02-16T10%3a30%3a48-05%3a00&vEcom_Organization=Department+of+Fisheries+and+Oceans&vEcom_Source=C&vGroupId=1935513-YCDY&vEcom_Media=AddOn2&vEcom_Currency=CA&vEcom_Memo=&vEcom_Lang=EN&vEcom_Memo=CCHS9906&vAction=C&vGroupCustId=CCHS9906&vEcom_Memo=122672&vEcom_Email=&vEcom_FirstName=&vEcom_CustId=CCHS5348&vEcom_Id=1935513-YCDY&vEcom_Amount=637&vEcom_Quantity=65&vPST=0&vHST=0&vEcom_Prices=637&vPrice=9.8&vGST=0&vEcom_Programs=P1176EN&vEcom_Amount=294&vEcom_Quantity=30&vPST=0&vHST=0&vEcom_Prices=294&vPrice=9.8&vGST=0&vEcom_Programs=P1176FR&vEcom_Amount=29.4&vEcom_Quantity=3&vPST=0&vHST=0&vEcom_Prices=29.4&vPrice=9.8&vGST=0&vEcom_Programs=P3281EN&vEcom_Amount=29.4&vEcom_Quantity=3&vPST=0&vHST=0&vEcom_Prices=29.4&vPrice=9.8&vGST=0&vEcom_Programs=P3281FR&vTot_Amount=989.8&vTot_PST=0&vTot_Quantity=101&vTot_HST=0&vTot_Prices=989.8&vTot_GST=0&LogNo=324195&vEcom_Postal=E1C+9B6&vEcom_Phone=506+851+2775+&vEcom_City=Moncton&vEcom_Country=Canada&vEcom_Province=NB&vEcom_Address=343+Universit%3f%3f+Avenue&vEcom_CardName=Eleana+Rousselle</textarea>
+
+  -->
+
+  <textarea name="ele_$$_trans" id="ele_$$_trans" style="width:80%; display:inline-block;">vEcom_LastName=Bulloch&vEcom_Organization=&vEcom_Source=C&vEcom_Media=Group2&vEcom_Currency=CA&vEcom_Memo=&vEcom_Lang=EN&vAction=C&vEcom_Email=peter.bulloch@vubiz.com&vEcom_FirstName=Peter&vEcom_CustId=LAKE0984&vEcom_Programs=P1315EN&vEcom_Amount=9.8&vEcom_Quantity=1&vPST=0&vHST=0&vEcom_Prices=9.8&vPrice=9.8&vGST=0&vTot_Amount=9.8&vTot_PST=0&vTot_Quantity=1&vTot_HST=0&vTot_Prices=9.8&vTot_GST=0&vEcom_Postal=&vEcom_Phone=&vEcom_City=&vEcom_Country=&vEcom_Province=&vEcom_Address=&vEcom_CardName=+</textarea>
+
+  <form id="$$_form" name="$$_form" method="post" target="$$_frame"></form>
+
+  <fieldset data-role="controlgroup" data-mini="true" style="width:180px; display:inline-block;">
+    <input type="radio" name="$$_v5Commit" id="$$_v5CommitOff" value="Off" checked="checked">
+    <label for="$$_v5CommitOff">Validate</label>
+    <input type="radio" name="$$_v5Commit" id="$$_v5CommitOn" value="ON">
+    <label for="$$_v5CommitOn">Commit</label>
+  </fieldset>
+
+  <fieldset data-role="controlgroup" data-mini="true" style="width:180px; display:inline-block;">
+    <input type="radio" name="$$_v5Step" id="$$_v5StepOff" value="Off">
+    <label for="$$_v5StepOff">Step Logging Off</label>
+    <input type="radio" name="$$_v5Step" id="$$_v5StepOn" value="On" checked="checked">
+    <label for="$$_v5StepOn">Step Logging On</label>
+  </fieldset>
+
+  <br />
+  <div id="ele_$$_check" class="ui-nodisc-icon ui-alt-icon ui-btn ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left">Simulate</div><br /><br />
+  <iframe name="$$_frame" style="width:80%; height:200px;"></iframe>
+</div>
+
+<style>
+  .jit { font-family: Courier New, Courier, monospace; font-size: larger; color: black; }
+</style>

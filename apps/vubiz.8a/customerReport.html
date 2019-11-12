@@ -1,0 +1,57 @@
+﻿<div id="content_$$" data-role="main" class="ui-content">
+
+  <table style="width: 90%; margin: auto; ">
+    <tr>
+      <td colspan="3" class="c2" style="padding-bottom:20px;">You can either display 50 customers (ordered by Customer Id) with links to their profile...</td>
+    <tr>
+    <tr>
+      <th style="width:50%;">starting with Customer Id... :</th>
+      <td style="width:100px;"><input onfocus="clearEle('ele_$$_custAcctId')" type="text" id="ele_$$_custId" size="3" maxlength="8" value="" name="ele_$$_custId" placeholder="ie: ABCD" /></td>
+      <td><a class="debug" onclick="clearEle('ele_$$_custId')" href="#">&#937;</a></td>
+    </tr>
+    <tr>
+      <th>or just those with Account Id :</th>
+      <td><input onfocus="clearEle('ele_$$_custId');" type="text" id="ele_$$_custAcctId" maxlength="4" value="" name="ele_$$_custAcctId" placeholder="ie: 1234" /></td>
+      <td><a class="debug" onclick="clearEle('ele_$$_custAcctId')" href="#">&#937;</a></td>
+    </tr>
+    <tr>
+      <th>whose Title contains :</th>
+      <td><input style="width: 200px !important" type="text" id="ele_$$_custTitle" name="ele_$$_custTitle" maxlength="32" placeholder="ie: Health" /></td>
+      <td><a class="debug" onclick="clearEle('ele_$$_custTitle')" href="#">&#937;</a></td>
+    </tr>
+    <tr>
+      <th>that are :</th>
+      <td>
+        <fieldset data-role="controlgroup">
+          <label><input type="radio" value="1" name="ele_$$_custActive" class="ele_$$_custActive" id="ele_$$_custActive_1" checked="checked" />Active Only</label>
+          <label><input type="radio" value="0" name="ele_$$_custActive" class="ele_$$_custActive" id="ele_$$_custActive_2" />Inactive Only</label>
+          <label><input type="radio" value="9" name="ele_$$_custActive" class="ele_$$_custActive" id="ele_$$_custActive_3" />Both Active and Inactive</label>
+        </fieldset>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align:center; padding:20px;" class="icons"><div id="ele_$$_display" style="width:200px;" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-report ui-btn-icon-left">Display Customers</div></td>
+    </tr>
+
+
+    <tr>
+      <td colspan="3" style="border-top:1px solid #4c8be8; padding-top:20px;" class="c2">...or, you can generate an Excel report containing ALL customers.</td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align:center; padding:20px;" class="icons">
+        <div id="ele_$$_excel" style="width:200px;" class="ui-btn ui-shadow i-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-excel ui-btn-icon-left" href="#">Generate Excel Report</div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td colspan="3" style="text-align:center; padding:20px;">
+        <a id="ele_$$_excelReport" class="ui-btn" data-ajax="false" href="/vubizExcel/reports/1690526/learnerReport.xlsx">Excel Report 2</a>
+      </td>
+    </tr>
+
+
+  </table>
+
+</div>

@@ -1,0 +1,50 @@
+﻿[
+  {
+    "pageId": "signIn",
+    "pageName": "Sign In"
+  },
+  {
+    "pageId": "home",
+    "pageName": "Administration Centre"
+  },
+  {
+    "pageId": "accountActivity",
+    "pageName": "Account Profile Summary"
+  },
+  {
+    "pageId": "programActivity",
+    "pageName": "Program Usage Summary"
+  },
+  {
+    "pageId": "programStarts",
+    "pageName": "Program Starts Report - Excel"
+  },
+  {
+    "pageId": "programCompletionSummary",
+    "pageName": "Program Completion Summary Report - Excel"
+  },
+  {
+    "pageId": "programActivityDetails",
+    "pageName": "Program Activity Details Report - Excel"
+  },
+  {
+    "pageId": "learner",
+    "pageName": "Add / Edit a Learner"
+  },
+  {
+    "pageId": "learners",
+    "pageName": "List of Learners - Online"
+  },
+  {
+    "pageId": "learnerReport",
+    "pageName": "List of Learners - Excel"
+  },
+  {
+    "pageId": "signOut",
+    "pageName": "Sign Out"
+  },
+  {
+    "pageId": "style",
+    "pageName": "Site Styles"
+  }
+]

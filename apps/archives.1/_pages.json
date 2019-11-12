@@ -1,0 +1,22 @@
+﻿[
+    {
+        "pageId": "signIn",
+        "pageName": "Sign In"
+    },
+    {
+        "pageId": "mgr",
+        "pageName": "Super Manager Centre"
+    },
+    {
+        "pageId": "adm",
+        "pageName": "Administration Centre"
+    },
+    {
+        "pageId": "findLearner",
+        "pageName": "Find a Learner"
+    },
+    {
+        "pageId": "learner",
+        "pageName": "Learner Profile"
+    }
+]

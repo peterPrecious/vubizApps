@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+  <style>
+    h2, h3,
+    table { font: 20px "Trebuchet MS", sans-serif; text-shadow: none !important; }
+    table { font-size:14px; }
+    .mainTable { border-collapse: collapse; }
+      .mainTable th,
+      .mainTable td { border: 1px solid cyan; padding: 3px; }
+      .mainTable tr th { text-align: right; vertical-align: top; }
+
+    input[type="text"] { background-color: cyan; }
+    .values input[type="text"] { text-align: right; }
+
+    .values th, .titles th { width: 11% }
+
+    .blue { color: blue; }
+  </style>
+
+
+  <h2>Create an Ecommerce Transaction from Scratch</h2>
+  <h3>
+    Fill in the form values (with two programs from your catalogue) and Submit. This will post your transaction values to the Ecommerce Engine.
+    Use "Validate" to ensure you are using the right values. Using "Commit" will actually post the transaction - if successful.
+    Note: the two field names at left are what the Engine expects (top) and what the <span class="blue">Web Service expects</span> (bottom)
+  </h3>
+
+  <form method="POST" action="/portal/services/ecomGenerateId3.aspx" target="_blank">
+
+    <table class="mainTable">
+
+      <tr>
+        <th>vEcom_Action<br /><span class="blue">Action</span> </th>
+        <td colspan="7">
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vAction" value="v" checked></td>
+              <td><span class="blue">V</span>alidate (confirm transaction integrity but do not generate IDs and/or passwords)</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vAction" value="c"></td>
+              <td><span class="blue">C</span>ommit (confirm transaction integrity AND generate IDs and/or passwords)</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <th>vEcom_CustId<br /><span class="blue">CustomerID</span></th>
+        <td colspan="7">
+          <input type="text" name="vEcom_CustId" maxlength="8" value="IAPA2859">
+          Existing 8 character Vubiz Customer Id (parent)
+        </td>
+      </tr>
+
+      <tr class="msc">
+        <th>vEcom_Memo<br /><span class="blue">Memo</span> </th>
+        <td colspan="7"><input type="text" name="vEcom_Memo" value="some value" size="25"></td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Memo<br /><span class="blue">Memo</span> </th>
+        <td colspan="7"><input type="text" name="vEcom_Memo" value="some more value" size="25"></td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_FirstName<br /><span class="blue">UserFirstName</span> </th>
+        <td colspan="7"><input type="text" name="vEcom_FirstName" value="some value" size="25"></td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_LastName<br /><span class="blue">UserLastName</span> </th>
+        <td colspan="7"><input type="text" name="vEcom_LastName" value="some value" size="25"></td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Email<br /><span class="blue">UserEmail</span> </th>
+        <td colspan="7"><input type="text" name="vEcom_Email" value="some value" size="25"></td>
+      </tr>
+      <tr>
+        <th>vEcom_Media<br /><span class="blue">TransactionType</span> </th>
+        <td colspan="7">
+
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="radio" value="Online" name="vEcom_Media"></td>
+              <td xstyle="width:90%;">"Online"/"<span class="blue">I</span>" Individual Purchase, UserPassword optional:</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"><input type="radio" value="Group2" name="vEcom_Media"></td>
+              <td xstyle="width:90%;">"Group2"/"<span class="blue">G</span>" Group Purchase, UserPassword optional:</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"><input type="radio" value="AddOn2" name="vEcom_Media"></td>
+              <td xstyle="width:90%;">"AddOn2"/"<span class="blue">A</span>" for Group AddOn include GroupCustomerId and GroupPassword</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"></td>
+              <td xstyle="width:90%;">
+                <table>
+                  <tr>
+                    <td xstyle="width: 100px">vEcom_Id <br /><span class="blue">UserPassword</span>  </td>
+                    <td xstyle="width: 50%"><input type="text" name="vEcom_Id" size="48" value="peterBulloch"></td>
+                  </tr>
+                  <tr>
+                    <td xstyle="width: 50%">vGroupCustId<br /><span class="blue">GroupCustomerId</span>  </td>
+                    <td xstyle="width: 50%"><input type="text" name="vGroupCustId" size="16" value="CCHS8754"></td>
+                  </tr>
+                  <tr>
+                    <td xstyle="width: 50%">vGroupId <br /><span class="blue">GroupPassword</span>  </td>
+                    <td xstyle="width: 50%"><input type="text" name="vGroupId" size="25" value="PETERBULLOCH"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+
+      <tr class="msc">
+        <th>vEcom_CardName<br /><span class="blue">CardHolderName</span>  </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_CardName" size="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Address<br /><span class="blue">CardHolderAddress</span>  </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_Address" size="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_City<br /><span class="blue">CardHolderCity</span> </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_City" size="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Postal<br /><span class="blue">CardHolderPostalCode</span>  </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_Postal" size="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Province<br /><span class="blue">CardHolderProvince</span> </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_Province" size="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Country<br /><span class="blue">CardHolderCountry</span> </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_Country" size="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Phone<br /><span class="blue">CardHolderPhone</span> </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_Phone" xsize="34">
+        </td>
+      </tr>
+      <tr class="msc">
+        <th>vEcom_Organization<br /><span class="blue">Organization</span> </th>
+        <td colspan="7">
+          <input type="text" name="vEcom_Organization" size="34">
+        </td>
+      </tr>
+
+      <tr class="msc">
+        <th>vEcom_Lang<br /><span class="blue">Language</span> </th>
+        <td colspan="7">
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vEcom_Lang" value="EN" checked></td>
+              <td>EN (Platform Language)</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vEcom_Lang" value="FR"></td>
+              <td>FR</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="msc">
+        <th>vEcom_Source<br /><span class="blue">vEcom_Source</span> </th>
+        <td colspan="7">
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vEcom_Source" value="C" checked></td>
+              <td>C (C:Client Ecommerce)</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vEcom_Source" value="E"></td>
+              <td>E (E:Vubiz/NOP Ecommerce)</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="msc">
+        <th>vEcom_Currency<br /><span class="blue">Currency</span> </th>
+        <td colspan="7">
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vEcom_Currency" value="CA" checked></td>
+              <td>CA</td>
+            </tr>
+            <tr>
+              <td style="width:10%;"><input type="radio" name="vEcom_Currency" value="US"></td>
+              <td>US</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+
+
+
+      <tr class="titles">
+        <th>vProgramId<br /><span class="blue">ProgramID</span></th>
+        <th>vEcom_Quantity<br /><span class="blue">Seats</span></th>
+        <th>vPrice<br /><span class="blue">UnitPrice</span></th>
+        <th>vEcomPrices<br /><span class="blue">ExtendedPrice</span></th>
+        <th>vGst<br /><span class="blue">GSTAmount</span></th>
+        <th>vHst<br /><span class="blue">HSTAmount</span></th>
+        <th>vPst<br /><span class="blue">PSTAmount</span></th>
+        <th>vEcom_Amount<br /><span class="blue">LineTotal</span></th>
+      </tr>
+      <tr class="values">
+        <th><input type="text" name="vEcom_Programs" size="10" value="P1254EN"></th>
+        <th><input type="text" name="vEcom_Quantity" size="6" value="10"></th>
+        <th><input type="text" name="vPrice" size="6" value="50"></th>
+        <th><input type="text" name="vEcom_Prices" size="6" value="500"></th>
+        <th><input type="text" name="vGST" size="6" value="10"></th>
+        <th><input type="text" name="vHST" size="6" value="0"></th>
+        <th><input type="text" name="vPST" size="6" value="0"></th>
+        <th><input type="text" name="vEcom_Amount" size="6" value="510"></th>
+      </tr>
+      <tr class="values">
+        <th><input type="text" name="vEcom_Programs" size="10" value="P2408FR"></th>
+        <th><input type="text" name="vEcom_Quantity" size="6" value="10"></th>
+        <th><input type="text" name="vPrice" size="6" value="50"></th>
+        <th><input type="text" name="vEcom_Prices" size="6" value="500"></th>
+        <th><input type="text" name="vGST" size="6" value="10"></th>
+        <th><input type="text" name="vHST" size="6" value="0"></th>
+        <th><input type="text" name="vPST" size="6" value="0"></th>
+        <th><input type="text" name="vEcom_Amount" size="6" value="510"></th>
+      </tr>
+
+      <tr class="titles">
+        <th></th>
+        <th>vEcom_Quantity<br /><span class="blue">SeatsTotal</span></th>
+        <th></th>
+        <th>vTot_Prices<br /><span class="blue">ExtendedTotal</span></th>
+        <th>vTot_Gst<br /><span class="blue">GSTAmountTotal</span></th>
+        <th>vTot_Hst<br /><span class="blue">HSTAmountTotal</span></th>
+        <th>vTot_Pst<br /><span class="blue">PSTAmountTotal</span></th>
+        <th>vTot_Amount<br /><span class="blue">OrderTotal</span></th>
+      </tr>
+      <tr class="values">
+        <th></th>
+        <th><input type="text" name="vTot_Quantity" size="6" value="20"></th>
+        <th>&nbsp;</th>
+        <th><input type="text" name="vTot_Prices" size="6" value="1000"></th>
+        <th><input type="text" name="vTot_GST" size="6" value="20"></th>
+        <th><input type="text" name="vTot_HST" size="6" value="0"></th>
+        <th><input type="text" name="vTot_PST" size="6" value="0"></th>
+        <th><input type="text" name="vTot_Amount" size="6" value="1020"></th>
+      </tr>
+
+
+
+
+      <tr class="msc">
+        <td class="c2" colspan="8" style="text-align:center">Next 2 fields are for this Simulator only, NOT for the Web Service</td>
+      </tr>
+
+      <tr class="msc">
+        <th>vTest ? </th>
+        <td colspan="7">
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="checkbox" name="vTest" value="y" checked></td>
+              <td colspan="2">Yes (required for the simulator)</td>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="msc">
+        <th>v5Step ? </th>
+        <td colspan="7">
+          <table>
+            <tr>
+              <td style="width:10%;"><input type="checkbox" name="v5Step" value="y" checked></td>
+              <td colspan="2">Yes (logs Steps taken)</td>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center" colspan="8">
+          <br /><br />
+          <input type="submit" value="Submit" name="bSubmit" class="button"><br />
+          <br /><br />
+        </td>
+
+      </tr>
+
+    </table>
+
+
+  </form>
+
+</body>
+</html>

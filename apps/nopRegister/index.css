@@ -1,0 +1,13 @@
+﻿#content_index .nop { margin: 10px auto; padding: 20px; border: 1px solid #ccc; border-radius: 20px; max-width: 600px;  }
+
+  #content_index .nop table { width: 100%; margin: auto; padding: 20px !important; }
+
+    #content_index .nop table tr th,
+    #content_index .nop table tr td { margin: 0 !important; padding: 0 !important; }
+
+    #content_index .nop table tr th { width: inherit; padding-right: 5px !important; white-space: nowrap; }
+    #content_index .nop table tr td { width: inherit; }
+
+      #content_index .nop table tr td .ui-select { float: left; }
+
+.ui-mini .ui-input-text input { width: 60%; }

@@ -1,0 +1,31 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <h2 class="c2">
+    This allows you to search for up to 50 learners (or facilitators) using their name.
+    You can enter the first part of their name segment, ie Sm will return Smith, Smythe, etc.
+    Click on the learner pull up their details.
+  </h2>
+
+  <table style="width:500px; margin:auto; margin-bottom:40px;">
+    <tr>
+      <th>First Name : </th>
+      <td><input id="ele_$$_firstName" name="ele_$$_firstName" value="A" type="text" maxlength="128" /></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Last Name : </th>
+      <td><input id="ele_$$_lastName" name="ele_$$_lastName" value="Smi" type="text" maxlength="128" /></td>
+      <td><div id="ele_$$_check" style="height:12px;" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Find</div></td>
+    </tr>
+  </table>
+
+  <ul id="$$_list" data-role="listview" style="width:500px; margin:auto;" data-inset="true"></ul>
+
+  <div class="ele_archId" style="position:absolute; bottom:50px; width:100%; text-align:center; font-size:60px; opacity:0.3;"></div>
+
+</div>
+
+<style>
+  .ui-li-static:hover { background-color: yellow;}
+</style>

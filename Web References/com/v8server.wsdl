@@ -1,0 +1,2447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://vubiz.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://vubiz.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://vubiz.com/">
+      <s:element name="EcomExtend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="learnerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="programId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noDays" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EcomExtendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EcomExtendResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoEnroll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membMemo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoEnrollResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="autoEnrollResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoEnrollWs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membMemo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membPrograms" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="membActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoEnrollWsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="autoEnrollWsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoSignIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custAcctId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoSignInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="autoSignInResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vuEcommerce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vuEcommerceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vuEcommerceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ssoMembGuidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ssoMembIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ssoMembNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembId2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ssoMembId2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ssoMembId2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="custTitle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="custTitleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custTitleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="caamEnroll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="caamEnrollResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="caamEnrollResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibAuthenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="profile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmailEncrypted" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membPasswordEncrypted" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibAuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cfibAuthenticateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibSignIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="profile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibSignInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cfibSignInResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibEnroll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membOrganization" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membMemo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibEnrollResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cfibEnrollResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibIsMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membOrganization" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cfibIsMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cfibIsMemberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enroll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membOrganization" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enrollResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enrollResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="isMemberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="profiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alias" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="profilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="profilesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="translate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phrase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="translateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="translateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="translateUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phraseIn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phraseEx" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="translateUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="translateUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ecommerceReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cust" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ecommerceReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ecommerceReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isGovActivityReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="organizations" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isGovActivityReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isGovActivityReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isGovActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="organizations" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isGovActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isGovActivityResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="learnerReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="learnerReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="learnerReport2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="learnerReport2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerReport2Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="learnerActivityReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="completed" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="guests" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="learnerActivityReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerActivityReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="programActivityDetailsReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="programActivityDetailsReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="programActivityDetailsReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EcomExtendSoapIn">
+    <wsdl:part name="parameters" element="tns:EcomExtend" />
+  </wsdl:message>
+  <wsdl:message name="EcomExtendSoapOut">
+    <wsdl:part name="parameters" element="tns:EcomExtendResponse" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollSoapIn">
+    <wsdl:part name="parameters" element="tns:autoEnroll" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollSoapOut">
+    <wsdl:part name="parameters" element="tns:autoEnrollResponse" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollWsSoapIn">
+    <wsdl:part name="parameters" element="tns:autoEnrollWs" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollWsSoapOut">
+    <wsdl:part name="parameters" element="tns:autoEnrollWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="autoSignInSoapIn">
+    <wsdl:part name="parameters" element="tns:autoSignIn" />
+  </wsdl:message>
+  <wsdl:message name="autoSignInSoapOut">
+    <wsdl:part name="parameters" element="tns:autoSignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="vuEcommerceSoapIn">
+    <wsdl:part name="parameters" element="tns:vuEcommerce" />
+  </wsdl:message>
+  <wsdl:message name="vuEcommerceSoapOut">
+    <wsdl:part name="parameters" element="tns:vuEcommerceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:ssoMembGuid" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:ssoMembGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ssoMembId" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ssoMembIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembNoSoapIn">
+    <wsdl:part name="parameters" element="tns:ssoMembNo" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembNoSoapOut">
+    <wsdl:part name="parameters" element="tns:ssoMembNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembId2SoapIn">
+    <wsdl:part name="parameters" element="tns:ssoMembId2" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembId2SoapOut">
+    <wsdl:part name="parameters" element="tns:ssoMembId2Response" />
+  </wsdl:message>
+  <wsdl:message name="custTitleSoapIn">
+    <wsdl:part name="parameters" element="tns:custTitle" />
+  </wsdl:message>
+  <wsdl:message name="custTitleSoapOut">
+    <wsdl:part name="parameters" element="tns:custTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="caamEnrollSoapIn">
+    <wsdl:part name="parameters" element="tns:caamEnroll" />
+  </wsdl:message>
+  <wsdl:message name="caamEnrollSoapOut">
+    <wsdl:part name="parameters" element="tns:caamEnrollResponse" />
+  </wsdl:message>
+  <wsdl:message name="cfibAuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:cfibAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="cfibAuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:cfibAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="cfibSignInSoapIn">
+    <wsdl:part name="parameters" element="tns:cfibSignIn" />
+  </wsdl:message>
+  <wsdl:message name="cfibSignInSoapOut">
+    <wsdl:part name="parameters" element="tns:cfibSignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="cfibEnrollSoapIn">
+    <wsdl:part name="parameters" element="tns:cfibEnroll" />
+  </wsdl:message>
+  <wsdl:message name="cfibEnrollSoapOut">
+    <wsdl:part name="parameters" element="tns:cfibEnrollResponse" />
+  </wsdl:message>
+  <wsdl:message name="cfibIsMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:cfibIsMember" />
+  </wsdl:message>
+  <wsdl:message name="cfibIsMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:cfibIsMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="enrollSoapIn">
+    <wsdl:part name="parameters" element="tns:enroll" />
+  </wsdl:message>
+  <wsdl:message name="enrollSoapOut">
+    <wsdl:part name="parameters" element="tns:enrollResponse" />
+  </wsdl:message>
+  <wsdl:message name="isMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:isMember" />
+  </wsdl:message>
+  <wsdl:message name="isMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:isMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="profilesSoapIn">
+    <wsdl:part name="parameters" element="tns:profiles" />
+  </wsdl:message>
+  <wsdl:message name="profilesSoapOut">
+    <wsdl:part name="parameters" element="tns:profilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="translateSoapIn">
+    <wsdl:part name="parameters" element="tns:translate" />
+  </wsdl:message>
+  <wsdl:message name="translateSoapOut">
+    <wsdl:part name="parameters" element="tns:translateResponse" />
+  </wsdl:message>
+  <wsdl:message name="translateUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:translateUpdate" />
+  </wsdl:message>
+  <wsdl:message name="translateUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:translateUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ecommerceReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ecommerceReport" />
+  </wsdl:message>
+  <wsdl:message name="ecommerceReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ecommerceReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityReportSoapIn">
+    <wsdl:part name="parameters" element="tns:isGovActivityReport" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityReportSoapOut">
+    <wsdl:part name="parameters" element="tns:isGovActivityReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:isGovActivity" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:isGovActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="learnerReportSoapIn">
+    <wsdl:part name="parameters" element="tns:learnerReport" />
+  </wsdl:message>
+  <wsdl:message name="learnerReportSoapOut">
+    <wsdl:part name="parameters" element="tns:learnerReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="learnerReport2SoapIn">
+    <wsdl:part name="parameters" element="tns:learnerReport2" />
+  </wsdl:message>
+  <wsdl:message name="learnerReport2SoapOut">
+    <wsdl:part name="parameters" element="tns:learnerReport2Response" />
+  </wsdl:message>
+  <wsdl:message name="learnerActivityReportSoapIn">
+    <wsdl:part name="parameters" element="tns:learnerActivityReport" />
+  </wsdl:message>
+  <wsdl:message name="learnerActivityReportSoapOut">
+    <wsdl:part name="parameters" element="tns:learnerActivityReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="programActivityDetailsReportSoapIn">
+    <wsdl:part name="parameters" element="tns:programActivityDetailsReport" />
+  </wsdl:message>
+  <wsdl:message name="programActivityDetailsReportSoapOut">
+    <wsdl:part name="parameters" element="tns:programActivityDetailsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="EcomExtendHttpGetIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="learnerId" type="s:string" />
+    <wsdl:part name="programId" type="s:string" />
+    <wsdl:part name="noDays" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EcomExtendHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollHttpGetIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membMemo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollWsHttpGetIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membMemo" type="s:string" />
+    <wsdl:part name="membPrograms" type="s:string" />
+    <wsdl:part name="membActive" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollWsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="autoSignInHttpGetIn">
+    <wsdl:part name="custAcctId" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoSignInHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vuEcommerceHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="logGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vuEcommerceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembGuidHttpGetIn">
+    <wsdl:part name="membGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembGuidHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembIdHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembNoHttpGetIn">
+    <wsdl:part name="membNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembId2HttpGetIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembId2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="custTitleHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="custTitleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="caamEnrollHttpGetIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="caamEnrollHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibAuthenticateHttpGetIn">
+    <wsdl:part name="profile" type="s:string" />
+    <wsdl:part name="membEmailEncrypted" type="s:string" />
+    <wsdl:part name="membPasswordEncrypted" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibAuthenticateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibSignInHttpGetIn">
+    <wsdl:part name="profile" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibSignInHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibEnrollHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membOrganization" type="s:string" />
+    <wsdl:part name="membType" type="s:string" />
+    <wsdl:part name="membMemo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibEnrollHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibIsMemberHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membOrganization" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibIsMemberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="enrollHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membOrganization" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enrollHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="isMemberHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="isMemberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="profilesHttpGetIn">
+    <wsdl:part name="alias" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="profilesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="translateHttpGetIn">
+    <wsdl:part name="phrase" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="translateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="translateUpdateHttpGetIn">
+    <wsdl:part name="phraseIn" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="phraseEx" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="translateUpdateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ecommerceReportHttpGetIn">
+    <wsdl:part name="cust" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ecommerceReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityReportHttpGetIn">
+    <wsdl:part name="organizations" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityHttpGetIn">
+    <wsdl:part name="organizations" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="repType" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="learnerReportHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="learnerReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="learnerReport2HttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="learnerReport2HttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="learnerActivityReportHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="completed" type="s:string" />
+    <wsdl:part name="guests" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="learnerActivityReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="programActivityDetailsReportHttpGetIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="programActivityDetailsReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="EcomExtendHttpPostIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="learnerId" type="s:string" />
+    <wsdl:part name="programId" type="s:string" />
+    <wsdl:part name="noDays" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EcomExtendHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollHttpPostIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membMemo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollWsHttpPostIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membMemo" type="s:string" />
+    <wsdl:part name="membPrograms" type="s:string" />
+    <wsdl:part name="membActive" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoEnrollWsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="autoSignInHttpPostIn">
+    <wsdl:part name="custAcctId" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoSignInHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vuEcommerceHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="logGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vuEcommerceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembGuidHttpPostIn">
+    <wsdl:part name="membGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembGuidHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembIdHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembNoHttpPostIn">
+    <wsdl:part name="membNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembId2HttpPostIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ssoMembId2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="custTitleHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="custTitleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="caamEnrollHttpPostIn">
+    <wsdl:part name="custGuid" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="caamEnrollHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibAuthenticateHttpPostIn">
+    <wsdl:part name="profile" type="s:string" />
+    <wsdl:part name="membEmailEncrypted" type="s:string" />
+    <wsdl:part name="membPasswordEncrypted" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibAuthenticateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibSignInHttpPostIn">
+    <wsdl:part name="profile" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibSignInHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibEnrollHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membOrganization" type="s:string" />
+    <wsdl:part name="membType" type="s:string" />
+    <wsdl:part name="membMemo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibEnrollHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibIsMemberHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membOrganization" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="cfibIsMemberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="enrollHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membEmail" type="s:string" />
+    <wsdl:part name="membPassword" type="s:string" />
+    <wsdl:part name="membFirstName" type="s:string" />
+    <wsdl:part name="membLastName" type="s:string" />
+    <wsdl:part name="membOrganization" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="enrollHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="isMemberHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="isMemberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="profilesHttpPostIn">
+    <wsdl:part name="alias" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="profilesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="translateHttpPostIn">
+    <wsdl:part name="phrase" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="translateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="translateUpdateHttpPostIn">
+    <wsdl:part name="phraseIn" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="phraseEx" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="translateUpdateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ecommerceReportHttpPostIn">
+    <wsdl:part name="cust" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ecommerceReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityReportHttpPostIn">
+    <wsdl:part name="organizations" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityHttpPostIn">
+    <wsdl:part name="organizations" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="repType" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="isGovActivityHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="learnerReportHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="learnerReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="learnerReport2HttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="learnerReport2HttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="learnerActivityReportHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="completed" type="s:string" />
+    <wsdl:part name="guests" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="learnerActivityReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="programActivityDetailsReportHttpPostIn">
+    <wsdl:part name="custId" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="membId" type="s:string" />
+    <wsdl:part name="membNo" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="programActivityDetailsReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="v8serverSoap">
+    <wsdl:operation name="EcomExtend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This extends (or reduces) the expiry date of an Ecommerce Transaction.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;custGuid: assigned by Vubiz, identifies the Account;&lt;/li&gt;&lt;li&gt;learnerId: this is the User Id of the PURCHASER of the transaction;&lt;/li&gt;&lt;li&gt;programId: this is the Program Id that you wish to extend;&lt;/li&gt;&lt;li&gt;noDays: typically 30, 60 or -1. A postive number extend the expires date FROM TODAY; a negative number reduces the expires date FROM TODAY - effectively meaning the transaction has expired;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:EcomExtendSoapIn" />
+      <wsdl:output message="tns:EcomExtendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <wsdl:input message="tns:autoEnrollSoapIn" />
+      <wsdl:output message="tns:autoEnrollSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <wsdl:input message="tns:autoEnrollWsSoapIn" />
+      <wsdl:output message="tns:autoEnrollWsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <wsdl:input message="tns:autoSignInSoapIn" />
+      <wsdl:output message="tns:autoSignInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This enrolls a vuEcommerce customer into V8.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;token: assigned by Login/Register/Take Course with a life of 10 mins to protect learner access;&lt;/li&gt;&lt;li&gt;logGuid: generated by the ecommerce web service, returned to NOP which passes it to vuEcommerce.asp;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:vuEcommerceSoapIn" />
+      <wsdl:output message="tns:vuEcommerceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <wsdl:input message="tns:ssoMembGuidSoapIn" />
+      <wsdl:output message="tns:ssoMembGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <wsdl:input message="tns:ssoMembIdSoapIn" />
+      <wsdl:output message="tns:ssoMembIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <wsdl:input message="tns:ssoMembNoSoapIn" />
+      <wsdl:output message="tns:ssoMembNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <wsdl:input message="tns:ssoMembId2SoapIn" />
+      <wsdl:output message="tns:ssoMembId2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <wsdl:input message="tns:custTitleSoapIn" />
+      <wsdl:output message="tns:custTitleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This enrolls an MPC who has a valid ecommerce record on file.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;custGuid: this is assigned by Vubiz and represents the customer account;&lt;/li&gt;&lt;li&gt;membId: This is the learner Id;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:caamEnrollSoapIn" />
+      <wsdl:output message="tns:caamEnrollSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <wsdl:input message="tns:cfibAuthenticateSoapIn" />
+      <wsdl:output message="tns:cfibAuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <wsdl:input message="tns:cfibSignInSoapIn" />
+      <wsdl:output message="tns:cfibSignInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <wsdl:input message="tns:cfibEnrollSoapIn" />
+      <wsdl:output message="tns:cfibEnrollSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <wsdl:input message="tns:cfibIsMemberSoapIn" />
+      <wsdl:output message="tns:cfibIsMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <wsdl:input message="tns:enrollSoapIn" />
+      <wsdl:output message="tns:enrollSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <wsdl:input message="tns:isMemberSoapIn" />
+      <wsdl:output message="tns:isMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <wsdl:input message="tns:profilesSoapIn" />
+      <wsdl:output message="tns:profilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <wsdl:input message="tns:translateSoapIn" />
+      <wsdl:output message="tns:translateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <wsdl:input message="tns:translateUpdateSoapIn" />
+      <wsdl:output message="tns:translateUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <wsdl:input message="tns:ecommerceReportSoapIn" />
+      <wsdl:output message="tns:ecommerceReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <wsdl:input message="tns:isGovActivityReportSoapIn" />
+      <wsdl:output message="tns:isGovActivityReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <wsdl:input message="tns:isGovActivitySoapIn" />
+      <wsdl:output message="tns:isGovActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <wsdl:input message="tns:learnerReportSoapIn" />
+      <wsdl:output message="tns:learnerReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <wsdl:input message="tns:learnerReport2SoapIn" />
+      <wsdl:output message="tns:learnerReport2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <wsdl:input message="tns:learnerActivityReportSoapIn" />
+      <wsdl:output message="tns:learnerActivityReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <wsdl:input message="tns:programActivityDetailsReportSoapIn" />
+      <wsdl:output message="tns:programActivityDetailsReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="v8serverHttpGet">
+    <wsdl:operation name="EcomExtend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This extends (or reduces) the expiry date of an Ecommerce Transaction.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;custGuid: assigned by Vubiz, identifies the Account;&lt;/li&gt;&lt;li&gt;learnerId: this is the User Id of the PURCHASER of the transaction;&lt;/li&gt;&lt;li&gt;programId: this is the Program Id that you wish to extend;&lt;/li&gt;&lt;li&gt;noDays: typically 30, 60 or -1. A postive number extend the expires date FROM TODAY; a negative number reduces the expires date FROM TODAY - effectively meaning the transaction has expired;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:EcomExtendHttpGetIn" />
+      <wsdl:output message="tns:EcomExtendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <wsdl:input message="tns:autoEnrollHttpGetIn" />
+      <wsdl:output message="tns:autoEnrollHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <wsdl:input message="tns:autoEnrollWsHttpGetIn" />
+      <wsdl:output message="tns:autoEnrollWsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <wsdl:input message="tns:autoSignInHttpGetIn" />
+      <wsdl:output message="tns:autoSignInHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This enrolls a vuEcommerce customer into V8.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;token: assigned by Login/Register/Take Course with a life of 10 mins to protect learner access;&lt;/li&gt;&lt;li&gt;logGuid: generated by the ecommerce web service, returned to NOP which passes it to vuEcommerce.asp;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:vuEcommerceHttpGetIn" />
+      <wsdl:output message="tns:vuEcommerceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <wsdl:input message="tns:ssoMembGuidHttpGetIn" />
+      <wsdl:output message="tns:ssoMembGuidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <wsdl:input message="tns:ssoMembIdHttpGetIn" />
+      <wsdl:output message="tns:ssoMembIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <wsdl:input message="tns:ssoMembNoHttpGetIn" />
+      <wsdl:output message="tns:ssoMembNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <wsdl:input message="tns:ssoMembId2HttpGetIn" />
+      <wsdl:output message="tns:ssoMembId2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <wsdl:input message="tns:custTitleHttpGetIn" />
+      <wsdl:output message="tns:custTitleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This enrolls an MPC who has a valid ecommerce record on file.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;custGuid: this is assigned by Vubiz and represents the customer account;&lt;/li&gt;&lt;li&gt;membId: This is the learner Id;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:caamEnrollHttpGetIn" />
+      <wsdl:output message="tns:caamEnrollHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <wsdl:input message="tns:cfibAuthenticateHttpGetIn" />
+      <wsdl:output message="tns:cfibAuthenticateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <wsdl:input message="tns:cfibSignInHttpGetIn" />
+      <wsdl:output message="tns:cfibSignInHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <wsdl:input message="tns:cfibEnrollHttpGetIn" />
+      <wsdl:output message="tns:cfibEnrollHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <wsdl:input message="tns:cfibIsMemberHttpGetIn" />
+      <wsdl:output message="tns:cfibIsMemberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <wsdl:input message="tns:enrollHttpGetIn" />
+      <wsdl:output message="tns:enrollHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <wsdl:input message="tns:isMemberHttpGetIn" />
+      <wsdl:output message="tns:isMemberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <wsdl:input message="tns:profilesHttpGetIn" />
+      <wsdl:output message="tns:profilesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <wsdl:input message="tns:translateHttpGetIn" />
+      <wsdl:output message="tns:translateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <wsdl:input message="tns:translateUpdateHttpGetIn" />
+      <wsdl:output message="tns:translateUpdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <wsdl:input message="tns:ecommerceReportHttpGetIn" />
+      <wsdl:output message="tns:ecommerceReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <wsdl:input message="tns:isGovActivityReportHttpGetIn" />
+      <wsdl:output message="tns:isGovActivityReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <wsdl:input message="tns:isGovActivityHttpGetIn" />
+      <wsdl:output message="tns:isGovActivityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <wsdl:input message="tns:learnerReportHttpGetIn" />
+      <wsdl:output message="tns:learnerReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <wsdl:input message="tns:learnerReport2HttpGetIn" />
+      <wsdl:output message="tns:learnerReport2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <wsdl:input message="tns:learnerActivityReportHttpGetIn" />
+      <wsdl:output message="tns:learnerActivityReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <wsdl:input message="tns:programActivityDetailsReportHttpGetIn" />
+      <wsdl:output message="tns:programActivityDetailsReportHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="v8serverHttpPost">
+    <wsdl:operation name="EcomExtend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This extends (or reduces) the expiry date of an Ecommerce Transaction.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;custGuid: assigned by Vubiz, identifies the Account;&lt;/li&gt;&lt;li&gt;learnerId: this is the User Id of the PURCHASER of the transaction;&lt;/li&gt;&lt;li&gt;programId: this is the Program Id that you wish to extend;&lt;/li&gt;&lt;li&gt;noDays: typically 30, 60 or -1. A postive number extend the expires date FROM TODAY; a negative number reduces the expires date FROM TODAY - effectively meaning the transaction has expired;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:EcomExtendHttpPostIn" />
+      <wsdl:output message="tns:EcomExtendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <wsdl:input message="tns:autoEnrollHttpPostIn" />
+      <wsdl:output message="tns:autoEnrollHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <wsdl:input message="tns:autoEnrollWsHttpPostIn" />
+      <wsdl:output message="tns:autoEnrollWsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <wsdl:input message="tns:autoSignInHttpPostIn" />
+      <wsdl:output message="tns:autoSignInHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This enrolls a vuEcommerce customer into V8.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;token: assigned by Login/Register/Take Course with a life of 10 mins to protect learner access;&lt;/li&gt;&lt;li&gt;logGuid: generated by the ecommerce web service, returned to NOP which passes it to vuEcommerce.asp;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:vuEcommerceHttpPostIn" />
+      <wsdl:output message="tns:vuEcommerceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <wsdl:input message="tns:ssoMembGuidHttpPostIn" />
+      <wsdl:output message="tns:ssoMembGuidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <wsdl:input message="tns:ssoMembIdHttpPostIn" />
+      <wsdl:output message="tns:ssoMembIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <wsdl:input message="tns:ssoMembNoHttpPostIn" />
+      <wsdl:output message="tns:ssoMembNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <wsdl:input message="tns:ssoMembId2HttpPostIn" />
+      <wsdl:output message="tns:ssoMembId2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <wsdl:input message="tns:custTitleHttpPostIn" />
+      <wsdl:output message="tns:custTitleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This enrolls an MPC who has a valid ecommerce record on file.&lt;h4&gt;Parameters&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;custGuid: this is assigned by Vubiz and represents the customer account;&lt;/li&gt;&lt;li&gt;membId: This is the learner Id;&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:caamEnrollHttpPostIn" />
+      <wsdl:output message="tns:caamEnrollHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <wsdl:input message="tns:cfibAuthenticateHttpPostIn" />
+      <wsdl:output message="tns:cfibAuthenticateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <wsdl:input message="tns:cfibSignInHttpPostIn" />
+      <wsdl:output message="tns:cfibSignInHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <wsdl:input message="tns:cfibEnrollHttpPostIn" />
+      <wsdl:output message="tns:cfibEnrollHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <wsdl:input message="tns:cfibIsMemberHttpPostIn" />
+      <wsdl:output message="tns:cfibIsMemberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <wsdl:input message="tns:enrollHttpPostIn" />
+      <wsdl:output message="tns:enrollHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <wsdl:input message="tns:isMemberHttpPostIn" />
+      <wsdl:output message="tns:isMemberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <wsdl:input message="tns:profilesHttpPostIn" />
+      <wsdl:output message="tns:profilesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <wsdl:input message="tns:translateHttpPostIn" />
+      <wsdl:output message="tns:translateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <wsdl:input message="tns:translateUpdateHttpPostIn" />
+      <wsdl:output message="tns:translateUpdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <wsdl:input message="tns:ecommerceReportHttpPostIn" />
+      <wsdl:output message="tns:ecommerceReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <wsdl:input message="tns:isGovActivityReportHttpPostIn" />
+      <wsdl:output message="tns:isGovActivityReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <wsdl:input message="tns:isGovActivityHttpPostIn" />
+      <wsdl:output message="tns:isGovActivityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <wsdl:input message="tns:learnerReportHttpPostIn" />
+      <wsdl:output message="tns:learnerReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <wsdl:input message="tns:learnerReport2HttpPostIn" />
+      <wsdl:output message="tns:learnerReport2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <wsdl:input message="tns:learnerActivityReportHttpPostIn" />
+      <wsdl:output message="tns:learnerActivityReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <wsdl:input message="tns:programActivityDetailsReportHttpPostIn" />
+      <wsdl:output message="tns:programActivityDetailsReportHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="v8serverSoap" type="tns:v8serverSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EcomExtend">
+      <soap:operation soapAction="http://vubiz.com/EcomExtend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <soap:operation soapAction="http://vubiz.com/autoEnroll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <soap:operation soapAction="http://vubiz.com/autoEnrollWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <soap:operation soapAction="http://vubiz.com/autoSignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <soap:operation soapAction="http://vubiz.com/vuEcommerce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <soap:operation soapAction="http://vubiz.com/ssoMembGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <soap:operation soapAction="http://vubiz.com/ssoMembId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <soap:operation soapAction="http://vubiz.com/ssoMembNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <soap:operation soapAction="http://vubiz.com/ssoMembId2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <soap:operation soapAction="http://vubiz.com/custTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <soap:operation soapAction="http://vubiz.com/caamEnroll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <soap:operation soapAction="http://vubiz.com/cfibAuthenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <soap:operation soapAction="http://vubiz.com/cfibSignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <soap:operation soapAction="http://vubiz.com/cfibEnroll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <soap:operation soapAction="http://vubiz.com/cfibIsMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <soap:operation soapAction="http://vubiz.com/enroll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <soap:operation soapAction="http://vubiz.com/isMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <soap:operation soapAction="http://vubiz.com/profiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <soap:operation soapAction="http://vubiz.com/translate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <soap:operation soapAction="http://vubiz.com/translateUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <soap:operation soapAction="http://vubiz.com/ecommerceReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <soap:operation soapAction="http://vubiz.com/isGovActivityReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <soap:operation soapAction="http://vubiz.com/isGovActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <soap:operation soapAction="http://vubiz.com/learnerReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <soap:operation soapAction="http://vubiz.com/learnerReport2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <soap:operation soapAction="http://vubiz.com/learnerActivityReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <soap:operation soapAction="http://vubiz.com/programActivityDetailsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="v8serverSoap12" type="tns:v8serverSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EcomExtend">
+      <soap12:operation soapAction="http://vubiz.com/EcomExtend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <soap12:operation soapAction="http://vubiz.com/autoEnroll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <soap12:operation soapAction="http://vubiz.com/autoEnrollWs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <soap12:operation soapAction="http://vubiz.com/autoSignIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <soap12:operation soapAction="http://vubiz.com/vuEcommerce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <soap12:operation soapAction="http://vubiz.com/ssoMembGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <soap12:operation soapAction="http://vubiz.com/ssoMembId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <soap12:operation soapAction="http://vubiz.com/ssoMembNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <soap12:operation soapAction="http://vubiz.com/ssoMembId2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <soap12:operation soapAction="http://vubiz.com/custTitle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <soap12:operation soapAction="http://vubiz.com/caamEnroll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <soap12:operation soapAction="http://vubiz.com/cfibAuthenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <soap12:operation soapAction="http://vubiz.com/cfibSignIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <soap12:operation soapAction="http://vubiz.com/cfibEnroll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <soap12:operation soapAction="http://vubiz.com/cfibIsMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <soap12:operation soapAction="http://vubiz.com/enroll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <soap12:operation soapAction="http://vubiz.com/isMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <soap12:operation soapAction="http://vubiz.com/profiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <soap12:operation soapAction="http://vubiz.com/translate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <soap12:operation soapAction="http://vubiz.com/translateUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <soap12:operation soapAction="http://vubiz.com/ecommerceReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <soap12:operation soapAction="http://vubiz.com/isGovActivityReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <soap12:operation soapAction="http://vubiz.com/isGovActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <soap12:operation soapAction="http://vubiz.com/learnerReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <soap12:operation soapAction="http://vubiz.com/learnerReport2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <soap12:operation soapAction="http://vubiz.com/learnerActivityReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <soap12:operation soapAction="http://vubiz.com/programActivityDetailsReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="v8serverHttpGet" type="tns:v8serverHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="EcomExtend">
+      <http:operation location="/EcomExtend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <http:operation location="/autoEnroll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <http:operation location="/autoEnrollWs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <http:operation location="/autoSignIn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <http:operation location="/vuEcommerce" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <http:operation location="/ssoMembGuid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <http:operation location="/ssoMembId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <http:operation location="/ssoMembNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <http:operation location="/ssoMembId2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <http:operation location="/custTitle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <http:operation location="/caamEnroll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <http:operation location="/cfibAuthenticate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <http:operation location="/cfibSignIn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <http:operation location="/cfibEnroll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <http:operation location="/cfibIsMember" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <http:operation location="/enroll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <http:operation location="/isMember" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <http:operation location="/profiles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <http:operation location="/translate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <http:operation location="/translateUpdate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <http:operation location="/ecommerceReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <http:operation location="/isGovActivityReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <http:operation location="/isGovActivity" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <http:operation location="/learnerReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <http:operation location="/learnerReport2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <http:operation location="/learnerActivityReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <http:operation location="/programActivityDetailsReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="v8serverHttpPost" type="tns:v8serverHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="EcomExtend">
+      <http:operation location="/EcomExtend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnroll">
+      <http:operation location="/autoEnroll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoEnrollWs">
+      <http:operation location="/autoEnrollWs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoSignIn">
+      <http:operation location="/autoSignIn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vuEcommerce">
+      <http:operation location="/vuEcommerce" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembGuid">
+      <http:operation location="/ssoMembGuid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId">
+      <http:operation location="/ssoMembId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembNo">
+      <http:operation location="/ssoMembNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ssoMembId2">
+      <http:operation location="/ssoMembId2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="custTitle">
+      <http:operation location="/custTitle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="caamEnroll">
+      <http:operation location="/caamEnroll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibAuthenticate">
+      <http:operation location="/cfibAuthenticate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibSignIn">
+      <http:operation location="/cfibSignIn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibEnroll">
+      <http:operation location="/cfibEnroll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cfibIsMember">
+      <http:operation location="/cfibIsMember" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enroll">
+      <http:operation location="/enroll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isMember">
+      <http:operation location="/isMember" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="profiles">
+      <http:operation location="/profiles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translate">
+      <http:operation location="/translate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="translateUpdate">
+      <http:operation location="/translateUpdate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ecommerceReport">
+      <http:operation location="/ecommerceReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivityReport">
+      <http:operation location="/isGovActivityReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isGovActivity">
+      <http:operation location="/isGovActivity" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport">
+      <http:operation location="/learnerReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerReport2">
+      <http:operation location="/learnerReport2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="learnerActivityReport">
+      <http:operation location="/learnerActivityReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="programActivityDetailsReport">
+      <http:operation location="/programActivityDetailsReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="v8server">
+    <wsdl:port name="v8serverSoap" binding="tns:v8serverSoap">
+      <soap:address location="http://corporate.vubiz.com/vubizWs/v8server.asmx" />
+    </wsdl:port>
+    <wsdl:port name="v8serverSoap12" binding="tns:v8serverSoap12">
+      <soap12:address location="http://corporate.vubiz.com/vubizWs/v8server.asmx" />
+    </wsdl:port>
+    <wsdl:port name="v8serverHttpGet" binding="tns:v8serverHttpGet">
+      <http:address location="http://corporate.vubiz.com/vubizWs/v8server.asmx" />
+    </wsdl:port>
+    <wsdl:port name="v8serverHttpPost" binding="tns:v8serverHttpPost">
+      <http:address location="http://corporate.vubiz.com/vubizWs/v8server.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

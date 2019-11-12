@@ -1,0 +1,130 @@
+﻿[
+
+  {
+    "appsId": "excel",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "excel",
+    "appsTiles": "1",
+    "appsTranslate": "y",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "vubiz.8",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "",
+    "appsTiles": "1",
+    "appsTranslate": "y",
+    "appsVideos": "1"
+  },
+  {
+    "appsId": "vubiz.8a",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "",
+    "appsTiles": "1",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "archives.1",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "2015",
+    "appsTiles": "1",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "browser.3",
+    "appsVersion": "3",
+    "appsProfileType": "1",
+    "appsProfileDefault": "vubiz",
+    "appsTiles": "0",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "simulator.1",
+    "appsVersion": "3",
+    "appsProfileType": "n",
+    "appsProfileDefault": "",
+    "appsTiles": "0",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "simulatorDirect",
+    "appsVersion": "3",
+    "appsProfileType": "n",
+    "appsProfileDefault": "",
+    "appsTiles": "0",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "credentials.1",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "vubz",
+    "appsTiles": "0",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "credentials.2",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "cfib",
+    "appsTiles": "0",
+    "appsTranslate": "y",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "isGovernment.1",
+    "appsVersion": "3",
+    "appsProfileType": "0",
+    "appsProfileDefault": "ccohs",
+    "appsTiles": "0",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "sampler.1",
+    "appsVersion": "3",
+    "appsProfileType": "n",
+    "appsProfileDefault": "sampler",
+    "appsTiles": "0",
+    "appsTranslate": "n",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "nopRegister",
+    "appsVersion": "3",
+    "appsProfileType": "n",
+    "appsProfileDefault": "",
+    "appsTiles": "0",
+    "appsTranslate": "y",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "nopSignIn",
+    "appsVersion": "3",
+    "appsProfileType": "n",
+    "appsProfileDefault": "",
+    "appsTiles": "0",
+    "appsTranslate": "y",
+    "appsVideos": "0"
+  },
+  {
+    "appsId": "nopAccount",
+    "appsVersion": "3",
+    "appsProfileType": "n",
+    "appsProfileDefault": "",
+    "appsTiles": "0",
+    "appsTranslate": "y",
+    "appsVideos": "0"
+  }
+
+]

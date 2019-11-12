@@ -1,0 +1,1929 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+	<title>Learning Center | Centre d'apprentissage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" href="https://vubiz.com/vubizApps/styles/favicon.ico" />
+
+	<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<link href="styles/basic.min.css" rel="stylesheet" />
+	<link href="styles/icons.min.css" rel="stylesheet" />
+	<link href="styles/logos.min.css" rel="stylesheet" />
+	<link href="styles/tiles.min.css" rel="stylesheet" />
+
+	<!-- utilities -->
+	<script src="scripts/$urls.min.js"></script>
+	<script src="scripts/$functions.min.js"></script>
+	<script src="scripts/$cookies.min.js"></script>
+	<script src="scripts/$storage.min.js"></script>
+
+	<!-- client script -->
+	<!--<script src="$vc/$vc5.min.js"></script>-->
+	<script src="$vc/$vc5.js"></script>
+
+	<link rel='stylesheet' href='apps/vubiz.8/kidsPrograms.css'>
+
+
+	<title>V8</title>
+
+</head>
+
+<body class="ui-mini ">
+
+
+	<div id='profileState' style='display:none'>True|False|True|CFIB6408|CFIB6504|#D31145|catalogue|CFIB5288|False|support@vubiz.com|True|False|True|en|True||||cfib_en.png|True|True|False|http://cfib.ca/|False||1|True|True|</div>
+
+	<div id='tileState' style='display:none'>[{"tilePage": "home","tileNo": "0","tileTitle": "My Learning Themes","tileColor": "#d30e45","tileIcon": "styles/tiles/myCategories.png","tileClass": "guest"},{"tilePage": "home","tileNo": "8","tileTitle": "Purchased Courses","tileColor": "#330ed3","tileIcon": "styles/tiles/myCategories.png","tileClass": "guest"},{"tilePage": "home","tileNo": "1","tileTitle": "Just In Time Learning","tileColor": "#330ed3","tileIcon": "styles/tiles/justInTimeLearning.png","tileClass": "guest"},{"tilePage": "home","tileNo": "2","tileTitle": "My Profile","tileColor": "#f43d0b","tileIcon": "styles/tiles/myProfile.png","tileClass": "guest"},{"tilePage": "home","tileNo": "23","tileTitle": "My Report Card","tileColor": "#7a1e95","tileIcon": "styles/tiles/myReportCard.png","tileClass": "guest"},{"tilePage": "home","tileNo": "4","tileTitle": "My Employees","tileColor": "#288af5","tileIcon": "styles/tiles/myEmployees.png","tileClass": "learner"},{"tilePage": "home","tileNo": "5","tileTitle": "Certificate Programs","tileColor": "#11ae9a","tileIcon": "styles/tiles/certificatePrograms.png","tileClass": "guest"},{"tilePage": "home","tileNo": "9","tileTitle": "About Our Kids Programs","tileColor": "#096e4d","tileIcon": "styles/tiles/piggy.png","tileClass": "guest"},{"tilePage": "home","tileNo": "6","tileTitle": "Administration","tileColor": "#00941a","tileIcon": "styles/tiles/administration.png","tileClass": "facilitator"},{"tilePage": "home","tileNo": "7","tileTitle": "Sign Out","tileColor": "#a91bd2","tileIcon": "styles/tiles/signInOut.png","tileClass": "guest"},{"tilePage": "administration","tileNo": "0","tileTitle": "Activity Analysis","tileColor": "#00941a","tileIcon": "styles/tiles/growingYourBusiness.png","tileClass": "facilitator"},{"tilePage": "administration","tileNo": "1","tileTitle": "Learner Report","tileColor": "#00941a","tileIcon": "styles/tiles/administration.png","tileClass": "facilitator"},{"tilePage": "myGuests","tileNo": "0","tileTitle": "Set Up The Employee Training Centre","tileColor": "#00941a","tileIcon": "styles/tiles/administration.png","tileClass": "guest"},{"tilePage": "myGuests","tileNo": "1","tileTitle": "Employee List","tileColor": "#330ed3","tileIcon": "styles/tiles/startingUp.png","tileClass": "guest"},{"tilePage": "myGuests","tileNo": "2","tileTitle": "Add An Employee","tileColor": "#7a1e95","tileIcon": "styles/tiles/managingYourPeople.png","tileClass": "guest"},{"tilePage": "myGuests","tileNo": "3","tileTitle": "Employee Activity Report","tileColor": "#c20a0a","tileIcon": "styles/tiles/healthAndSafety.png","tileClass": "guest"}]</div>
+
+	<div id='startState' style='display:none'>vubiz.8|0|3|1|||||y|stagingweb.vubiz.com|en||||||||1||cfib|cfib||//vubiz.com||1|True|empty</div>
+
+
+	<div id='page_signIn' data-role='page'>
+		<div id='header_signIn' class='toolbar_header' data-role='header'>
+			<div id='header_signIn_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Sign In
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_signIn_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_signIn_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_signIn_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_signIn" data-role="main" class="ui-content">
+
+			<img class="noPhone logoTrR" id="img_signIn_logo">
+
+			<div class="c2">
+				Welcome.&ensp;Please enter your credentials.
+			</div>
+
+			<div style="padding:50px 0 0 30px;">
+
+				<div id="div_signIn_custId">
+					<label id="ele_signIn_customerId">Customer Id:</label>
+					<div style="padding-left:20px; width:100px;">
+						<input id="ele_signIn_custId" type="email" name="ele_signIn_custId" value="" />
+					</div>
+				</div>
+
+				<label id="ele_signIn_learnerId">Username (Email Address) :</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signIn_membId" type="email" name="ele_signIn_membId" value="support@vubiz.com" />
+				</div>
+
+				<label id="ele_signIn_password">Password:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signIn_membPassword" type="text" name="ele_signIn_membPassword" value="vub!z" />
+				</div>
+
+			</div>
+
+			<div class="icons">
+				<div id="ele_signIn_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Sign In</div>
+			</div>
+
+			<!--this renders a watermark at the bottom of the page -->
+			<!--<div class="noPhone" style="position:absolute; bottom:50px; left:0; width:100%;text-align:center; opacity:.3">
+			<img id="img_signIn_logo">
+			</div>-->
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_signIn_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_signUp' data-role='page'>
+		<div id='header_signUp' class='toolbar_header' data-role='header'>
+			<div id='header_signUp_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Sign Up
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_signUp_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_signUp_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_signUp_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_signUp" data-role="main" class="ui-content">
+
+			<div id="ele_signUp_logo" class="noPhone" style="float:right;"><img id="img_signUp_logo"></div>
+
+			<div class="c2">
+				Welcome to the Learning Portal.&ensp;Please create your account.
+			</div>
+
+			<div style="padding-left:30px;">
+
+				<label>Email Address:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signUp_membEmail" type="email" name="ele_signUp_membEmail" value="pbulloch@vubiz.com" />
+				</div>
+
+				<label>Password:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signUp_membPassword" name="ele_signUp_membPassword" value="PASSWORD" type="text" />
+				</div>
+
+				<label>First Name:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signUp_membFirstName" name="ele_signUp_membFirstName" value="Peter" type="text" />
+				</div>
+
+				<label>Last Name:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signUp_membLastName" name="ele_signUp_membLastName" value="Bulloch" type="text" />
+				</div>
+
+			</div>
+
+			<div class="icons">
+				<div id="ele_signUp_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Sign Up</div>
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_signUp_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_signOut' data-role='page'>
+		<div id='header_signOut' class='toolbar_header' data-role='header'>
+			<div id='header_signOut_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Sign Out
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_signOut_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_signOut_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_signOut_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_signOut" data-role="main" class="ui-content">
+			<h2>Thank You.</h2>
+			<h3>Your session has ended.</h3>
+			<div class="icons">
+				<div id="ele_signOut_refresh" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-refresh ui-btn-icon-left">Restart</div>
+			</div>
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_signOut_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_learner' data-role='page'>
+		<div id='header_learner' class='toolbar_header' data-role='header'>
+			<div id='header_learner_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Create an Account
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_learner_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_learner_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_learner_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_learner" data-role="main" class="ui-content">
+
+			<div id="ele_learner_logo" class="noPhone" style="float:right;"><img id="img_learner_logo"></div>
+
+			<div class="c2">
+				Welcome! Creating an Account provides you and your employees access to a wide assortment of E-Learning Materials.
+			</div>
+
+			<div style="padding-left:30px;">
+				<label>Email Address:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_learner_membEmail" name="ele_learner_membEmail" value="" type="text" />
+				</div>
+				<label>Password:</label>
+				<div style="padding-left:20px; width:200px;">
+					<input id="ele_learner_membPassword" type="password" name="ele_learner_membPassword" value="" />
+				</div>
+				<label>First Name:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_learner_membFirstName" name="ele_learner_membFirstName" value=" " type="text" />
+				</div>
+				<label>Last Name:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_learner_membLastName" name="ele_learner_membLastName" value="" type="text" />
+				</div>
+			</div>
+			<div class="icons">
+				<div id="ele_learner_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Create Account</div>
+			</div>
+			<br />
+			<h3>
+				You can re-visit service from CFIB by entering the above Email Address (User Name) and Password.
+			</h3>
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_learner_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_home' data-role='page'>
+		<div id='header_home' class='toolbar_header' data-role='header'>
+			<div id='header_home_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Learning Centre
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_home_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_home_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_home_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_home" data-role="main" class="ui-content">
+
+			<ul id="tile_home" class='tileSet'></ul>
+
+			<!--this renders a watermark at the bottom of the page -->
+			<div class="noPhone" style="position:absolute; bottom:50px; left:0; width:100%;text-align:center; opacity:.3">
+				<img id="img_home_logo">
+			</div>
+
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_home_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_oops' data-role='page'>
+		<div id='header_oops' class='toolbar_header' data-role='header'>
+			<div id='header_oops_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Oops
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_oops_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_oops_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_oops_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_oops" data-role="main" class="ui-content">
+
+			<div style="float: right; display: inline-block; background-image: url('apps/vubiz.8/styles/oops.jpg'); background-size: 80px; width: 110px; height: 120px; margin:0 0 20px 10px; background-repeat: no-repeat"></div>
+
+			<h2>Oops!</h2>
+			<p>
+				You need to provide the appropriate credentials to access this service.<br /><br />
+			</p>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_oops_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_profile' data-role='page'>
+		<div id='header_profile' class='toolbar_header' data-role='header'>
+			<div id='header_profile_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Profile
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_profile_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_profile_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_profile_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_profile" data-role="main" class="ui-content">
+
+			<div id="ele_profile_logo" class="noPhone" style=" margin-bottom:10px; width:50%;"><img id="img_profile_logo"></div>
+
+			<div class="c2" id="ele_profile_welcome"></div>
+
+			<table style="width:80%;margin:0 0 20px 30px;" id="ele_profile_myProfile">
+				<tr><th>Learner ID:</th><td id="ele_profile_membId"></td></tr>
+				<tr><th>First Name:</th><td id="ele_profile_membFirstName"></td></tr>
+				<tr><th>Last Name:</th><td id="ele_profile_membLastName"></td></tr>
+				<tr><th>Email Address:</th><td id="ele_profile_membEmail"></td></tr>
+				<tr><th>No. Visits:</th><td id="ele_profile_membNoVisits"></td></tr>
+			</table>
+
+			<!-- We need a proper secure GUID to allow this option - not available via VUBIZ backdoor -->
+			<div id="div_profile_profile" style="display:none">
+				<p class="c2">My Password</p>
+				<p>
+					To change your password, enter your current password, then enter the new password (TWICE) and then tap the Check icon.&ensp;
+					Note: Passwords are NOT case sensitive.
+				</p>
+				<table style="width:80%;margin-left:30px;">
+					<tr><th>Current Password:</th><td><input type="password" name="ele_profile_passwordOld" id="ele_profile_passwordOld" value=""></td><td>&ensp;</td></tr>
+					<tr><th>New Password:</th><td><input type="password" name="ele_profile_passwordNew" id="ele_profile_passwordNew" value=""></td><td>&ensp;</td></tr>
+					<tr><th>Confirm New Password:</th><td><input type="password" name="ele_profile_passwordCon" id="ele_profile_passwordCon" value=""></td><td class="ui-alt-icon ui-nodisc-icon"><a id="ele_profile_check" class="ui-btn ui-shadow ui-btn-icon-notext ui-btn-inline ui-icon-check" href="#">Update</a></td></tr>
+				</table>
+			</div>
+
+			<div id="div_profile_privacy" style="display:none">
+				<p class="c2">Privacy</p>
+				<p>
+					This service maintains a small set of data in this browser.
+					If this is NOT your personal device, you should clear this data when finished by tapping the Sign Out tile on the home page.
+					Otherwise, it is best to leave the data intact so you can revisit the service and continue where you left off.
+				</p>
+				<div class="c2">Access Issues?</div>
+				<p>
+					Since some tablets do not support Flash (such as the iPad), you may need to view this service on a computer.
+					All major browsers are supported, the newer the better.
+				</p>
+				<button id="ele_profile_browser" data-theme="a" style="margin-left:30px; width:150px;">Browser Tester</button>
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_profile_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_catalogue' data-role='page'>
+		<div id='header_catalogue' class='toolbar_header' data-role='header'>
+			<div id='header_catalogue_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Learning Themes
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_catalogue_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_catalogue_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_catalogue_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_catalogue" data-role="main" class="ui-content">
+
+			<ul id="tiles_catalogue" class="tileSet"></ul>
+
+			<!--this renders a watermark at the bottom of the page when lots of white space-->
+			<div class="noPhone" style="position:absolute; bottom:50px; left:0; width:100%;text-align:center; opacity:.3">
+				<img id="img_catalogue_logo">
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_catalogue_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_jitCatalogue' data-role='page'>
+		<div id='header_jitCatalogue' class='toolbar_header' data-role='header'>
+			<div id='header_jitCatalogue_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Just In Time Learning Themes
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_jitCatalogue_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_jitCatalogue_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_jitCatalogue_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_jitCatalogue" data-role="main" class="ui-content">
+
+			<ul id="tiles_jitCatalogue" class="tileSet"></ul>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_jitCatalogue_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_jitQuery' data-role='page'>
+		<div id='header_jitQuery' class='toolbar_header' data-role='header'>
+			<div id='header_jitQuery_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Select Learning Items of Interest
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_jitQuery_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_jitQuery_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_jitQuery_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_jitQuery" data-role="main" class="ui-content">
+
+			<div id="ele_jitQuery_query" xclass="c2">
+
+				<div class="c2">Just In Time Learning</div>
+
+				<p>
+					Enter one or more search words. Pages of modules in this theme containing the word(s) will be listed below.&ensp;
+					Use QUOTES to search for an exact phrase (e.g. <span class='jit'>&#34;in every part of the country&#34;</span>).&ensp;
+					Use AND to search on all the terms or phrases (e.g. <span class='jit'>business AND plan</span>).&ensp;
+					Use OR to search on either of the terms or phrases (e.g. <span class='jit'>business OR plan</span>).
+				</p>
+
+				<div style="width:100%; padding:20px; display:inline-block;">
+					<div style="display:inline-block; width:400px; vertical-align:bottom;">
+						<input id="ele_jitQuery_search" name="ele_jitQuery_search" type="text" value="" />
+					</div>
+					<div style="display:inline-block;" class="ui-alt-icon ui-nodisc-icon">
+						<a id="ele_jitQuery_start" class="ui-btn ui-shadow ui-btn-icon-notext ui-btn-inline ui-icon-search" href="#">Search</a>
+					</div>
+					<ul data-role="listview" data-inset="true" id="list_jitQuery" style="margin-right:50px;"></ul>
+				</div>
+			</div>
+
+			<div id="ele_jitQuery_content" class="c2">
+				<div class="ui-alt-icon ui-nodisc-icon" style="position:absolute; top:0; right:0;">
+					<a id="ele_jitQuery_back" class="ui-btn ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-notext" href="#">Close</a>
+				</div><br />&ensp;
+				<iframe scrolling="no"></iframe>
+			</div>
+
+
+		</div>
+
+		<style>
+			.jit { font-family: Courier New, Courier, monospace; font-size: larger; color: black; }
+		</style>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_jitQuery_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_programs' data-role='page'>
+		<div id='header_programs' class='toolbar_header' data-role='header'>
+			<div id='header_programs_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Learning Programs
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_programs_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_programs_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_programs_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_programs" data-role="main" class="ui-content">
+			<ul id="tiles_programs" class="tileSet"></ul>
+			<!--<a target="_blank" href="//cnn.com">test</a>-->
+			<!--this renders a watermark at the bottom of the page when lots of white space-->
+			<div class="noPhone" style="position:absolute; bottom:50px; left:0; width:100%;text-align:center; opacity:.3">
+				<img id="img_programs_logo">
+			</div>
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+		</div>
+	</div>
+
+	<div id='page_modules' data-role='page'>
+		<div id='header_modules' class='toolbar_header' data-role='header'>
+			<div id='header_modules_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Learning Modules
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_modules_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_modules_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_modules_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_modules" data-role="main" class="ui-content">
+
+			<ul id="tiles_modules" class="tileSet"></ul>
+			<span id="tile_modules" style="display:none;">used to simulate click if only 1 module</span>
+
+			<!--this renders a watermark at the bottom of the page when lots of white space-->
+			<div class="noPhone" style="position:absolute; bottom:50px; left:0; width:100%;text-align:center; opacity:.3">
+				<img id="img_modules_logo">
+			</div>
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+
+		</div>
+	</div>
+
+	<div id='page_content' data-role='page'>
+		<div id='header_content' class='toolbar_header' data-role='header'>
+			<div id='header_content_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Learning Content
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_content_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_content_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_content_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_content" data-role="main" class="ui-content">
+
+			<div class="ui-alt-icon ui-nodisc-icon" style="position:absolute; top:0; right:0;">
+				<a id="ele_content_back" class="ui-btn ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-notext" href="#">Close</a>
+			</div>
+
+			<div class="c2" id="content_content_message" style="width:400px; margin:auto;">
+				Course will open in new tab/window. Do not close this window before you finish taking the course.
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_content_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_historyPrograms2' data-role='page'>
+		<div id='header_historyPrograms2' class='toolbar_header' data-role='header'>
+			<div id='header_historyPrograms2_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Report Card Summary
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_historyPrograms2_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_historyPrograms2_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_historyPrograms2_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_historyPrograms2" data-role="main" class="ui-content">
+
+			<div class="c1" id="ele_historyPrograms2_name"></div>
+
+			<div class="c2">
+				<!--Click or tap Name for details and certificate-->
+				<!--Select Completed or In-Progress Programs then click or tap Program Name for details and certificate-->
+				Select COMPLETED PROGRAMS then click or tap the program name for details and certificate.
+				IN-PROGRESS PROGRAMS show information on current programs in progress.
+
+			</div>
+
+			<!--<label id="lab_historyPrograms2_completed" style="margin-bottom: 20px;">
+			<input id="ele_historyPrograms2_completed" name="ele_historyPrograms2_completed" type="checkbox">Include Completed Programs?
+			<span style="float:right">&#10004; = Completed Program</span>
+			</label>-->
+
+
+			<div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false">
+				<div data-role="collapsible">
+					<h2>Completed Programs</h2>
+					<ul id="programsC_historyPrograms2" data-role="listview" data-inset="true"></ul>
+				</div>
+				<div data-role="collapsible">
+					<h2>In-Progress Programs</h2>
+					<ul id="programsI_historyPrograms2" data-role="listview" data-inset="true"></ul>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<style>
+			#content_historyPrograms2 .c1,
+			#content_historyPrograms2 .c2 { margin-bottom: 20px; }
+			#content_historyPrograms2 h2 { margin-top: 0; }
+			#content_historyPrograms2 ul li { cursor: pointer; text-overflow: ellipsis; }
+				#content_historyPrograms2 ul li:hover { background-color: cyan; }
+		</style>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_historyPrograms2_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_historyProgram' data-role='page'>
+		<div id='header_historyProgram' class='toolbar_header' data-role='header'>
+			<div id='header_historyProgram_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Report Card Details
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_historyProgram_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_historyProgram_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_historyProgram_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_historyProgram" data-role="main" class="ui-content">
+
+			<!--<h2>...populated by historyProgram.js...</h2>
+
+			<h3 style="text-align:left">
+			Date is either the date completed or when not completed, the last time this module was accessed.&ensp;
+			TimeSpent is the number of minutes spent reviewing the module/assessment.&ensp;
+			Tap on the Name to launch the module.&ensp;
+			If completed a blue check mark will appear at the right. Tap on this for your Certificate.
+			</h3>-->
+
+			<ul id="header_historyProgram" data-role="listview" data-inset="true">
+				<li>
+					<div>
+						<div class="header module">Module Name (Click or tap to launch)</div>
+						<div class="header timeSpent">Time Spent<br />(minutes)</div>
+						<div class="header score">Score</div>
+						<div class="header date">Date Completed<br />(or last accessed)</div>
+						<div class="header certificate">Certificate<br />(If completed, click<br />or tap icon to launch)</div>
+					</div>
+				</li>
+			</ul>
+
+			<ul id="details_historyProgram" data-role="listview" data-inset="true"></ul>
+
+			<div class="icons">
+				<div id="ele_historyProgram_back" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-back ui-btn-icon-left">Back</div>
+			</div>
+
+		</div>
+
+
+		<style>
+			#content_historyProgram ul li div { width: 100%; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+			#details_historyProgram li div { margin-right: 4px; }
+				#details_historyProgram li div .module:hover { cursor: pointer; background-color: cyan; }
+
+			#header_historyProgram .header { font-weight: bold; }
+
+			#content_historyProgram .module { width: 40%; }
+			#content_historyProgram .timeSpent { text-align: center; width: 10%; }
+			#content_historyProgram .score { text-align: center; width: 10%; }
+			#content_historyProgram .date { text-align: center; width: 15%; }
+			#content_historyProgram .certificate { text-align: center; width: 20%; }
+			#details_historyProgram .certificate:hover { cursor: pointer; }
+		</style>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_historyProgram_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_certificate' data-role='page'>
+		<div id='header_certificate' class='toolbar_header' data-role='header'>
+			<div id='header_certificate_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Certificate
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_certificate_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_certificate_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_certificate_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+		<div id="content_certificate" data-role="main" class="ui-content" style="background-color:white; position:relative; margin:20px;">
+
+			<div class="ui-alt-icon ui-nodisc-icon" style="position:absolute; top:0; right:0;">
+				<a id="ele_certificate_back" class="ui-btn ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-notext" href="#">Close</a>
+			</div><br />&ensp;
+
+			<iframe scrolling="no"></iframe>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_certificate_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_certificatePrograms' data-role='page'>
+		<div id='header_certificatePrograms' class='toolbar_header' data-role='header'>
+			<div id='header_certificatePrograms_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Certificate Programs
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_certificatePrograms_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_certificatePrograms_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_certificatePrograms_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_certificatePrograms" data-role="main" class="ui-content">
+
+			<div id="ele_certificatePrograms_logo" class="noPhone" style="float:right; margin-bottom:10px;"><img id="img_certificatePrograms_logo"></div>
+
+			<p>
+				CFIB, in partnership with a powerful coalition of organizations, is pooling its resources to bring new learning opportunities to the small business community.
+			</p>
+
+			<p>
+				We are proud to offer you access to excellent online Certificate programs through our e-learning partner at only $69 for a single seat for any one of the four certificate programs:
+			</p>
+
+			<br />&emsp;&bull;&emsp;Small Business Health & Safety Certificate
+			<br />&emsp;&bull;&emsp;Small Business Human Resources Certificate
+			<br />&emsp;&bull;&emsp;Small Business Management Certificate
+			<br />&emsp;&bull;&emsp;Small Business Sales and Marketing Certificate
+
+
+			<div class="icons">
+				<div id="ele_certificatePrograms_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Enter</div>
+			</div>
+
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_certificatePrograms_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_kidsPrograms' data-role='page'>
+		<div id='header_kidsPrograms' class='toolbar_header' data-role='header'>
+			<div id='header_kidsPrograms_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Kids Programs
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_kidsPrograms_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_kidsPrograms_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_kidsPrograms_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_kidsPrograms" data-role="main" class="ui-content">
+
+			<p class="c2" style="margin-bottom:50px;">
+				CFIB proudly presents online learning especially for children, developed with our partners, Vubiz Ltd., Canada's leading elearning developer, and Teresa Cascioli, author of the Parent Tested Parent Approved™ M is for Money™ books.
+				These fun and engaging online lessons promote business and financial literacy and teach valuable lessons kids need to ensure a prosperous future.
+				Follow the links to check out our free courses, purchase additional business and financial elearning lessons for kids, and purchase Teresa Cascioli's M is For Money™ books.
+			</p>
+
+			<ul class="tileSet">
+				<li id="ele_kidsPrograms_1" class="tile" style="background-color: #096e4d;">
+					<div class="tileIcon" style="background-image: url('styles/tiles/piggy.png');"></div>
+					<div class="tileTitle">Enjoy the Free Courses</div>
+				</li>
+				<li id="ele_kidsPrograms_2" class="tile" style="background-color: #096e4d;">
+					<div class="tileIcon" style="background-image: url('styles/tiles/piggy.png');"></div>
+					<div class="tileTitle">Purchase More Courses</div>
+				</li>
+				<li id="ele_kidsPrograms_3" class="tile" style="background-color: #096e4d;">
+					<div class="tileIcon" style="background-image: url('styles/tiles/piggy.png');"></div>
+					<div class="tileTitle">Purchase Books and Other Fun Stuff</div>
+				</li>
+			</ul>
+
+			<!--this renders a watermark at the bottom of the page -->
+			<div class="noPhone" style="position:absolute; bottom:50px; left:0; width:100%;text-align:center; opacity:.3">
+				<img id="img_kidsPrograms_logo">
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_kidsPrograms_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_myGuests' data-role='page'>
+		<div id='header_myGuests' class='toolbar_header' data-role='header'>
+			<div id='header_myGuests_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				My Employees
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_myGuests_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_myGuests_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_myGuests_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_myGuests" data-role="main" class="ui-content">
+
+			<ul id="tile_myGuests" class='tileSet'></ul>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_myGuests_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_guestSetup' data-role='page'>
+		<div id='header_guestSetup' class='toolbar_header' data-role='header'>
+			<div id='header_guestSetup_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Set Up The Employee Training Centre
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_guestSetup_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_guestSetup_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_guestSetup_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_guestSetup" data-role="main" class="ui-content">
+
+			<div class="c2">
+				The Employee Training Centre is where you can enroll members of your team to view selected Learning Themes.&ensp;
+				Once you select one or more Themes, you can then enroll your employees.&ensp;
+				If you wish to disable this service, simply deselect all Themes.
+				<br /><br />
+
+				Note: To offer courses to employees in both English and French you must select ALL THEMES. If the portal is offered to employees in only one language you may select the individual themes to be displayed.
+				<br /><br />
+			</div>
+
+			<label>Learning Themes:</label>
+
+			<div style="padding-left: 20px; width: 400px;">
+				<fieldset data-role="controlgroup" id="ele_guestSetup_catlItems"></fieldset>
+			</div>
+
+			<div class="icons">
+				<div id="ele_guestSetup_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Update</div>
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_guestSetup_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_guests' data-role='page'>
+		<div id='header_guests' class='toolbar_header' data-role='header'>
+			<div id='header_guests_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Employee List
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_guests_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_guests_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_guests_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_guests" data-role="main" class="ui-content">
+
+			<div class="c2" style="margin-bottom:20px;">
+				Tap on the Edit Icon to modify an employee's name or status.&ensp;
+				You can delete an employee that has not used this service, ie when the # Visits = 0.&ensp;
+				To inactivate an employee, use the Edit feature.
+			</div>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="text-align:left; width:100px;">Name</th>
+						<th style="text-align:left; width:100px;">Email Address</th>
+						<th style="text-align:center; width:90px;">Active?</th>
+						<th style="text-align:center; width:90px;"># Visits</th>
+						<th style="width:60px;">&ensp;&ensp;&ensp;&ensp;&ensp;</th>
+						<th style="width:60px;">&ensp;&ensp;&ensp;&ensp;&ensp;</th>
+					</tr>
+				</thead>
+				<tbody id="ele_guests_tbody"></tbody>
+			</table>
+
+			<div class="icons">
+				<div id="ele_guests_add" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-add ui-btn-icon-left">Add an Employee</div>
+			</div>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_guests_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_guest' data-role='page'>
+		<div id='header_guest' class='toolbar_header' data-role='header'>
+			<div id='header_guest_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Add an Employee
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_guest_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_guest_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_guest_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_guest" data-role="main" class="ui-content">
+
+			<div class="guest_upd c2">
+				You can only modify the name or inactivate this employee.&ensp;If the email address has changed then you need to inactivate then re-add the employee.
+			</div>
+			<div class="guest_new c2">
+				Each employee must have a unique Email Address. First Name and Last Name are used on any future Learning Certificates. An Employee can change their password at their convenience. You can inactivate this employee's access to this service at your convenience.
+			</div>
+
+
+			<div style="padding-left:30px; margin-top:20px;">
+
+				<div class="guest_new">
+					<label>Email Address:</label>
+					<div style="padding-left: 20px; width: 200px;">
+						<input id="ele_guest_membEmail" name="ele_guest_membEmail" type="text" />
+					</div>
+					<label>Password:</label>
+					<div style="padding-left:20px; width:200px;">
+						<input id="ele_guest_membPassword" type="password" name="ele_guest_membPassword" />
+					</div>
+				</div>
+
+				<label>First Name:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_guest_membFirstName" name="ele_guest_membFirstName" type="text" />
+				</div>
+
+				<label>Last Name:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_guest_membLastName" name="ele_guest_membLastName" type="text" />
+				</div>
+
+				<label>Active?</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<label><input type="radio" name="ele_guest_membActive" id="ele_guest_membActive" value="1" checked="checked">Yes</label>
+					<label><input type="radio" name="ele_guest_membActive" id="ele_guest_membActive_0" value="0">No</label>
+				</div>
+
+			</div>
+
+			<div class="icons">
+				<div id="ele_guest_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left"></div>
+			</div>
+
+
+		</div>
+
+		<style>
+			#content_guest table td, #content_guest table th { padding: 5px; }
+			#content_guest table th { text-align: left; }
+		</style>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_guest_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+	<div id='page_guestActivity' data-role='page'>
+		<div id='header_guestActivity' class='toolbar_header' data-role='header'>
+			<div id='header_guestActivity_pageName' style='display:inline-block; width:100%; margin-top:10px; position:absolute; top:0; left:0; text-align:center; '>
+				Employee Activity
+			</div>
+			<div class='ui-alt-icon ui-nodisc-icon ui-btn-inline' style='width:35%; display:inline-block; padding-left:15px; height:90px;'>
+				<a class='homeIcon' id='ele_guestActivity_homeIcon' href='#page_home' data-theme='a' data-role='button' data-icon='home' data-iconpos='notext'>Home Button</a>
+				<a class='backIcon' id='ele_guestActivity_backIcon' href='#' data-theme='a' data-role='button' data-icon='d-back' data-iconpos='notext'>Back Button</a>
+				<a class='videoIcon' id='ele_guestActivity_videoIcon' href='#' data-theme='a' data-role='button' data-icon='video' data-iconpos='notext'>Video Button</a>
+			</div>
+		</div>
+
+		<div id="content_guestActivity" data-role="main" class="ui-content">
+
+			<div class="c2">
+				This provides a summary view of the activities of each active employee.
+				&ensp;&ensp;
+
+				If content has been accessed, an icon will appear at the right.&ensp;
+				Tap on this icon to access the employee's Report Card.&ensp;
+			</div>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="text-align:left; width:35%;">Name</th>
+						<th style="text-align:center; width:15%;"># Visits</th>
+						<th style="text-align:center; width:15%;"># Courses Accessed</th>
+						<th style="text-align:center; width:15%;"># Mins Learning</th>
+						<th style="text-align:center; width:15%;">Details&ensp;</th>
+					</tr>
+				</thead>
+				<tbody id="ele_guestActivity_tbody"></tbody>
+			</table>
+
+		</div>
+		<div id='footer' class='toolbar_footer' data-role='footer' data-position='fixed' data-tap-toggle='false'>
+			<br /><span class='sessionState' id='footer_guestActivity_title' xstyle='color: rgba(0, 0, 0, 0.5);'></span>
+		</div>
+	</div>
+
+
+	<script id='page_scripts'>
+
+		$(document).bind("pagebeforeshow", function () {
+
+			if ($.mobile.activePage.attr("id") === "page_signIn") {
+
+				$("#footer_signIn_title").html($vc.sessionState.appId + " | signIn");
+				$("#ele_signIn_homeIcon").hide();
+				$("#ele_signIn_backIcon").hide();
+
+				if ($vc.startState.host === "localhost") {
+					$("#ele_signIn_membId")[0].value = "support@vubiz.com";
+					$("#ele_signIn_membPassword")[0].value = "vub!z";
+				}
+
+				/* if we have a logo, display it */
+				if ($vc.profileState.logo === undefined || $vc.profileState.logo.length === 0) {
+					$("#ele_signIn_logo").hide();
+				} else {
+					$("#ele_signIn_logo").show();
+					$("#img_signIn_logo").attr("src", "styles/logos/" + $vc.profileState.logo);
+				}
+				if (ok($vc.sessionState.membGuid).length === 36) {
+					$("#content_signIn").hide();
+					$vc.signIn.member();
+				} else if (ok($vc.sessionState.userName).length > 9) {
+					$("#content_signIn").hide();
+					$vc.signIn.authenticate("auto");
+				} else if (ok($vc.sessionState.custId).length === 8) {
+					$("#content_signIn").show();
+					$("#div_signIn_custId").hide();
+					$("#ele_signIn_custId")[0].value = $vc.sessionState.custId;
+					$vc.signIn.customer();
+				}
+
+			}
+		});
+
+		$vc.signIn = function () {
+			var _getCustId = function () { /* get customer ID from URL or use house account */
+				return ifElse($.getUrlVar("custId"), $("#ele_signIn_custId")[0].value);
+			};
+			var _getMember = function (type) {
+				$vc.sessionState.applicationId = 1;
+				/* if type = auto then we have the values stored in parameterState */
+				if (type === "form") {
+					$vc.sessionState.membId = $("#ele_signIn_membId")[0].value;
+					$vc.sessionState.userName = $("#ele_signIn_custId")[0].value + "\\" + $("#ele_signIn_membId")[0].value;
+					$vc.sessionState.membPassword = $("#ele_signIn_membPassword")[0].value;
+				}
+			};
+			var _getGuid = function () {
+				$vc.sessionState.membGuid = $vc.memberState.membGuid;
+			};
+			var _doneCustomer = function (data, result, xhr) {
+				if (data === null) {
+					$vc.fn.popup("This account is inactive or has expired.");
+				} else {
+					$vc.fn.console("starting customer");
+					$vc.customerState = data;
+					$vc.customerState.langEn = data.langEn === "1";
+					$vc.customerState.langFr = data.langFr === "1";
+					$vc.customerState.langEs = data.langEs === "1";
+					$vc.customerState.langPt = data.langPt === "1";
+					$vc.sessionState.custNo = data.custNo;
+					$vc.fn.putData();
+
+					/* render the customer title on the header */
+					$("#header_signIn_title").html($vc.customerState.custTitle);
+					$vc.fn.console("completed customer");
+				}
+			};
+			var _doneAuthenticate = function (data, result, xhr) {
+				$vc.fn.console("success authenticate");
+				if (data.membGuid === "") {
+					$vc.sessionState.secure = false;
+					$vc.fn.popup("Invalid credentials. Note: Username<br />and Password are NOT case sensitive.");
+				} else {
+					$vc.sessionState.secure = true;
+					$vc.sessionState.membGuid = data.membGuid;
+					$vc.memberState.membGuid = data.membGuid;
+					$vc.fn.putData();
+					$vc.signIn.member(); /* get this member's data */
+				}
+			};
+			var _doneMember = function (data, result, xhr) {
+
+				if (data === null) {
+					alert("That member GUID is not on file!");
+
+				} else {
+					$vc.fn.console("success member");
+					$vc.memberState = data;
+					$vc.sessionState.membNo = parseInt(data.membNo);
+					$vc.sessionState.membId = data.membId;
+					$vc.sessionState.membEmail = data.membEmail;
+					$vc.sessionState.membFirstName = data.membFirstName;
+					$vc.sessionState.membLastName = data.membLastName;
+					$vc.sessionState.membLevel = data.membLevel;
+					$vc.sessionState.membNoVisits = data.membNoVisits;
+					$vc.sessionState.membCatalogue = data.membCatalogue;
+					$vc.sessionState.membOrganization = data.membOrganization;
+					$vc.sessionState.membType = data.membType;
+					$vc.sessionState.membNOPGuid = data.membNOPGuid;
+
+					$vc.sessionState.secure = true;
+
+					switch (parseInt(data.membLevel)) { /* these are used to turn on/off tiles */
+						case 0: $vc.sessionState.membClass = "public"; break;
+						case 1: $vc.sessionState.membClass = "guest"; break;
+						case 2: $vc.sessionState.membClass = "learner"; break;
+						case 3: $vc.sessionState.membClass = "facilitator"; break;
+						case 4: $vc.sessionState.membClass = "manager"; break;
+						case 5: $vc.sessionState.membClass = "administrator"; break;
+					}
+
+					$.when(
+						$vc.fn.putData()
+					).then(function () {
+						if ($vc.startState.startPage === undefined || $vc.startState.startPage === "") {
+							$(":mobile-pagecontainer").pagecontainer("change", "#page_home");
+						} else { // startPage comes via a URL parameter in Default.aspx
+							$(":mobile-pagecontainer").pagecontainer("change", "#" + $vc.startState.startPage);
+						}
+					});
+				}
+
+			};
+			var _failCustomer = function (xhr, result, statusText) {
+				alert("Error accessing the CustomerRecord : " + statusText);
+			};
+			var _failAuthenticate = function (xhr, result, statusText) {
+				$vc.sessionState.secure = false;
+				alert("Error trying to Authenticate : " + statusText);
+			};
+			var _failMember = function (xhr, result, statusText) {
+				alert("Error accessing the Member Record : " + statusText);
+			};
+
+			return {
+				customer: function () {
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					$vc.ws("customer", parm, _doneCustomer, _failCustomer);
+				},
+				authenticate: function (type) {
+					$vc.fn.console("about to authenticate");
+					_getMember(type);
+					var parm = {};
+					parm.applicationId = $vc.sessionState.applicationId;
+					parm.userName = $vc.sessionState.userName;
+					parm.membPassword = $vc.sessionState.membPassword;
+					$vc.ws("authenticate", parm, _doneAuthenticate, _failAuthenticate);
+				},
+				member: function () {
+					var parm = {};
+					parm.membGuid = $vc.sessionState.membGuid;
+					$vc.ws("member", parm, _doneMember, _failMember);
+				}
+			};
+		}();
+
+		$(function () {
+			$("#ele_signIn_check").on("click", function () {
+
+				/* ensure two valid fields are entered */
+				var membId = $("#ele_signIn_membId")[0].value.toUpperCase();
+				var membPassword = $("#ele_signIn_membPassword")[0].value.toUpperCase();
+
+				var ok = true;
+				if (ok) { /* password must be at least 4 characters long */
+					if (membId.length > 3) {
+						ok = true;
+					} else {
+						ok = false;
+						$vc.fn.popup("Please enter a valid Email Address.");
+					}
+				}
+				if (ok) { /* password must be at least 5 characters long */
+					if (membPassword.length > 3) {
+						ok = true;
+					} else {
+						ok = false;
+						$vc.fn.popup("Please enter a valid Password.");
+					}
+				}
+
+
+				if (ok) {
+
+					$vc.sessionState.applicationId = 1;
+					$vc.sessionState.userName = $("#ele_signIn_custId")[0].value + "\\" + $("#ele_signIn_membId")[0].value;
+					$vc.sessionState.membPassword = $("#ele_signIn_membPassword")[0].value;
+					$vc.signIn.authenticate("form");
+
+				}
+
+			});
+		});
+
+		$(document).bind("pagebeforeshow", function () {
+			if ($.mobile.activePage.attr("id") == "page_signUp") {
+				$("#footer_signUp_title").html($vc.sessionState.appId + " | signUp");
+
+			};
+		});
+
+		$vc.signUp = function () {
+			return {
+			};
+		}();
+
+		$(function () {
+			$("#ele_signUp_check").on("click", function () {
+			});
+		});
+		$(document).bind("pagebeforeshow", function () {
+			if ($.mobile.activePage.attr("id") === "page_signOut") {
+				$("#footer_signOut_title").html($vc.sessionState.appId + " | signOut");
+				$(".homeIcon").hide();
+				$(".backIcon").hide();
+				$("#content_signOut").hide();
+
+				/* store returnUrl before killing local storage */
+				var returnUrl = $vc.sessionState.returnUrl;
+				var profile = $vc.sessionState.profile;
+				$.when(
+					$vc.fn.endData(),
+					$vc = {}
+				).then(function () {
+					if (returnUrl.length === 0) { // if no return URL then restart (typically to signin page)
+						location.href = location.origin + location.pathname + location.search;
+					} else {
+						if (returnUrl.substring(0, 2) === "//") {
+							location.href = location.origin + returnUrl;
+						} else if (returnUrl.indexOf("//") > 0) {
+							location.href = returnUrl;
+						}
+					}
+				});
+
+			};
+		})
+
+		$("#ele_signOut_refresh").on("click", function () {
+			location.replace("/V8?profile=" + $vc_profile);
+		});
+
+		$(document).bind("pagebeforeshow", function () {
+
+			if ($.mobile.activePage.attr("id") == "page_learner") {
+				$("#footer_learner_title").html($vc.sessionState.appId + " | learner");
+			};
+
+			/* if we have a logo, display it */
+			//if ($vc.profileState.logo == undefined || $vc.profileState.logo.length == 0) {
+			if ($vc.profileState.logo == undefined) {
+				$("#ele_learner_logo").hide();
+			} else {
+				$("#ele_learner_logo").show();
+				$("#img_learner_logo").attr("src", "styles/logos/" + $vc.profileState.logo)
+			};
+
+
+		});
+
+		var var_home_init = false;/* onlyinitialize once, not each time this page is rendered */
+
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_home") {
+
+				$("#footer_home_title").html($vc.sessionState.appId + " | home");
+				$("#img_home_logo").attr("src", "styles/logos/" + $vc.profileState.logo)
+				$("#ele_home_homeIcon").hide();
+				$("#ele_home_backIcon").hide();
+
+				/* if this is the first visit then launch the video (if we use videos) - this only happens on this page*/
+				if ($vc.sessionState.videos) {
+					if ($vc.sessionState.membNoVisits == 0 && var_home_init == false) {
+						var video = eval("$vc.videoState." + "home") /* do we have a video for this page */
+						if (video != undefined) {
+							window.open("video.html?url=" + encodeURIComponent(video));
+						};
+					};
+				};
+
+
+				/* not sure how you can get here if you are not secure... probably reloaded the page which is a no-no */
+				if (!$vc.sessionState.secure) {
+					alert("Oops. You are not currently authenticated to use this service.!");
+				};
+				if (!var_home_init) {
+					var_home_init = true;
+
+					/* start with browser budgie tile then get home tileset from tileState object - Robin suggested color: #585858 - prefer black */
+					var tileNo = "x", tileColor = "#000", tileIcon = "styles/tiles/browserCheck.png", tileTitle = "Browser Readiness Test"
+					var tile = ""
+						+ "<li id=\"ele_home_" + tileNo + "\" class=\"tile\" style=\"background-color: " + tileColor + ";\">"
+						+ "<div class=\"tileIcon\" style=\"background-image: url('" + tileIcon + "');\"></div>"
+						+ "<div class=\"tileTitle\">" + tileTitle + "</div>"
+						+ "</li>";
+
+
+					$.each($vc.tileState, function (key, value) {
+						var ok = false;
+						if (value.tilePage == "home") {
+							/* render appropriate tiles class based on member class */
+							if (value.tileClass == "guest" && ($vc.sessionState.membClass == "guest" || $vc.sessionState.membClass == "learner" || $vc.sessionState.membClass == "facilitator" || $vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "learner" && ($vc.sessionState.membClass == "learner" || $vc.sessionState.membClass == "facilitator" || $vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "facilitator" && ($vc.sessionState.membClass == "facilitator" || $vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "manager" && ($vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "administrator" && ($vc.sessionState.membClass == "administrator")) ok = true;
+
+							///* tile title override - note: only en currently available- this is now done via overrides in default.aspx*/
+							//if (value.tileNo == "0" & $vc.sessionState.titleCourses_en.length > 0) value.tileTitle = $vc.sessionState.titleCourses_en;
+
+							/* don't render a "jit" tile if jit = "False" */
+							if (value.tileNo == "1" & !$vc.sessionState.jit) ok = false;
+
+							/* don't render a "profile" tile if SSO or autoEnrollWs*/
+							if (value.tileNo == "2" & ($vc.profileState.sso.length > 0 || $vc.profileState.autoEnrollWs)) ok = false;
+
+							/* don't render a "guest" tile if an employee, ie membType = "E" */
+							if (value.tileNo == "4" & $vc.sessionState.membType == "E") ok = false;
+
+							/* don't render a "guest" tile if guests = false*/
+							if (value.tileNo == "4" & !$vc.sessionState.guests) ok = false;
+
+							/* don't render a "certificate" tile if certPrograms = "" */
+							if (value.tileNo == "8" & !$vc.sessionState.ecommerce) ok = false;
+
+							/* don't render an "ecommerce " tile if ecommerce = False */
+							if (value.tileNo == "5" & $vc.sessionState.certPrograms == "") ok = false;
+
+							/* don't render the "vukidz" tile if vukidz = False */
+							if (value.tileNo == "9" & !$vc.sessionState.vukidz) ok = false;
+
+							if (ok) {
+								tile = tile
+									+ "<li id=\"ele_home_" + value.tileNo + "\" class=\"tile\" style=\"background-color: " + value.tileColor + ";\">"
+									+ "<div class=\"tileIcon\" style=\"background-image: url('" + value.tileIcon + "');\"></div>"
+									+ "<div class=\"tileTitle\">" + value.tileTitle + "</div>"
+									+ "</li>";
+							};
+						};
+					});
+					$("#tile_home").html(tile);
+
+					/* create the events for the above tiles */
+					$("#ele_home_0").on("click", function () {
+						if ($vc.sessionState.contentSource == "ecommerce" || $vc.sessionState.contentSource == "assigned" || $vc.sessionState.contentSource == "ecom-assigned") {
+							$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+						} else {
+							$(":mobile-pagecontainer").pagecontainer("change", "#page_catalogue");
+						};
+					});
+					$("#ele_home_1").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_jitCatalogue");
+					});
+					$("#ele_home_2").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_profile");
+					});
+					//$("#ele_home_3").on("click", function () {
+					//$vc.sessionState.reportByGuest = false;
+					//$(":mobile-pagecontainer").pagecontainer("change", "#page_historyPrograms");
+					//});
+					$("#ele_home_23").on("click", function () {
+						$vc.sessionState.reportByGuest = false;
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_historyPrograms2");
+					});
+					$("#ele_home_4").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_myGuests");
+					});
+					$("#ele_home_5").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_certificatePrograms");
+					});
+					$("#ele_home_9").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_kidsPrograms");
+					});
+					$("#ele_home_6").on("click", function () {
+						if ($vc.sessionState.portal == true) {
+							var url = "/portal/v7/default.aspx?source=v8&profile=" + $vc.sessionState.profile + "&membGuid=" + $vc.sessionState.membGuid;
+						} else {
+							var url = "/v8a?profile=" + $vc.sessionState.profile + "&membGuid=" + $vc.sessionState.membGuid;
+						}
+						window.open(url);
+					});
+					$("#ele_home_7").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_signOut");
+					});
+					$("#ele_home_8").on("click", function () {
+						var url = "http://store.vubiz.com/NopAdmin/Authenticatev5.aspx?membGUID=" + $vc.sessionState.membNOPGuid;
+						window.open(url);
+					});
+
+					$("#ele_home_x").on("click", function () {
+						var url = "/browser?lang=" + $vc.sessionState.lang;
+						window.open(url);
+					});
+
+
+
+				};
+
+				$vc.fn.console("completed loading home tiles");
+
+			};
+		});
+
+		$(document).bind("pagebeforeshow", function () {
+			if ($.mobile.activePage.attr("id") == "page_profile") {
+				$("#footer_profile_title").html($vc.sessionState.appId + " | profile");
+				$vc.sessionState.prevPage = "page_home"; /* ensure we return to programs */
+				$("#img_profile_logo").attr("src", "styles/logos/" + $vc.profileState.logo)
+
+				/* populate profile */
+				$("#ele_profile_welcome").html("Welcome" + "&nbsp;" + $vc.sessionState.membFirstName);
+				//$("#ele_profile_custId").html($vc.sessionState.custId);
+				$("#ele_profile_membId").html($vc.sessionState.membId);
+				$("#ele_profile_membFirstName").html($vc.sessionState.membFirstName);
+				$("#ele_profile_membLastName").html($vc.sessionState.membLastName);
+				$("#ele_profile_membEmail").html($vc.sessionState.membEmail);
+				$("#ele_profile_membNoVisits").html($vc.sessionState.membNoVisits);
+
+				/* if there's a guid enable password change, else remains hidden for backdoor */
+				if (isValid($vc.sessionState.membGuid, "guid") && $vc.sessionState.password) $("#div_profile_profile").show();
+
+				/* show if passwords can be changed */
+				if ($vc.sessionState.password) $("#div_profile_profile").show();
+
+			};
+		});
+
+
+		$vc.profile = function () {
+			var _donePassword = function (data, result, xhr) {
+				/* check if changed = 1 or 2 */
+				if (data.passwordChanged == "1") {
+					$vc.fn.popup("Your Password has been updated.");
+					$vc.fn.console("Successfully modified password");
+				} else {
+					$vc.fn.popup("Your Password has NOT been updated.<br />Are you certain you submitted the proper 'Current Password'?");
+					$vc.fn.console("Unsuccessfully modified password");
+				}
+
+			};
+			var _failPassword = function (xhr, result, statusText) {
+				$vc.fn.popup("Your Password has NOT been updated.<br />Are you certain you submitted the proper 'Current Password'?");
+				$vc.fn.console("Unsuccessfully modified password");
+			};
+
+			return {
+				_getPasswords: function () {
+
+				},
+				password: function () {
+
+					var passwordOld = $("#ele_profile_passwordOld")[0].value.toUpperCase();
+					var passwordNew = $("#ele_profile_passwordNew")[0].value.toUpperCase();
+					var passwordCon = $("#ele_profile_passwordCon")[0].value.toUpperCase();
+					var ok = true;
+
+
+					if (ok) { /* old password must be at least 5 characters long */
+						if (passwordOld.length > 4) {
+							ok = true
+						} else {
+							ok = false;
+							$vc.fn.popup("Current Password must be greater than 4 characters in length.");
+						};
+					};
+
+					if (ok) { /* new password must be at least 5 characters long */
+						if (passwordNew.length > 4) {
+							ok = true
+						} else {
+							ok = false;
+							$vc.fn.popup("New Password must be greater than 4 characters in length.");
+						};
+					};
+
+					if (ok) { /* new and conf must be equal */
+						if (passwordNew == passwordCon) {
+							ok = true
+						} else {
+							ok = false;
+							$vc.fn.popup("Your New Passwords are not the same.");
+						};
+					};
+
+					if (ok) {
+						var parm = {};
+						parm.membGuid = $vc.sessionState.membGuid;
+						parm.passwordOld = passwordOld;
+						parm.passwordNew = passwordNew;
+						$vc.ws("password", parm, _donePassword, _failPassword);
+					};
+				}
+
+
+			};
+
+		}();
+
+
+		$("#ele_profile_learning").on("click", function () {
+			$(":mobile-pagecontainer").pagecontainer("change", "#page_learningCenter");
+		});
+
+		$("#ele_profile_browser").on("click", function () {
+			window.open("Default.aspx?appId=browser.3&lang=" + $vc.sessionState.lang, "_blank");
+		});
+
+		$("#ele_profile_check").on("click", function () {
+			$vc.profile.password();
+		});
+		var var_catalogue_init = false;/* only initialize catalogue once, not each time this page is rendered */
+
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") === "page_catalogue") {
+				$("#footer_catalogue_title").html($vc.sessionState.appId + " | catalogue");
+				$("#img_catalogue_logo").attr("src", "styles/logos/" + $vc.profileState.logo);
+
+				if ($vc.sessionState.custId.length !== 8) { // can't remember why we do this?
+					$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+				} else {
+					$vc.sessionState.prevPage = "page_home";
+					$vc.catalogue.catalogue();
+				}
+			}
+		});
+
+		$vc.catalogue = function () {
+			var _doneCatalogue = function (data, result, xhr) {
+				$vc.fn.console("Success loading Catalogue");
+				$vc.catalogueState = data;
+				$vc.fn.putData();
+
+				/* if there's just one catalogue item then go right over to the Programs */
+				if (data.length === 1) {
+					$vc.sessionState.catalogue = -1; /* use -1 to signify skipping catalogue - programs will make this 0 */
+					$vc.sessionState.currPage = "page_home";
+					$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+				} else {
+
+					/* get tiles color and icon from db */
+					var tiles = catlTileColor = catlTileIcon = catlTitle = "";
+
+					//debugger;
+
+					$.each(data, function (key, value) {
+						/* if this is a guest then we only want to render the selected catalogue items (unless set to "0" which is all), else render all catl items */
+						if ($vc.sessionState.membLevel > 1 || $vc.sessionState.membCatalogue === "0" || $vc.sessionState.membCatalogue.lastIndexOf(value.catlNo) >= 0) {
+
+							/* if program colors and icons are not setup on the catalogue table then use defaults */
+							catlTileColor = (value.catlTileColor === "" ? "red" : value.catlTileColor);
+							catlTileIcon = (value.catlTileIcon === "" ? "myCategories.png" : value.catlTileIcon);
+							catlTitle = (value.catlTitle.length > 32 ? value.catlTitle.substring(0, 32) + "..." : value.catlTitle);
+
+							tiles = tiles
+								+ "<li id=\"ele_catalogue_" + key + "\" class=\"tile\" style=\"background-color: " + catlTileColor + ";\">"
+								+ "<div class=\"tileIcon\" style=\"background-image: url('styles/tiles/" + catlTileIcon + "');\"></div>"
+								+ "<div class=\"tileTitle\">" + catlTitle + "</div>"
+								+ "</li>";
+						}
+					});
+				}
+				$("#tiles_catalogue").html(tiles);
+			};
+			var _failCatalogue = function (xhr, result, statusText) {
+				alert("Error loading Catalogue!" + " ..." + result);
+				alert(statusText);
+			};
+			return {
+				catalogue: function () {
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					$vc.ws("catalogue", parm, _doneCatalogue, _failCatalogue);
+				}
+			};
+		}();
+
+
+		$(function () { /* grab the selected tile number from the end of the parentElement id that was tapped */
+			$("#content_catalogue").on("click", function (event) {
+				var tileId = event.target.parentElement.id;
+				var idStartsAt = tileId.lastIndexOf("_") + 1;
+				var tileLength = tileId.length;
+				var tileNo = right(tileId, tileLength - idStartsAt); /* the last 1 or 2 characters are the tile number */
+				$vc.sessionState.catalogue = parseInt(tileNo); /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+				$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+			});
+		});
+		var var_jitCatalogue_init = false;/* onlyinitialize once, not each time this page is rendered */
+
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_jitCatalogue") {
+
+				$("#footer_jitCatalogue_title").html($vc.sessionState.appId + " | jitCatalogue");
+
+				if ($vc.sessionState.custId.length != 8) {
+					$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+				};
+
+				$vc.sessionState.prevPage = "page_home"; /* ensure we return to programs */
+
+				if (!var_jitCatalogue_init) { /* only load static catalogue once */
+					var_jitCatalogue_init = true;
+					$vc.jitCatalogue.catalogue();
+				};
+
+			};
+		});
+
+		$vc.jitCatalogue = function () {
+			var _doneCatalogue = function (data, result, xhr) {
+				$vc.fn.console("Success loading Catalogue");
+				$vc.catalogueState = data;
+				$vc.fn.putData();
+
+				/* get tiles color and icon from db */
+				var tiles = "";
+				$.each(data, function (key, value) {
+					/* if this is a guest then we only want to render the selected catalogue items, else render all catl items, also catlJITNo must be greater than 0 */
+					if (($vc.sessionState.membLevel > 1 || $vc.sessionState.membCatalogue.lastIndexOf(value.catlNo) >= 0) && value.catlJITNo > 0) {
+						tiles = tiles
+							+ "<li id=\"ele_jitCatalogue_" + key + "\" class=\"tile\" style=\"background-color: " + value.catlTileColor + ";\">"
+							+ "<div class=\"tileIcon\" style=\"background-image: url('styles/tiles/" + value.catlTileIcon + "');\"></div>"
+							+ "<div class=\"tileTitle\">" + value.catlTitle + "</div>"
+							+ "</li>";
+					};
+				});
+				$("#tiles_jitCatalogue").html(tiles);
+			};
+			var _failCatalogue = function (xhr, result, statusText) {
+				alert("Error loading Catalogue!");
+			};
+			return {
+				catalogue: function () {
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					$vc.ws("catalogue", parm, _doneCatalogue, _failCatalogue);
+				}
+			};
+		}();
+
+
+
+
+
+
+
+
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_programs") {
+
+				//* hide page in case there is only one program and we go directly to modules */
+				//$("#" + "page_programs").hide()
+				//$vc.fn.popup("Loading...");
+
+				$("#footer_programs_title").html($vc.sessionState.appId + " | programs");
+				$("#img_programs_logo").attr("src", "styles/logos/" + $vc.profileState.logo)
+				$vc.sessionState.prevPage = ($vc.sessionState.contentSource == "ecommerce" || $vc.sessionState.contentSource == "assigned") ? "page_home" : "page_catalogue";
+
+				/* added Apr 26, 2017 - not sure about this... */
+				$vc.sessionState.catalogue = ($vc.sessionState.catalogue == -1) ? 0 : $vc.sessionState.catalogue;
+
+				$vc.programs.programs();/* generate dynamic program tiles each visit */
+			};
+		});
+
+		$vc.programs = function () {
+			var _donePrograms = function (data, result, xhr) {
+				$vc.fn.console("success programs");
+				$vc.programsState = data;
+				$vc.fn.putData();
+
+				if (data == null) {
+					$vc.fn.popup("There are no Programs available to review!");
+				} else {
+					if ($vc.sessionState.contentSource == "ecommerce" || $vc.sessionState.contentSource == "assigned" || $vc.sessionState.contentSource == "ecom-assigned") { /* get tiles color and icon from catalogue object */
+						var catlTileIcon = "myCategories.png";
+						/* default tile color to secondary color ... hack */
+						$('<span id="getSecondaryColor" class="secondaryColor"></span>').appendTo('body');
+						var catlTileColor = $("#getSecondaryColor").css("color");
+						$("#getSecondaryColor").remove();
+
+					} else { /* get tiles color and icon from catalogue object */
+						var catlTileIcon = $vc.catalogueState[$vc.sessionState.catalogue].catlTileIcon;
+						var catlTileColor = $vc.catalogueState[$vc.sessionState.catalogue].catlTileColor;
+					};
+					var tiles = "", title, completed;
+					if (data.length == 1 && $vc.sessionState.showSoloProgram) { /* if there's only one program then just render modules - UNLESS we want to show a single program */
+						$vc.sessionState.program = 0 /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+						$vc.sessionState.progId = data[0].progId;
+						$vc.sessionState.progNo = data[0].progNo;
+
+						$vc.sessionState.currPage = $vc.sessionState.prevPage;
+						$vc.fn.putData();
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_modules");
+					} else {
+						$.each(data, function (key, value) {
+							if (value.progCompleted.length > 0) {
+								completed = " checked-tile";
+							} else {
+								completed = ""
+							};
+							if (value.progTitle2.indexOf($vc.sessionState.custId) == 0) { /* see if there is a custom title */
+								title = value.progTitle2.substr(9, 128)
+							} else {
+								title = value.progTitle1;
+							};
+
+							/* if program colors and icons are not setup on the catalogue table then use defaults */
+							catlTileColor = (catlTileColor === "" ? "red" : catlTileColor);
+							catlTileIcon = (catlTileIcon === "" ? "myCategories.png" : catlTileIcon);
+							title = (title.length > 32 ? title.substring(0, 32) + "..." : title);
+
+							tiles = tiles
+								+ "<li id=\"ele_programs_" + key + "\" class=\"tile" + completed + "\" style=\"background-color: " + catlTileColor + ";\">"
+								+ "<div class=\"tileIcon\" style=\"background-image: url('styles/tiles/" + catlTileIcon + "');\"></div>"
+								+ "<div class=\"tileTitle\">" + title + "</div>"
+								+ "</li>";
+						});
+						$("#tiles_programs").html(tiles);
+						$vc.fn.popupClose();
+					};
+				};
+			};
+			var _failPrograms = function (xhr, result, statusText) {
+				alert("Error Loading Programs!");
+			};
+			return {
+				programs: function () {
+					//alert($vc.sessionState.prevPage + " _programs");
+
+					/* get programs from ecommerce */
+					if ($vc.sessionState.contentSource == "ecommerce") {
+						var parm = {};
+						parm.custId = $vc.sessionState.custId;
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programsEcommerce", parm, _donePrograms, _failPrograms);
+					}
+					/* get programs from assigned on member table */
+					else if ($vc.sessionState.contentSource == "assigned") {
+						var parm = {};
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programsAssigned", parm, _donePrograms, _failPrograms);
+					}
+					/* get programs from ecommerce and/or assigned on member table*/
+					else if ($vc.sessionState.contentSource == "ecom-assigned") {
+						var parm = {};
+						parm.custId = $vc.sessionState.custId;
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programsEcomAssigned", parm, _donePrograms, _failPrograms);
+					}
+					/* get programs from catalogue */
+					else {
+						/* extract the catlNo from catalogueState using parameterState.catalogue which is the tile number */
+						$vc.sessionState.catlNo = $vc.catalogueState[$vc.sessionState.catalogue].catlNo;
+						/* show video icon for each theme */
+						$("#ele_programs_videoIcon").show();
+						var parm = {};
+						parm.custId = $vc.sessionState.custId;
+						parm.catlNo = $vc.sessionState.catlNo;
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programs", parm, _donePrograms, _failPrograms);
+					};
+				}
+			};
+		}();
+
+		$(function () { /* grab the selected tile number from the end of the parentElement id that was tapped */
+
+			$("#content_programs").on("click", function (event) {
+				var tileId = event.target.parentElement.id;
+				var idStartsAt = tileId.lastIndexOf("_") + 1;
+				var tileLength = tileId.length;
+				var tileNo = right(tileId, tileLength - idStartsAt); /* the last 1 or 2 characters are the tile number */
+				$vc.sessionState.program = parseInt(tileNo); /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+				$vc.sessionState.progId = $vc.programsState[$vc.sessionState.program].progId;
+				$vc.sessionState.progNo = $vc.programsState[$vc.sessionState.program].progNo;
+
+				$(":mobile-pagecontainer").pagecontainer("change", "#page_modules");
+			});
+		});
+
+
+
+
+
+
+
+
+		// modules (works)
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_modules") {
+				$vc.modules.modules();
+			};
+		});
+
+		$vc.modules = function () {
+			var _done = function (data, result, xhr) {
+				$vc.fn.console("success modules");
+
+				$vc.modulesState = data;
+				$vc.fn.putData();
+
+				/* get tiles color and icon from catalogue object */
+				var catlTileIcon = $vc.catalogueState[$vc.sessionState.catalogue].catlTileIcon;
+				var catlTileColor = $vc.catalogueState[$vc.sessionState.catalogue].catlTileColor;
+
+				var tiles = "", completed;
+				if (data.length == 1) { /* if there's only one module then just launch that */
+					var tileNo = 1 /* the is the tile number / array number */
+					$vc.sessionState.module = 1; /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+					$vc.sessionState.modsId = data[0].modsId;
+					$vc.sessionState.modsNo = data[0].modsNo;
+					$vc.sessionState.currPage = $vc.sessionState.prevPage;
+					$vc.fn.putData();
+
+					$("#tile_modules").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+					});
+					$("#tile_modules").trigger("click");
+
+				} else {
+					/* otherwise render the tiles - first close the window required for single modules, it will be created later */
+					window.open("about:blank", "myWindow").close();
+
+					$vc.sessionState.prevPage = "page_programs";
+					$.each(data, function (key, value) {
+						if (value.modsCompleted.length > 0) {
+							completed = " checked-tile";
+						} else {
+							completed = ""
+						};
+						catlTileIcon = "exam.png";
+
+						tiles = tiles
+							+ "<li id=\"ele_modules_" + key + "\" class=\"tile" + completed + "\" style=\"background-color: " + catlTileColor + ";\">"
+							+ "<div class=\"tileIcon\" style=\"background-image: url('styles/tiles/" + catlTileIcon + "');\"></div>"
+							+ "<div class=\"tileTitle\">" + value.modsTitle + "</div>"
+							+ "</li>";
+					});
+					$("#tiles_modules").html(tiles);
+					$vc.fn.popupClose();
+
+				};
+
+			};
+			return {
+				modules: function () { /* this is used for ecommerce and assigned */
+					$vc.sessionState.catlNo = $vc.catalogueState[$vc.sessionState.catalogue].catlNo;
+					$vc.sessionState.progId = $vc.programsState[$vc.sessionState.program].progId;
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					parm.catlNo = $vc.sessionState.catlNo;
+					parm.progId = $vc.sessionState.progId;
+					parm.membNo = $vc.sessionState.membNo;
+
+					var myWindow = window.open("about:blank", "myWindow");
+					$vc.ws("modules", parm, _done);
+				}
+			};
+		}();
+		$(function () { /* grab the selected tile number from the end of the parentElement id that was tapped */
+
+			//// this is used as a trigger to simulate a click enabling us to NOT trigger a popup for the module - when there is only 1 module in the program
+			//$("#tiles_modulex").on("click", function () {
+			//	$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+			//});
+
+			//			$("#content_modules").on("click", function (event) {
+			$("#tiles_modules").on("click", function (event) {
+				var tileId = event.target.parentElement.id;
+				var idStartsAt = tileId.lastIndexOf("_") + 1;
+				var tileLength = tileId.length;
+				var tileNo = right(tileId, tileLength - idStartsAt); /* the last 1 or 2 characters are the tile number / array number */
+				$vc.sessionState.module = parseInt(tileNo); /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+				$vc.sessionState.modsId = $vc.modulesState[$vc.sessionState.module].modsId;
+				$vc.sessionState.modsNo = $vc.modulesState[$vc.sessionState.module].modsNo;
+				$vc.fn.putData();
+				$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+			});
+		});
+
+
+
+
+
+
+
+		// content
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") === "page_content") {
+				$("#footer_content_title").html($vc.sessionState.appId + " | content");
+				$("#ele_content_homeIcon").hide();
+				$("#ele_content_backIcon").hide();
+				$vc.content.getModuleData();
+			}
+		});
+
+		$vc.content = function () {
+			var _done = function (data, result, xhr) {
+				$vc.fn.console("success module");
+				$vc.modulesState = data;
+				$vc.content.renderModule();
+			};
+
+			return {
+				getModuleData: function () {
+					var parm = {};
+					parm.modsId = $vc.sessionState.prevPage === "page_historyProgram" ? $vc.sessionState.historyModsId : $vc.sessionState.modsId;
+					window.open("about:blank", "myWindow");
+					$vc.ws("module", parm, _done);
+				},
+				renderModule: function () {
+					$("#header_content_title").html($vc.sessionState.prevPage === "page_historyProgram" ? $vc.sessionState.historyModsTitle : $vc.sessionState.modsTitle);
+					/* this can be launched by the content tiles or historyProgram report */
+					/* either http://vubiz.com or http://corporate.vubiz.com - comes from web.config */
+					/* + "&SessionReturnURL=";...when you DO NOT pass this parm, the return button on the player DOES NOT appear */
+					var url = $vc.startState.rteHost
+						+ "/Gold/vuSCORM/SCOContainer.aspx"
+						+ "?vCustId=" + $vc.sessionState.custId
+						+ "&vMods_No=" + ($vc.sessionState.prevPage === "page_historyProgram" ? $vc.sessionState.historyModsNo : $vc.sessionState.modsNo)
+						+ "&vProg_No=" + ($vc.sessionState.prevPage === "page_historyProgram" ? $vc.sessionState.historyProgNo : $vc.sessionState.progNo)
+						+ "&vMemb_No=" + $vc.sessionState.membNo
+						+ "&vLang=" + $vc.sessionState.lang
+						+ "&app=V8"/* this parameter tells the RTE to not alert when leaving a module */
+						+ "&jumpto="
+						+ "&fluid=1"
+						+ "&close=1"
+						+ "&certificate=0"
+						+ "&vModId=";
+
+					//url = "//vubiz.com/Gold/vuSCORM/SCOContainer.aspx?vCustId=CFIB5288&vMods_No=25503&vProg_No=6611&vMemb_No=1692969&vLang=en&app=V8&jumpto=&fluid=1&close=1&certificate=0&vModId=";
+					$vc.fn.console(url);
+					window.open(url, "myWindow");
+
+				},
+			};
+		}();
+
+	</script>
+
+
+
+</body>
+
+</html>

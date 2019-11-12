@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>:: Media Player | Lecteur multimédia</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <script src="scripts/$urls.js"></script>
+  <script src="scripts/$functions.js"></script>
+
+  <link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+  <script src="//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
+
+  <script>
+    var _url, _width, _height;
+
+    function setup() {
+      _url = decodeURIComponent($.getUrlVar("url"));
+
+      if (!isOk(_url)) {
+        _url = "//ms01.streaming.mediaservices.windows.net/ed8617ec-ddb2-448a-bec0-2011fff1aeee/CFIB Video Intro 1080 FR.ism/manifest";
+      };
+
+      // set size as big as possible and resize whenever the browser size changes
+      _width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0;
+      _height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+    };
+
+    $(function () {
+      setup();
+
+      $(window).resize(function () {
+        console.log("window resized");
+        var resizeTimer;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setup(), 1000);
+      });
+
+      $("#ele_close").on("click", function () {
+        window.close();
+      });
+
+      var myOptions = {
+        autoplay: true,
+        controls: true,
+        width: _width,
+        height: _height,
+        poster: ""
+      };
+      var myPlayer = amp("azuremediaplayer", myOptions);
+      myPlayer.src([{ src: _url, type: "application/vnd.ms-sstr+xml" }, ]);
+      $(".amp-logo ").hide()
+    });
+
+  </script>
+</head>
+<body>
+
+  <!-- launch video here -->
+  <video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"> </video>
+
+  <!-- Overlay the X button -->
+  <div id="ele_div" class="ui-alt-icon ui-nodisc-icon" style="position:absolute; top:10px; right:0;">
+    <a id="ele_close" class="ui-btn ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-notext" href="#">[[Close]]</a>
+  </div>
+
+</body>
+</html>

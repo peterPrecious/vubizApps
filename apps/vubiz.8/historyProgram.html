@@ -1,0 +1,48 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <!--<h2>...populated by historyProgram.js...</h2>
+
+  <h3 style="text-align:left">
+    [[Date is either the date completed or when not completed, the last time this module was accessed.]]&ensp;
+    [[TimeSpent is the number of minutes spent reviewing the module/assessment.]]&ensp;
+    [[Tap on the Name to launch the module.]]&ensp;
+    [[If completed a blue check mark will appear at the right. Tap on this for your Certificate.]]
+  </h3>-->
+
+  <ul id="header_$$" data-role="listview" data-inset="true">
+    <li>
+      <div>
+        <div class="header module">[[Module Name]] ([[Click or tap to launch]])</div>
+        <div class="header timeSpent">[[Time Spent]]<br />([[minutes]])</div>
+        <div class="header score">[[Score]]</div>
+        <div class="header date">[[Date Completed]]<br />([[or last accessed]])</div>
+        <div class="header certificate">[[Certificate]]<br />([[If completed, click<br />or tap icon to launch]])</div>
+      </div>
+    </li>
+  </ul>
+
+  <ul id="details_$$" data-role="listview" data-inset="true"></ul>
+
+  <div class="icons">
+    <div id="ele_$$_back" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-back ui-btn-icon-left">[[Back]]</div>
+  </div>
+
+</div>
+
+
+<style>
+  #content_$$ ul li div { width: 100%; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #details_$$ li div { margin-right: 4px; }
+    #details_$$ li div .module:hover { cursor: pointer; background-color: cyan; }
+
+  #header_$$ .header { font-weight: bold; }
+
+  #content_$$ .module { width: 40%; }
+  #content_$$ .timeSpent { text-align: center; width: 10%; }
+  #content_$$ .score { text-align: center; width: 10%; }
+  #content_$$ .date { text-align: center; width: 15%; }
+  #content_$$ .certificate { text-align: center; width: 20%; }
+  #details_$$ .certificate:hover { cursor: pointer; }
+
+</style>

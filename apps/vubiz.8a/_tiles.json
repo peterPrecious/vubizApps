@@ -1,0 +1,118 @@
+﻿[
+  {
+    "tilePage": "home",
+    "tileNo": "0",
+    "tileTitle": "Account Profile Summary",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/myCategories.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "1",
+    "tileTitle": "Program Usage Summary",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/myCategories.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "2",
+    "tileTitle": "Program Starts<br />Report Excel",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportExcel.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "3",
+    "tileTitle": "Program Completion<br />Summary Report Excel",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportExcel.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "33",
+    "tileTitle": "Program Activity<br />Details Report Excel",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportExcel.png",
+    "tileClass": "facilitator"
+  },
+
+
+
+
+  {
+    "tilePage": "home",
+    "tileNo": "4",
+    "tileTitle": "Add / Edit a Learner",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/administration.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "5",
+    "tileTitle": "List of Learners",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportOnline.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "6",
+    "tileTitle": "List of Learners <br />Excel",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportExcel.png",
+    "tileClass": "facilitator"
+  },
+
+
+
+
+
+
+  {
+    "tilePage": "home",
+    "tileNo": "20",
+    "tileTitle": "Learner Report Card",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportOnline.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "21",
+    "tileTitle": "Activity Report",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportOnline.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "22",
+    "tileTitle": "Assessment Report",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/reportOnline.png",
+    "tileClass": "facilitator"
+  },
+
+
+  {
+    "tilePage": "home",
+    "tileNo": "98",
+    "tileTitle": "Site Styles",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/managingYourPeople.png",
+    "tileClass": "administrator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "99",
+    "tileTitle": "Sign Out",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/signInOut.png",
+    "tileClass": "facilitator"
+  }
+]

@@ -1,0 +1,36 @@
+﻿
+.ui-icon-d-add:after { background-image: url("icons/add.png"); background-size: 36px 36px; }
+
+.ui-icon-d-back:after { background-image: url("icons/back.png"); background-size: 32px 32px; }
+
+.ui-icon-d-next:after { background-image: url("icons/next.png"); background-size: 32px 32px; }
+
+.ui-icon-d-check:after { background-image: url("icons/check.png"); background-size: 32px 32px; }
+
+.ui-icon-d-clone:after { background-image: url("icons/clone.png"); background-size: 22px 22px; }
+
+.ui-icon-d-delete:after { background-image: url("icons/delete.png"); background-size: 44px 44px; }
+
+.ui-icon-d-excel:after { background-image: url("icons/excel.png"); background-size: 18px 18px; }
+
+.ui-icon-d-report:after { background-image: url("icons/report.png"); background-size: 18px 18px; }
+
+.ui-icon-d-help:after { background-image: url("icons/help.png"); background-size: 32px 32px; }
+
+.ui-icon-d-info:after { background-image: url("icons/info.png"); background-size: 32px 32px; }
+
+.ui-icon-d-more:after { background-image: url("icons/more.png"); background-size: 22px 15px; }
+
+.ui-icon-d-refresh:after { background-image: url("icons/refresh.png"); background-size: 32px 32px; }
+
+.ui-icon-d-upload:after { background-image: url("icons/upload.png"); background-size: 32px 32px; }
+
+
+
+.ui-icon-d-EN:after { background-image: url("icons/EN.png"); background-size: 24px 20px; }
+
+.ui-icon-d-FR:after { background-image: url("icons/FR.png"); background-size: 24px 20px; }
+
+.ui-icon-d-ES:after { background-image: url("icons/ES.png"); background-size: 24px 20px; }
+
+.ui-icon-d-PT:after { background-image: url("icons/PT.png"); background-size: 24px 20px; }

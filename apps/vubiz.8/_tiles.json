@@ -1,0 +1,154 @@
+﻿[
+  {
+    "tilePage": "home",
+    "tileNo": "0",
+    "tileTitle": "[[My Learning Themes]]",
+    "tileColor": "#d30e45",
+    "tileIcon": "styles/tiles/myCategories.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "8",
+    "tileTitle": "[[Purchased Courses]]",
+    "tileColor": "#330ed3",
+    "tileIcon": "styles/tiles/myCategories.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "1",
+    "tileTitle": "[[Just In Time Learning]]",
+    "tileColor": "#330ed3",
+    "tileIcon": "styles/tiles/justInTimeLearning.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "2",
+    "tileTitle": "[[My Profile]]",
+    "tileColor": "#f43d0b",
+    "tileIcon": "styles/tiles/myProfile.png",
+    "tileClass": "guest"
+  },
+
+  {
+    "tilePage": "home",
+    "tileNo": "23",
+    "tileTitle": "[[My Report Card]]",
+    "tileColor": "#7a1e95",
+    "tileIcon": "styles/tiles/myReportCard.png",
+    "tileClass": "guest"
+  },
+
+
+  {
+    "tilePage": "home",
+    "tileNo": "4",
+    "tileTitle": "[[My Employees]]",
+    "tileColor": "#288af5",
+    "tileIcon": "styles/tiles/myEmployees.png",
+    "tileClass": "learner"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "5",
+    "tileTitle": "[[Certificate Programs]]",
+    "tileColor": "#11ae9a",
+    "tileIcon": "styles/tiles/certificatePrograms.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "9",
+    "tileTitle": "[[About Our Kids Programs]]",
+    "tileColor": "#096e4d",
+    "tileIcon": "styles/tiles/piggy.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "6",
+    "tileTitle": "Administration",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/administration.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "home",
+    "tileNo": "7",
+    "tileTitle": "[[Sign Out]]",
+    "tileColor": "#a91bd2",
+    "tileIcon": "styles/tiles/signInOut.png",
+    "tileClass": "guest"
+  },
+
+
+  {
+    "tilePage": "administration",
+    "tileNo": "0",
+    "tileTitle": "Activity Analysis",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/growingYourBusiness.png",
+    "tileClass": "facilitator"
+  },
+  {
+    "tilePage": "administration",
+    "tileNo": "1",
+    "tileTitle": "Learner Report",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/administration.png",
+    "tileClass": "facilitator"
+  },
+
+
+
+
+
+
+
+  {
+    "tilePage": "myGuests",
+    "tileNo": "0",
+    "tileTitle": "[[Set Up The Employee Training Centre]]",
+    "tileColor": "#00941a",
+    "tileIcon": "styles/tiles/administration.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "myGuests",
+    "tileNo": "1",
+    "tileTitle": "[[Employee List]]",
+    "tileColor": "#330ed3",
+    "tileIcon": "styles/tiles/startingUp.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "myGuests",
+    "tileNo": "2",
+    "tileTitle": "[[Add An Employee]]",
+    "tileColor": "#7a1e95",
+    "tileIcon": "styles/tiles/managingYourPeople.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "myGuests",
+    "tileNo": "3",
+    "tileTitle": "[[Employee Activity Report]]",
+    "tileColor": "#c20a0a",
+    "tileIcon": "styles/tiles/healthAndSafety.png",
+    "tileClass": "guest"
+  },
+  {
+    "tilePage": "myGuests",
+    "tileNo": "4",
+    "tileTitle": "[[Completion Report]]",
+    "tileColor": "#964B00",
+    "tileIcon": "styles/tiles/reportExcel.png",
+    "tileClass": "guest"
+  }
+
+
+
+
+]

@@ -1,0 +1,94 @@
+﻿[
+  {
+    "pageId": "signIn",
+    "pageName": "[[Sign In]]"
+  },
+  {
+    "pageId": "signUp",
+    "pageName": "[[Sign Up]]"
+  },
+  {
+    "pageId": "signOut",
+    "pageName": "[[Sign Out]]"
+  },
+  {
+    "pageId": "learner",
+    "pageName": "[[Create an Account]]"
+  },
+  {
+    "pageId": "home",
+    "pageName": "[[My Learning Centre]]"
+  },
+  {
+    "pageId": "oops",
+    "pageName": "[[Oops]]"
+  },
+  {
+    "pageId": "profile",
+    "pageName": "[[My Profile]]"
+  },
+  {
+    "pageId": "catalogue",
+    "pageName": "[[My Learning Themes]]"
+  },
+  {
+    "pageId": "jitCatalogue",
+    "pageName": "[[Just In Time Learning Themes]]"
+  },
+  {
+    "pageId": "jitQuery",
+    "pageName": "[[Select Learning Items of Interest]]"
+  },
+  {
+    "pageId": "programs",
+    "pageName": "[[My Learning Programs]]"
+  },
+  {
+    "pageId": "modules",
+    "pageName": "[[My Learning Modules]]"
+  },
+  {
+    "pageId": "content",
+    "pageName": "[[My Learning Content]]"
+  },
+  {
+    "pageId": "historyPrograms2",
+    "pageName": "[[Report Card Summary]]"
+  },
+  {
+    "pageId": "historyProgram",
+    "pageName": "[[Report Card Details]]"
+  },
+  {
+    "pageId": "certificate",
+    "pageName": "[[Certificate]]"
+  },
+  {
+    "pageId": "certificatePrograms",
+    "pageName": "[[Certificate Programs]]"
+  },
+  {
+    "pageId": "kidsPrograms",
+    "pageName": "[[Kids Programs]]"
+  },
+  {
+    "pageId": "myGuests",
+    "pageName": "[[My Employees]]"
+  },
+  {
+    "pageId": "guestSetup",
+    "pageName": "[[Set Up The Employee Training Centre]]"
+  },
+  {
+    "pageId": "guests",
+    "pageName": "[[Employee List]]"
+  },
+  {
+    "pageId": "guest",
+    "pageName": "[[Add an Employee]]"
+  },
+  {
+    "pageId": "guestActivity",
+    "pageName": "[[Employee Activity]]"
+  }
+]

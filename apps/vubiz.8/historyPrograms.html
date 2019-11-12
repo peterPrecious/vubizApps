@@ -1,0 +1,25 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <div class="c2">
+    [[Click or tap Name for details and certificate]]
+    <br /><br />
+  </div>
+
+  <label id="lab_$$_completed" style="margin-bottom: 20px;">
+    <input id="ele_$$_completed" name="ele_$$_completed" type="checkbox">[[Include Completed Programs?]]
+    <span style="float:right">&#10004; = [[Completed Program]]</span>
+  </label>
+
+  <span style="font-weight:bold;" id="ele_$$_name"></span><br />
+
+  <ul id="programs_$$" data-role="listview" data-inset="true"></ul>
+
+</div>
+
+
+<style>
+  #content_$$ h2 { margin-top: 0; }
+  #content_$$ ul li { cursor: pointer; text-overflow: ellipsis; }
+    #content_$$ ul li:hover { background-color: cyan; }
+</style>

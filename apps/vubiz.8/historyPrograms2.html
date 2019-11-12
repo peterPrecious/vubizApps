@@ -1,0 +1,38 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <div class="c1" id="ele_$$_name"></div>
+
+  <div class="c2">
+    [[Under Completed Programs, click or tap the program name for details or the icon for certificate.]]
+
+    [[Under In-Progress Programs, click or tap the program name for details of the programs in progress.]]
+  </div>
+
+  <div data-role="collapsibleset" class="ui-collapsible-set" data-corners="false">
+    <div data-role="collapsible">
+      <h2>[[Completed Programs]]</h2>
+      <ul id="programsC_$$" data-role="listview" data-inset="true"></ul>
+    </div>
+    <div data-role="collapsible">
+      <h2>[[In-Progress Programs]]</h2>
+      <ul id="programsI_$$" data-role="listview" data-inset="true"></ul>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+  #content_$$ .c1,
+  #content_$$ .c2 { margin-bottom: 20px; }
+  #content_$$ h2 { margin-top: 0; }
+    #content_$$ h2 a { text-transform: none !important; }
+  #content_$$ ul li { cursor: pointer; text-overflow: ellipsis; }
+    #content_$$ ul li:hover { background-color: cyan; }
+    #content_$$ ul li div { height: 20px; margin: 0; padding: 0; vertical-align: bottom; }
+      #content_$$ ul li div .$$_cont { display: inline-block; width: 100% }
+      #content_$$ ul li div .$$_prog { display: inline-block; width: 95% }
+      #content_$$ ul li div .$$_cert { display: inline-block; width: 5% }
+      #content_$$ ul li div .$$_none { display: inline-block; width: 5% }
+</style>

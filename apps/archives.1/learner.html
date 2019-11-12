@@ -1,0 +1,51 @@
+﻿<div id="content_$$" data-role="main" class="ui-content">
+
+  <label>Profile</label>
+  <table id="$$_profile" style="margin: 0 0 20px 20px;">
+    <tbody></tbody>
+  </table>
+
+  <label>Program History <span>(tap on the Program Id for Module details)</span></label>
+  <table id="$$_programs" style="margin: 0 0 20px 20px;">
+    <thead>
+      <tr>
+        <th>Program Title</th>
+        <th>Program Id</th>
+        <th>Program Completed</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <label>Module History</label>
+  <table id="$$_modules" style="margin: 0 0 20px 20px;">
+    <thead>
+      <tr>
+        <th>Program Title</th>
+        <th>Program Id</th>
+        <th>Module Title</th>
+        <th>Module Id</th>
+        <th>Module Last Accessed</th>
+        <th>TimeSpent (Mins)</th>
+        <th>Module Score</th>
+        <th>Certificate</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="ele_archId" style="position:absolute; bottom:50px; width:100%; text-align:center; font-size:60px; opacity:0.3;"></div>
+
+</div>
+
+<style>
+  #$$_programs tr:nth-child(even) { background: #ccc; }
+  #$$_programs tr th { text-align: left; }
+
+  #$$_modules tr:nth-child(even) { background: #ccc; }
+  #$$_modules tr th { text-align: left; }
+
+  #$$_programs tr:hover { background-color: yellow; }
+
+  .$$_modules { display: none; }
+</style>

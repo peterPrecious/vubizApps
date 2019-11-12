@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://vubiz.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://vubiz.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://vubiz.com/">
+      <s:element name="GetAvailablePrograms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAvailableProgramsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAvailableProgramsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLearnerPrograms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LearnerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLearnerProgramsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLearnerProgramsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatalogResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramStats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProgramID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ModuleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramStatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgramStatsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLearnerCompletion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SessionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLearnerCompletionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLearnerCompletionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostSalesTrans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalesTransaction" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Encrypted" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostSalesTransResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PostSalesTransResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExpiryDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseGUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MemberXMLstatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LearnerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MemberXMLstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberXMLstatusResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MemberXMLhistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LearnerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MemberXMLhistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberXMLhistoryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MembersXMLhistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerGUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MembersXMLhistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MembersXMLhistoryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAvailableProgramsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAvailablePrograms" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableProgramsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAvailableProgramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerProgramsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLearnerPrograms" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerProgramsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLearnerProgramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCatalog" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProgramStats" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgramStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerCompletionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLearnerCompletion" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerCompletionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLearnerCompletionResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostSalesTransSoapIn">
+    <wsdl:part name="parameters" element="tns:PostSalesTrans" />
+  </wsdl:message>
+  <wsdl:message name="PostSalesTransSoapOut">
+    <wsdl:part name="parameters" element="tns:PostSalesTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:MemberXMLstatus" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:MemberXMLstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLhistorySoapIn">
+    <wsdl:part name="parameters" element="tns:MemberXMLhistory" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLhistorySoapOut">
+    <wsdl:part name="parameters" element="tns:MemberXMLhistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembersXMLhistorySoapIn">
+    <wsdl:part name="parameters" element="tns:MembersXMLhistory" />
+  </wsdl:message>
+  <wsdl:message name="MembersXMLhistorySoapOut">
+    <wsdl:part name="parameters" element="tns:MembersXMLhistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableProgramsHttpGetIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableProgramsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerProgramsHttpGetIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+    <wsdl:part name="LearnerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerProgramsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogHttpGetIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatsHttpGetIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+    <wsdl:part name="ProgramID" type="s:string" />
+    <wsdl:part name="ModuleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerCompletionHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerCompletionHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLstatusHttpGetIn">
+    <wsdl:part name="CustomerGUID" type="s:string" />
+    <wsdl:part name="LearnerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLstatusHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLhistoryHttpGetIn">
+    <wsdl:part name="CustomerGUID" type="s:string" />
+    <wsdl:part name="LearnerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLhistoryHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableProgramsHttpPostIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableProgramsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerProgramsHttpPostIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+    <wsdl:part name="LearnerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerProgramsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogHttpPostIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatsHttpPostIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+    <wsdl:part name="ProgramID" type="s:string" />
+    <wsdl:part name="ModuleID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerCompletionHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLearnerCompletionHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLstatusHttpPostIn">
+    <wsdl:part name="CustomerGUID" type="s:string" />
+    <wsdl:part name="LearnerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLstatusHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLhistoryHttpPostIn">
+    <wsdl:part name="CustomerGUID" type="s:string" />
+    <wsdl:part name="LearnerID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MemberXMLhistoryHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="ExchangeSoap">
+    <wsdl:operation name="GetAvailablePrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of available programs as an XML data document for a supplied customer ID&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetAvailableProgramsSoapIn" />
+      <wsdl:output message="tns:GetAvailableProgramsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns program status as an XML data document for a supplied customer ID and Learner ID&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;li&gt;LearnerID - Unique Learner ID &lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLearnerProgramsSoapIn" />
+      <wsdl:output message="tns:GetLearnerProgramsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the catalog for a supplied customer ID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCatalogSoapIn" />
+      <wsdl:output message="tns:GetCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the statistics for a program and module as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;li&gt;ProgramID - Program ID in the form P1234EN&lt;/li&gt;&lt;li&gt;Module ID - Module ID in the form 1234EN&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetProgramStatsSoapIn" />
+      <wsdl:output message="tns:GetProgramStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the completion data for a learning session in an XML document if completed&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;SessionID - Unique Session ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLearnerCompletionSoapIn" />
+      <wsdl:output message="tns:GetLearnerCompletionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostSalesTrans">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Post one or more sales transactions consisting of individual items&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;SalesTransaction - XML Document containing sales items&lt;/li&gt;&lt;li&gt;Encrypted - Flag to indicate if the contents are encrypted - currently not used, should be set to false&lt;/li&gt;&lt;li&gt;AccountID - May return a new account vubiz generated account ID&lt;/li&gt;&lt;li&gt;Password - May return a new vubiz generated account password&lt;/li&gt;&lt;li&gt;ResponseGUID - Will always return a guid to the apps.dbo.ecomLogs - also used by NOP so clients can take courses after purchase&lt;/li&gt;&lt;li&gt;ExpiryDate - Date module will expire. Default is null&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:PostSalesTransSoapIn" />
+      <wsdl:output message="tns:PostSalesTransSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns learner status for CustomerGUID and LearnerID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGUID - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Learner ID - Unique Learner ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MemberXMLstatusSoapIn" />
+      <wsdl:output message="tns:MemberXMLstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns learner history for CustomerGuid and LearnerID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGuid - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Learner ID - Unique Learner ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MemberXMLhistorySoapIn" />
+      <wsdl:output message="tns:MemberXMLhistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MembersXMLhistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns completed programs for CustomerGuid as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGuid - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Start Date - optional&lt;/li&gt;&lt;li&gt;End Date - optional&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MembersXMLhistorySoapIn" />
+      <wsdl:output message="tns:MembersXMLhistorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ExchangeHttpGet">
+    <wsdl:operation name="GetAvailablePrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of available programs as an XML data document for a supplied customer ID&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetAvailableProgramsHttpGetIn" />
+      <wsdl:output message="tns:GetAvailableProgramsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns program status as an XML data document for a supplied customer ID and Learner ID&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;li&gt;LearnerID - Unique Learner ID &lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLearnerProgramsHttpGetIn" />
+      <wsdl:output message="tns:GetLearnerProgramsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the catalog for a supplied customer ID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCatalogHttpGetIn" />
+      <wsdl:output message="tns:GetCatalogHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the statistics for a program and module as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;li&gt;ProgramID - Program ID in the form P1234EN&lt;/li&gt;&lt;li&gt;Module ID - Module ID in the form 1234EN&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetProgramStatsHttpGetIn" />
+      <wsdl:output message="tns:GetProgramStatsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the completion data for a learning session in an XML document if completed&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;SessionID - Unique Session ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLearnerCompletionHttpGetIn" />
+      <wsdl:output message="tns:GetLearnerCompletionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns learner status for CustomerGUID and LearnerID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGUID - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Learner ID - Unique Learner ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MemberXMLstatusHttpGetIn" />
+      <wsdl:output message="tns:MemberXMLstatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns learner history for CustomerGuid and LearnerID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGuid - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Learner ID - Unique Learner ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MemberXMLhistoryHttpGetIn" />
+      <wsdl:output message="tns:MemberXMLhistoryHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ExchangeHttpPost">
+    <wsdl:operation name="GetAvailablePrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of available programs as an XML data document for a supplied customer ID&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetAvailableProgramsHttpPostIn" />
+      <wsdl:output message="tns:GetAvailableProgramsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns program status as an XML data document for a supplied customer ID and Learner ID&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;li&gt;LearnerID - Unique Learner ID &lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLearnerProgramsHttpPostIn" />
+      <wsdl:output message="tns:GetLearnerProgramsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the catalog for a supplied customer ID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCatalogHttpPostIn" />
+      <wsdl:output message="tns:GetCatalogHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the statistics for a program and module as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerID - Unique Customer ID in the form ABCD1234&lt;/li&gt;&lt;li&gt;ProgramID - Program ID in the form P1234EN&lt;/li&gt;&lt;li&gt;Module ID - Module ID in the form 1234EN&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetProgramStatsHttpPostIn" />
+      <wsdl:output message="tns:GetProgramStatsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the completion data for a learning session in an XML document if completed&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;SessionID - Unique Session ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetLearnerCompletionHttpPostIn" />
+      <wsdl:output message="tns:GetLearnerCompletionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns learner status for CustomerGUID and LearnerID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGUID - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Learner ID - Unique Learner ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MemberXMLstatusHttpPostIn" />
+      <wsdl:output message="tns:MemberXMLstatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns learner history for CustomerGuid and LearnerID as an XML document&lt;br/&gt;&lt;h6&gt;Parameters&lt;/h6&gt;&lt;ol&gt;&lt;li&gt;CustomerGuid - Assigned by Vubiz&lt;/li&gt;&lt;li&gt;Learner ID - Unique Learner ID&lt;/li&gt;&lt;/ol&gt;</wsdl:documentation>
+      <wsdl:input message="tns:MemberXMLhistoryHttpPostIn" />
+      <wsdl:output message="tns:MemberXMLhistoryHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExchangeSoap" type="tns:ExchangeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAvailablePrograms">
+      <soap:operation soapAction="http://vubiz.com/GetAvailablePrograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <soap:operation soapAction="http://vubiz.com/GetLearnerPrograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <soap:operation soapAction="http://vubiz.com/GetCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <soap:operation soapAction="http://vubiz.com/GetProgramStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <soap:operation soapAction="http://vubiz.com/GetLearnerCompletion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostSalesTrans">
+      <soap:operation soapAction="http://vubiz.com/PostSalesTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <soap:operation soapAction="http://vubiz.com/MemberXMLstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <soap:operation soapAction="http://vubiz.com/MemberXMLhistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MembersXMLhistory">
+      <soap:operation soapAction="http://vubiz.com/MembersXMLhistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExchangeSoap12" type="tns:ExchangeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAvailablePrograms">
+      <soap12:operation soapAction="http://vubiz.com/GetAvailablePrograms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <soap12:operation soapAction="http://vubiz.com/GetLearnerPrograms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <soap12:operation soapAction="http://vubiz.com/GetCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <soap12:operation soapAction="http://vubiz.com/GetProgramStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <soap12:operation soapAction="http://vubiz.com/GetLearnerCompletion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostSalesTrans">
+      <soap12:operation soapAction="http://vubiz.com/PostSalesTrans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <soap12:operation soapAction="http://vubiz.com/MemberXMLstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <soap12:operation soapAction="http://vubiz.com/MemberXMLhistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MembersXMLhistory">
+      <soap12:operation soapAction="http://vubiz.com/MembersXMLhistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExchangeHttpGet" type="tns:ExchangeHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetAvailablePrograms">
+      <http:operation location="/GetAvailablePrograms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <http:operation location="/GetLearnerPrograms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <http:operation location="/GetCatalog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <http:operation location="/GetProgramStats" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <http:operation location="/GetLearnerCompletion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <http:operation location="/MemberXMLstatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <http:operation location="/MemberXMLhistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExchangeHttpPost" type="tns:ExchangeHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAvailablePrograms">
+      <http:operation location="/GetAvailablePrograms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerPrograms">
+      <http:operation location="/GetLearnerPrograms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalog">
+      <http:operation location="/GetCatalog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStats">
+      <http:operation location="/GetProgramStats" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnerCompletion">
+      <http:operation location="/GetLearnerCompletion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLstatus">
+      <http:operation location="/MemberXMLstatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberXMLhistory">
+      <http:operation location="/MemberXMLhistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Exchange">
+    <wsdl:port name="ExchangeSoap" binding="tns:ExchangeSoap">
+      <soap:address location="http://localhost/webservice/vuecommerce.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExchangeSoap12" binding="tns:ExchangeSoap12">
+      <soap12:address location="http://localhost/webservice/vuecommerce.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExchangeHttpGet" binding="tns:ExchangeHttpGet">
+      <http:address location="http://localhost/webservice/vuecommerce.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExchangeHttpPost" binding="tns:ExchangeHttpPost">
+      <http:address location="http://localhost/webservice/vuecommerce.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

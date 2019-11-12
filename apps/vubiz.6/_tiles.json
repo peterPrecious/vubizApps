@@ -1,0 +1,18 @@
+﻿[
+    {
+        "tilePage": "home",
+        "tileNo": "0",
+        "tileTitle": "Ecommerce<br>...coming",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/growingYourBusiness.png",
+        "tileClass": "manager"
+    },
+    {
+        "tilePage": "home",
+        "tileNo": "1",
+        "tileTitle": "Learners<br>...coming",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/growingYourBusiness.png",
+        "tileClass": "manager"
+    }
+]

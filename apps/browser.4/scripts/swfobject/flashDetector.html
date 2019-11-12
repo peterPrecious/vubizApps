@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+		  function outputPlayerversion()
+		  {
+		    var playerVersion = swfobject.getFlashPlayerVersion(); // returns a JavaScript object
+		    var output = "You have Flash player " + playerVersion.major + "." + playerVersion.minor + "." + playerVersion.release + " installed";
+		    alert( output );
+		  }
+		  //outputPlayerversion(); 
+		  // testing before the DOM is available is not fully reliable in non-Internet Explorer browsers
+		  swfobject.addDomLoadEvent( outputPlayerversion );
+
+
+
+
+		</script>
+	</head>
+<body>
+
+</body>
+</html>

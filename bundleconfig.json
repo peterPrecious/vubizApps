@@ -1,0 +1,176 @@
+[
+  {
+    "outputFileName": "scripts/jquery-ui.min.css",
+    "inputFiles": [
+      "scripts/jquery-ui.css"
+    ]
+  },
+  {
+    "outputFileName": "scripts/less-1.5.1.min.js",
+    "inputFiles": [
+      "scripts/less-1.5.1.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$storage.min.js",
+    "inputFiles": [
+      "scripts/$storage.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$scale.min.js",
+    "inputFiles": [
+      "scripts/$scale.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$functions.min.js",
+    "inputFiles": [
+      "scripts/$functions.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$cookies.min.js",
+    "inputFiles": [
+      "scripts/$cookies.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/jquery-ui-fr.min.js",
+    "inputFiles": [
+      "scripts/jquery-ui-fr.js"
+    ]
+  },
+  {
+    "outputFileName": "styles/icons.min.css",
+    "inputFiles": [
+      "styles/icons.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/logos.min.css",
+    "inputFiles": [
+      "styles/logos.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/tiles.min.css",
+    "inputFiles": [
+      "styles/tiles.css"
+    ]
+  },
+  {
+    "outputFileName": "scripts/jquery-ui.min.js",
+    "inputFiles": [
+      "scripts/jquery-ui.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$urls.min.js",
+    "inputFiles": [
+      "scripts/$urls.js"
+    ]
+  },
+  {
+    "outputFileName": "$vc/$vc5.min.js",
+    "inputFiles": [
+      "$vc/$vc5.js"
+    ]
+  },
+  {
+    "outputFileName": "$vc/$ws.min.js",
+    "inputFiles": [
+      "$vc/$ws.js"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/cfib.min.css",
+    "inputFiles": [
+      "styles/skins/cfib.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/evhr.min.css",
+    "inputFiles": [
+      "styles/skins/evhr.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/ibao.min.css",
+    "inputFiles": [
+      "styles/skins/ibao.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/mort.min.css",
+    "inputFiles": [
+      "styles/skins/mort.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/mpc.min.css",
+    "inputFiles": [
+      "styles/skins/mpc.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/vubz.min.css",
+    "inputFiles": [
+      "styles/skins/vubz.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/skins/high.min.css",
+    "inputFiles": [
+      "styles/skins/high.css"
+    ]
+  },
+  {
+    "outputFileName": "styles/basic.min.css",
+    "inputFiles": [
+      "styles/basic.css"
+    ]
+  },
+  {
+    "outputFileName": "$vc/$vc3.min.js",
+    "inputFiles": [
+      "$vc/$vc3.js"
+    ]
+  },
+  {
+    "outputFileName": "$vc/$vc2.min.js",
+    "inputFiles": [
+      "$vc/$vc2.js"
+    ]
+  },
+  {
+    "outputFileName": "$vc/$ws.langs.min.js",
+    "inputFiles": [
+      "$vc/$ws.langs.js"
+    ]
+  },
+  {
+    "outputFileName": "$vc/$ws.profiles.min.js",
+    "inputFiles": [
+      "$vc/$ws.profiles.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$formManager.min.js",
+    "inputFiles": [
+      "scripts/$formManager.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/$formManagerAsp.min.js",
+    "inputFiles": [
+      "scripts/$formManagerAsp.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/jquery.min.js",
+    "inputFiles": [
+      "scripts/jquery.js"
+    ]
+  }
+]

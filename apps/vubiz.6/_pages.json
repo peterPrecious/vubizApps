@@ -1,0 +1,14 @@
+﻿[
+    {
+        "pageId": "signIn",
+        "pageName": "SignIn"
+    },
+    {
+        "pageId": "ecommerceReport",
+        "pageName": "[[Ecommerce Transactions]]"
+    },
+    {
+        "pageId": "learnerReport",
+        "pageName": "[[Learners]]"
+    }
+]

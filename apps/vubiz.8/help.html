@@ -1,0 +1,112 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <div data-role=" collapsibleset" data-content-theme="a" data-theme="a">
+
+  <div data-role="collapsible">
+    <h3>How is V8 different?</h3>
+    <ul>
+      <li>It is mobile/touch friendly.&ensp;This feature will increasingl become important as our HTML content collection grows.</li>
+      <li>It offers enhanced security by using user controlled passwords, enhanced access options and optionally configured to run using SSL.</li>
+      <li>It is only for learning.&ensp;Facs/Mgrs/Adms will link to V5 (V8a eventually) for Reports, etc which will NOT be mobile/touch friendly.</li>
+      <li>Sign In pages (ChAccess Pages) are embedded in V8.</li>
+      <li>Allows Advanced Learner Uploads and the ability to tie learners to a particular Facilitator for reporting.</li>
+      <li>A V8 account can be configured to allow a learner to Add one or more Guest Leaners.&ensp;And example is CFIB's members who are tyipcally small business owners.&ensp;Each CFIB member/learner can add one or more of their employees into the system to access all or some of the account catalogue.</li>
+      <li>V8 is part of our growing family of Vubiz "apps".&ensp;Each app uses a "Profile" table that addresses their unique services.&ensp;This table allows app specific info to enhance the service, ie like the embedded "Sign In pages"</li>
+      <!--<li>When we set up a V8 account it will create V8 Internal Users that have slightly different credentials.&ensp;Instead of VUV5_LRN (for example) we create VUV8_LRN with the same password we use in Samplers [coming].</li>-->
+    </ul>
+  </div>
+
+  <div data-role="collapsible">
+    <h3>Which accounts can and cannot use V8?</h3>
+    <ul>
+      <li>V8 is targetted to our next generation "clean" channels, ie those that do not use custom functionality.</li>
+      <li>V8 will support content and child accounts created via Ecommerce however ecommerce is not part of V8.</li>
+      <li>While G2 Parent/Child Sites are supported, the legacy G1 sites are NOT supported.</li>
+      <li>Corporate sites are NOT supported</li>
+      <li>V8 only supports content using our SCORM RTE.&ensp;This includes FX, XX and Z but does NOT support the leagacy F nor X content.</li>
+      <li>Existing channels that match this criteria can be ported to V8.</li>
+    </ul>
+  </div>
+
+  <div data-role="collapsible">
+    <h3>When will V8 be available.</h3>
+    <ul>
+      <li>CFIB is our first V8 custmer.&ensp;They are a good account to launch this service as they have a high profile, and only use the core features.</li>
+      <li>V8 with CFIB should be live by September.</li>
+      <li>V8 with ecommerce using the VUBIZ house account should be functional by the end of the year.</li>
+      <li>V8 should be availble for new customers or the migration of existing customer by early 2015.</li>
+    </ul>
+  </div>
+
+  <div data-role="collapsible">
+    <h3>Configuring a V8 Account</h3>
+
+    This is done on the Customer Table using V5. Since V8 is a Channel Service there are a set of flags that need to be addressed.
+
+    <ul>
+
+      <li>Is V8 : Does this account meet the criteria to be V8, ie is it a clean channel using RTE content.</li>
+      <li>Is G2 Parent : If this is a Group Account is it a G2 Parent or Child</li>
+      <li>Use V8 Uploads with Reports To : Does this V8 client want to use the Advanced Upload to manage their learners?</li>
+      <li>Use V8 Guest System : can a learner invite a guest to access the account.&ensp;Typically use in Associations like CFIB.</li>
+      <li>To use Single Sign On (SSO) enable Auto Enroll. This implies that Members cannot access the site directly, they must come in with a Customer Guid.</li>
+
+    </ul>
+  </div>
+
+  <div data-role="collapsible">
+    <h3>Access Options</h3>
+    There are three ways to enter the V8 service (configurable):
+    <ol>
+      <li>
+        SSO - Single Sign On<br /><br />
+
+        This is available for clients who authenticate their users behind their own firewall.&ensp;When they are redirected to us they do NOT need a password but they will need an Account Guid.&ensp;These guids are unique to each Customer Id and would be given out to the client by Helen.&ensp; CFIB for example would have an SSO link to our site as follows:
+
+        <div style="margin:20px;">
+          http://cfib.vubiz.com?custGuid=abcdef12-1234-5554-abab-3333&learnerId=123456
+          <br />...where 123456 is the CFIB Member No and the custGuid is issued by Vubiz
+        </div>
+
+        For Security reasons we all want to keep the GUIDS as confidential as possible.<br />
+        Ideally we want the SSO to be a form post to V8 but that will depend on ths client's setup.<br /><br />
+
+
+      </li>
+      <li>
+        Direct Access<br /><br />
+
+        We will optionally allow clients direct access by passing in all these variables, typically via the URL.<br />
+        Soon we will enhance security by offering a V8 direct access option: none | url | form.<br />
+        V5 allows URL direct access and V8 will start by allowing it but soon we can either disable this or only support direct access via a form post.<br />
+        A typical form post to CFIB would look like this:
+
+        <div style="margin:20px;">
+          http://cfib.vubiz.com?leanerId&learnerId=123456&password=password;
+        </div>
+      </li>
+      <li>
+        Sign In Form<br /><br />
+
+        When the service does not recognize either SSO or Direct Access it will render a sign in page.<br />
+        Using profile data the Sign In page will be able to replicate the older ChAcess service.<br />
+        If V8 does not know the profile it will render a Customer Id text box.
+
+
+      </li>
+    </ol>
+  </div>
+
+  <div data-role="collapsible">
+    <h3>Future Considerations</h3>
+    <ul>
+      <li>For the Advanced Upload, should we have an optional “Create Password” feature that generates an industry standard password if one is NOT provided?</li>
+      <li>Technically no-one other than the learner should ever know their password.&ensp;Learners should recreate their own rather than look to VUBIZ to tell them the password.&ensp;We have an app for that purpose.</li>
+      <li>For V8 clients using existing reports, we will change V5 channel term Password to Learner ID as we do with Corporate - BUT unlike Corporate passwords, we would never make V8 passwords available anywhere.</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>

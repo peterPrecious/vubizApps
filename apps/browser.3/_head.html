@@ -1,0 +1,45 @@
+﻿
+<title>Browser Checker | Vérificateur de navigateur</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="https://vubiz.com/vubizApps/styles/favicon.ico" />
+
+<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<link href="styles/basic.css" rel="stylesheet" />
+<link href="styles/icons.css" rel="stylesheet" />
+<link href="styles/logos.css" rel="stylesheet" />
+<link href="styles/tiles.css" rel="stylesheet" />
+
+<!-- utilities -->
+<script src="scripts/$urls.js"></script>
+<script src="scripts/$functions.js"></script>
+<script src="scripts/$cookies.js"></script>
+<script src="scripts/$storage.js"></script>
+
+<!-- client script -->
+<script src="$vc/$vc2.js"></script>
+
+<!-- custom scripts -->
+<link href="apps/browser.3/styles/this.css" rel="stylesheet" />
+
+<!-- check TLS status script (run even if not needed)-->
+<script>
+  var ecomOk = false;
+  window.parseTLSinfo = function (data) {
+    var version = data.tls_version.split(' ');
+    ecomOk = version[0] != 'TLS' || version[1] < 1.2 ? false : true;
+  }
+</script>
+<script src="https://www.howsmyssl.com/a/check?callback=parseTLSinfo"></script>
+
+<!-- kill soon.... -->
+<script src="apps/browser.3/scripts/onload.js"></script>
+<script src="apps/browser.3/scripts/langButtons.js"></script>
+<script src="apps/browser.3/scripts/renderPage.js"></script>
+<script src="apps/browser.3/scripts/showNavigator.js"></script>
+<script src="apps/browser.3/scripts/swfobject.js"></script>
+<script src="apps/browser.3/scripts/getLangs.js"></script>
+<script src="apps/browser.3/scripts/getProfiles.js"></script>

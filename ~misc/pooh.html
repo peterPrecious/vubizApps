@@ -1,0 +1,758 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>Learning Center | Centre d'apprentissage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" href="https://vubiz.com/vubizApps/styles/favicon.ico" />
+
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<link href="styles/basic.min.css" rel="stylesheet" />
+	<link href="styles/icons.min.css" rel="stylesheet" />
+	<link href="styles/logos.min.css" rel="stylesheet" />
+	<link href="styles/tiles.min.css" rel="stylesheet" />
+
+	<!-- utilities -->
+	<script src="scripts/$urls.min.js"></script>
+	<script src="scripts/$functions.min.js"></script>
+	<script src="scripts/$cookies.min.js"></script>
+	<script src="scripts/$storage.min.js"></script>
+
+	<script src="$vc/$vc5.js"></script>
+
+</head>
+
+<body class="ui-mini ">
+
+	<div id='profileState' style='display:none'>True|False|True|CFIB6408|CFIB6504|#D31145|catalogue|CFIB5288|False|support@vubiz.com|True|False|True|en|True||||cfib_en.png|True|True|False|http://cfib.ca/|False||1|True|True|</div>
+	<div id='tileState' style='display:none'>[{"tilePage": "home","tileNo": "0","tileTitle": "My Learning Themes","tileColor": "#d30e45","tileIcon": "styles/tiles/myCategories.png","tileClass": "guest"},{"tilePage": "home","tileNo": "8","tileTitle": "Purchased Courses","tileColor": "#330ed3","tileIcon": "styles/tiles/myCategories.png","tileClass": "guest"},{"tilePage": "home","tileNo": "1","tileTitle": "Just In Time Learning","tileColor": "#330ed3","tileIcon": "styles/tiles/justInTimeLearning.png","tileClass": "guest"},{"tilePage": "home","tileNo": "2","tileTitle": "My Profile","tileColor": "#f43d0b","tileIcon": "styles/tiles/myProfile.png","tileClass": "guest"},{"tilePage": "home","tileNo": "23","tileTitle": "My Report Card","tileColor": "#7a1e95","tileIcon": "styles/tiles/myReportCard.png","tileClass": "guest"},{"tilePage": "home","tileNo": "4","tileTitle": "My Employees","tileColor": "#288af5","tileIcon": "styles/tiles/myEmployees.png","tileClass": "learner"},{"tilePage": "home","tileNo": "5","tileTitle": "Certificate Programs","tileColor": "#11ae9a","tileIcon": "styles/tiles/certificatePrograms.png","tileClass": "guest"},{"tilePage": "home","tileNo": "9","tileTitle": "About Our Kids Programs","tileColor": "#096e4d","tileIcon": "styles/tiles/piggy.png","tileClass": "guest"},{"tilePage": "home","tileNo": "6","tileTitle": "Administration","tileColor": "#00941a","tileIcon": "styles/tiles/administration.png","tileClass": "facilitator"},{"tilePage": "home","tileNo": "7","tileTitle": "Sign Out","tileColor": "#a91bd2","tileIcon": "styles/tiles/signInOut.png","tileClass": "guest"},{"tilePage": "administration","tileNo": "0","tileTitle": "Activity Analysis","tileColor": "#00941a","tileIcon": "styles/tiles/growingYourBusiness.png","tileClass": "facilitator"},{"tilePage": "administration","tileNo": "1","tileTitle": "Learner Report","tileColor": "#00941a","tileIcon": "styles/tiles/administration.png","tileClass": "facilitator"},{"tilePage": "myGuests","tileNo": "0","tileTitle": "Set Up The Employee Training Centre","tileColor": "#00941a","tileIcon": "styles/tiles/administration.png","tileClass": "guest"},{"tilePage": "myGuests","tileNo": "1","tileTitle": "Employee List","tileColor": "#330ed3","tileIcon": "styles/tiles/startingUp.png","tileClass": "guest"},{"tilePage": "myGuests","tileNo": "2","tileTitle": "Add An Employee","tileColor": "#7a1e95","tileIcon": "styles/tiles/managingYourPeople.png","tileClass": "guest"},{"tilePage": "myGuests","tileNo": "3","tileTitle": "Employee Activity Report","tileColor": "#c20a0a","tileIcon": "styles/tiles/healthAndSafety.png","tileClass": "guest"}]</div>
+	<div id='startState' style='display:none'>vubiz.8|0|3|1|||||y|localhost|en||||||||1||cfib|cfib||//corporate.vubiz.com||1|True|empty</div>
+
+	<div id='page_signIn' data-role='page'>
+		<div id="content_signIn" data-role="main" class="ui-content">
+			<div style="padding:50px 0 0 30px;">
+				<div id="div_signIn_custId">
+					<label id="ele_signIn_customerId">Customer Id:</label>
+					<div style="padding-left:20px; width:100px;">
+						<input id="ele_signIn_custId" type="email" name="ele_signIn_custId" value="" />
+					</div>
+				</div>
+				<label id="ele_signIn_learnerId">Username (Email Address) :</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signIn_membId" type="email" name="ele_signIn_membId" value="" />
+				</div>
+				<label id="ele_signIn_password">Password:</label>
+				<div style="padding-left: 20px; width: 200px;">
+					<input id="ele_signIn_membPassword" name="ele_signIn_membPassword" value="" type="password" />
+				</div>
+			</div>
+			<div class="icons">
+				<div id="ele_signIn_check" class="ui-btn ui-shadow ui-corner-all ui-nodisc-icon ui-btn-inline ui-icon-d-check ui-btn-icon-left">Sign In</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='page_home' data-role='page'>
+		<div id="content_home" data-role="main" class="ui-content">
+			<ul id="tile_home" class='tileSet'></ul>
+		</div>
+	</div>
+
+	<div id='page_catalogue' data-role='page'>
+		<div id="content_catalogue" data-role="main" class="ui-content">
+			<ul id="tiles_catalogue" class="tileSet"></ul>
+		</div>
+	</div>
+
+	<div id='page_programs' data-role='page'>
+		<div id="content_programs" data-role="main" class="ui-content">
+			<ul id="tiles_programs" class="tileSet"></ul>
+		</div>
+	</div>
+
+	<div id='page_modules' data-role='page'>
+		<div id="content_modules" data-role="main" class="ui-content">
+			<ul id="tiles_modules" class="tileSet"></ul>
+		</div>
+	</div>
+
+	<div id='page_content' data-role='page'>
+		<div id="content_content" data-role="main" class="ui-content"></div>
+	</div>
+
+
+
+
+	<script id='page_scripts'>
+
+		// signin
+		$(document).bind("pagebeforeshow", function () {
+			if ($.mobile.activePage.attr("id") === "page_signIn") {
+
+				$("#footer_signIn_title").html($vc.sessionState.appId + " | signIn");
+				$("#ele_signIn_homeIcon").hide();
+				$("#ele_signIn_backIcon").hide();
+
+				if ($vc.startState.host === "localhost") {
+					$("#ele_signIn_membId")[0].value = "support@vubiz.com";
+					$("#ele_signIn_membPassword")[0].value = "vub!z";
+				}
+
+				/* if we have a logo, display it */
+				if ($vc.profileState.logo === undefined || $vc.profileState.logo.length === 0) {
+					$("#ele_signIn_logo").hide();
+				} else {
+					$("#ele_signIn_logo").show();
+					$("#img_signIn_logo").attr("src", "styles/logos/" + $vc.profileState.logo);
+				}
+				if (ok($vc.sessionState.membGuid).length === 36) {
+					$("#content_signIn").hide();
+					$vc.signIn.member();
+				} else if (ok($vc.sessionState.userName).length > 9) {
+					$("#content_signIn").hide();
+					$vc.signIn.authenticate("auto");
+				} else if (ok($vc.sessionState.custId).length === 8) {
+					$("#content_signIn").show();
+					$("#div_signIn_custId").hide();
+					$("#ele_signIn_custId")[0].value = $vc.sessionState.custId;
+					$vc.signIn.customer();
+				}
+
+			}
+		});
+		$vc.signIn = function () {
+			var _getCustId = function () { /* get customer ID from URL or use house account */
+				return ifElse($.getUrlVar("custId"), $("#ele_signIn_custId")[0].value);
+			};
+			var _getMember = function (type) {
+				$vc.sessionState.applicationId = 1;
+				/* if type = auto then we have the values stored in parameterState */
+				if (type === "form") {
+					$vc.sessionState.membId = $("#ele_signIn_membId")[0].value;
+					$vc.sessionState.userName = $("#ele_signIn_custId")[0].value + "\\" + $("#ele_signIn_membId")[0].value;
+					$vc.sessionState.membPassword = $("#ele_signIn_membPassword")[0].value;
+				}
+			};
+			var _getGuid = function () {
+				$vc.sessionState.membGuid = $vc.memberState.membGuid;
+			};
+			var _doneCustomer = function (data, result, xhr) {
+				if (data === null) {
+					$vc.fn.popup("This account is inactive or has expired.");
+				} else {
+					$vc.fn.console("starting customer");
+					$vc.customerState = data;
+					$vc.customerState.langEn = data.langEn === "1";
+					$vc.customerState.langFr = data.langFr === "1";
+					$vc.customerState.langEs = data.langEs === "1";
+					$vc.customerState.langPt = data.langPt === "1";
+					$vc.sessionState.custNo = data.custNo;
+					$vc.fn.putData();
+
+					/* render the customer title on the header */
+					$("#header_signIn_title").html($vc.customerState.custTitle);
+					$vc.fn.console("completed customer");
+				}
+			};
+			var _doneAuthenticate = function (data, result, xhr) {
+				$vc.fn.console("success authenticate");
+				if (data.membGuid === "") {
+					$vc.sessionState.secure = false;
+					$vc.fn.popup("Invalid credentials. Note: Username<br />and Password are NOT case sensitive.");
+				} else {
+					$vc.sessionState.secure = true;
+					$vc.sessionState.membGuid = data.membGuid;
+					$vc.memberState.membGuid = data.membGuid;
+					$vc.fn.putData();
+					$vc.signIn.member(); /* get this member's data */
+				}
+			};
+			var _doneMember = function (data, result, xhr) {
+
+				if (data === null) {
+					alert("That member GUID is not on file!");
+
+				} else {
+					$vc.fn.console("success member");
+					$vc.memberState = data;
+					$vc.sessionState.membNo = parseInt(data.membNo);
+					$vc.sessionState.membId = data.membId;
+					$vc.sessionState.membEmail = data.membEmail;
+					$vc.sessionState.membFirstName = data.membFirstName;
+					$vc.sessionState.membLastName = data.membLastName;
+					$vc.sessionState.membLevel = data.membLevel;
+					$vc.sessionState.membNoVisits = data.membNoVisits;
+					$vc.sessionState.membCatalogue = data.membCatalogue;
+					$vc.sessionState.membOrganization = data.membOrganization;
+					$vc.sessionState.membType = data.membType;
+					$vc.sessionState.membNOPGuid = data.membNOPGuid;
+
+					$vc.sessionState.secure = true;
+
+					switch (parseInt(data.membLevel)) { /* these are used to turn on/off tiles */
+						case 0: $vc.sessionState.membClass = "public"; break;
+						case 1: $vc.sessionState.membClass = "guest"; break;
+						case 2: $vc.sessionState.membClass = "learner"; break;
+						case 3: $vc.sessionState.membClass = "facilitator"; break;
+						case 4: $vc.sessionState.membClass = "manager"; break;
+						case 5: $vc.sessionState.membClass = "administrator"; break;
+					}
+
+					$.when(
+						$vc.fn.putData()
+					).then(function () {
+						if ($vc.startState.startPage === undefined || $vc.startState.startPage === "") {
+							$(":mobile-pagecontainer").pagecontainer("change", "#page_home");
+						} else { // startPage comes via a URL parameter in Default.aspx
+							$(":mobile-pagecontainer").pagecontainer("change", "#" + $vc.startState.startPage);
+						}
+					});
+				}
+
+			};
+			var _failCustomer = function (xhr, result, statusText) {
+				alert("Error accessing the CustomerRecord : " + statusText);
+			};
+			var _failAuthenticate = function (xhr, result, statusText) {
+				$vc.sessionState.secure = false;
+				alert("Error trying to Authenticate : " + statusText);
+			};
+			var _failMember = function (xhr, result, statusText) {
+				alert("Error accessing the Member Record : " + statusText);
+			};
+
+			return {
+				customer: function () {
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					$vc.ws("customer", parm, _doneCustomer, _failCustomer);
+				},
+				authenticate: function (type) {
+					$vc.fn.console("about to authenticate");
+					_getMember(type);
+					var parm = {};
+					parm.applicationId = $vc.sessionState.applicationId;
+					parm.userName = $vc.sessionState.userName;
+					parm.membPassword = $vc.sessionState.membPassword;
+					$vc.ws("authenticate", parm, _doneAuthenticate, _failAuthenticate);
+				},
+				member: function () {
+					var parm = {};
+					parm.membGuid = $vc.sessionState.membGuid;
+					$vc.ws("member", parm, _doneMember, _failMember);
+				}
+			};
+		}();
+		$(function () {
+			$("#ele_signIn_check").on("click", function () {
+
+				/* ensure two valid fields are entered */
+				var membId = $("#ele_signIn_membId")[0].value.toUpperCase();
+				var membPassword = $("#ele_signIn_membPassword")[0].value.toUpperCase();
+
+				var ok = true;
+				if (ok) { /* password must be at least 4 characters long */
+					if (membId.length > 3) {
+						ok = true;
+					} else {
+						ok = false;
+						$vc.fn.popup("Please enter a valid Email Address.");
+					}
+				}
+				if (ok) { /* password must be at least 5 characters long */
+					if (membPassword.length > 3) {
+						ok = true;
+					} else {
+						ok = false;
+						$vc.fn.popup("Please enter a valid Password.");
+					}
+				}
+
+
+				if (ok) {
+
+					$vc.sessionState.applicationId = 1;
+					$vc.sessionState.userName = $("#ele_signIn_custId")[0].value + "\\" + $("#ele_signIn_membId")[0].value;
+					$vc.sessionState.membPassword = $("#ele_signIn_membPassword")[0].value;
+					$vc.signIn.authenticate("form");
+
+				}
+
+			});
+		});
+
+		// home
+		var var_home_init = false;/* onlyinitialize once, not each time this page is rendered */
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_home") {
+				$("#footer_home_title").html($vc.sessionState.appId + " | home");
+				$("#img_home_logo").attr("src", "styles/logos/" + $vc.profileState.logo)
+				$("#ele_home_homeIcon").hide();
+				$("#ele_home_backIcon").hide();
+				/* if this is the first visit then launch the video (if we use videos) - this only happens on this page*/
+				if ($vc.sessionState.videos) {
+					if ($vc.sessionState.membNoVisits == 0 && var_home_init == false) {
+						var video = eval("$vc.videoState." + "home") /* do we have a video for this page */
+						if (video != undefined) {
+							window.open("video.html?url=" + encodeURIComponent(video));
+						};
+					};
+				};
+				/* not sure how you can get here if you are not secure... probably reloaded the page which is a no-no */
+				if (!$vc.sessionState.secure) {
+					alert("Oops. You are not currently authenticated to use this service.!");
+				};
+				if (!var_home_init) {
+					var_home_init = true;
+
+					/* start with browser budgie tile then get home tileset from tileState object - Robin suggested color: #585858 - prefer black */
+					var tileNo = "x", tileColor = "#000", tileIcon = "styles/tiles/browserCheck.png", tileTitle = "Browser Readiness Test"
+					var tile = ""
+						+ "<li id=\"ele_home_" + tileNo + "\" class=\"tile\" style=\"background-color: " + tileColor + ";\">"
+						+ "<div class=\"tileIcon\" style=\"background-image: url('" + tileIcon + "');\"></div>"
+						+ "<div class=\"tileTitle\">" + tileTitle + "</div>"
+						+ "</li>";
+
+
+					$.each($vc.tileState, function (key, value) {
+						var ok = false;
+						if (value.tilePage == "home") {
+							/* render appropriate tiles class based on member class */
+							if (value.tileClass == "guest" && ($vc.sessionState.membClass == "guest" || $vc.sessionState.membClass == "learner" || $vc.sessionState.membClass == "facilitator" || $vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "learner" && ($vc.sessionState.membClass == "learner" || $vc.sessionState.membClass == "facilitator" || $vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "facilitator" && ($vc.sessionState.membClass == "facilitator" || $vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "manager" && ($vc.sessionState.membClass == "manager" || $vc.sessionState.membClass == "administrator")) ok = true;
+							if (value.tileClass == "administrator" && ($vc.sessionState.membClass == "administrator")) ok = true;
+
+							///* tile title override - note: only en currently available- this is now done via overrides in default.aspx*/
+							//if (value.tileNo == "0" & $vc.sessionState.titleCourses_en.length > 0) value.tileTitle = $vc.sessionState.titleCourses_en;
+
+							/* don't render a "jit" tile if jit = "False" */
+							if (value.tileNo == "1" & !$vc.sessionState.jit) ok = false;
+
+							/* don't render a "profile" tile if SSO or autoEnrollWs*/
+							if (value.tileNo == "2" & ($vc.profileState.sso.length > 0 || $vc.profileState.autoEnrollWs)) ok = false;
+
+							/* don't render a "guest" tile if an employee, ie membType = "E" */
+							if (value.tileNo == "4" & $vc.sessionState.membType == "E") ok = false;
+
+							/* don't render a "guest" tile if guests = false*/
+							if (value.tileNo == "4" & !$vc.sessionState.guests) ok = false;
+
+							/* don't render a "certificate" tile if certPrograms = "" */
+							if (value.tileNo == "8" & !$vc.sessionState.ecommerce) ok = false;
+
+							/* don't render an "ecommerce " tile if ecommerce = False */
+							if (value.tileNo == "5" & $vc.sessionState.certPrograms == "") ok = false;
+
+							/* don't render the "vukidz" tile if vukidz = False */
+							if (value.tileNo == "9" & !$vc.sessionState.vukidz) ok = false;
+
+							if (ok) {
+								tile = tile
+									+ "<li id=\"ele_home_" + value.tileNo + "\" class=\"tile\" style=\"background-color: " + value.tileColor + ";\">"
+									+ "<div class=\"tileIcon\" style=\"background-image: url('" + value.tileIcon + "');\"></div>"
+									+ "<div class=\"tileTitle\">" + value.tileTitle + "</div>"
+									+ "</li>";
+							};
+						};
+					});
+					$("#tile_home").html(tile);
+
+					/* create the events for the above tiles */
+					$("#ele_home_0").on("click", function () {
+						if ($vc.sessionState.contentSource == "ecommerce" || $vc.sessionState.contentSource == "assigned" || $vc.sessionState.contentSource == "ecom-assigned") {
+							$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+						} else {
+							$(":mobile-pagecontainer").pagecontainer("change", "#page_catalogue");
+						};
+					});
+					$("#ele_home_1").on("click", function () {
+						//					$(":mobile-pagecontainer").pagecontainer("change", "#page_jitCatalogue");
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+					});
+					$("#ele_home_2").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_profile");
+					});
+					//$("#ele_home_3").on("click", function () {
+					//$vc.sessionState.reportByGuest = false;
+					//$(":mobile-pagecontainer").pagecontainer("change", "#page_historyPrograms");
+					//});
+					$("#ele_home_23").on("click", function () {
+						$vc.sessionState.reportByGuest = false;
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_historyPrograms2");
+					});
+					$("#ele_home_4").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_myGuests");
+					});
+					$("#ele_home_5").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_certificatePrograms");
+					});
+					$("#ele_home_9").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_kidsPrograms");
+					});
+					$("#ele_home_6").on("click", function () {
+						if ($vc.sessionState.portal == true) {
+							var url = "/portal/v7/default.aspx?source=v8&profile=" + $vc.sessionState.profile + "&membGuid=" + $vc.sessionState.membGuid;
+						} else {
+							var url = "/v8a?profile=" + $vc.sessionState.profile + "&membGuid=" + $vc.sessionState.membGuid;
+						}
+						window.open(url);
+					});
+					$("#ele_home_7").on("click", function () {
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_signOut");
+					});
+					$("#ele_home_8").on("click", function () {
+						var url = "http://store.vubiz.com/NopAdmin/Authenticatev5.aspx?membGUID=" + $vc.sessionState.membNOPGuid;
+						window.open(url);
+					});
+
+					$("#ele_home_x").on("click", function () {
+						var url = "/browser?lang=" + $vc.sessionState.lang;
+						window.open(url);
+					});
+
+
+
+				};
+
+				$vc.fn.console("completed loading home tiles");
+
+			};
+		});
+
+
+		// catalogue
+		var var_catalogue_init = false;/* only initialize catalogue once, not each time this page is rendered */
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") === "page_catalogue") {
+				$("#footer_catalogue_title").html($vc.sessionState.appId + " | catalogue");
+				$("#img_catalogue_logo").attr("src", "styles/logos/" + $vc.profileState.logo);
+
+				if ($vc.sessionState.custId.length !== 8) { // can't remember why we do this?
+					$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+				} else {
+					$vc.sessionState.prevPage = "page_home";
+					$vc.catalogue.catalogue();
+				}
+			}
+		});
+		$vc.catalogue = function () {
+			var _doneCatalogue = function (data, result, xhr) {
+				$vc.fn.console("Success loading Catalogue");
+				$vc.catalogueState = data;
+				$vc.fn.putData();
+
+				/* if there's just one catalogue item then go right over to the Programs */
+				if (data.length === 1) {
+					$vc.sessionState.catalogue = -1; /* use -1 to signify skipping catalogue - programs will make this 0 */
+					$vc.sessionState.currPage = "page_home";
+					$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+				} else {
+
+					/* get tiles color and icon from db */
+					var tiles = catlTileColor = catlTileIcon = catlTitle = "";
+
+					//debugger;
+
+					$.each(data, function (key, value) {
+						/* if this is a guest then we only want to render the selected catalogue items (unless set to "0" which is all), else render all catl items */
+						if ($vc.sessionState.membLevel > 1 || $vc.sessionState.membCatalogue === "0" || $vc.sessionState.membCatalogue.lastIndexOf(value.catlNo) >= 0) {
+
+							/* if program colors and icons are not setup on the catalogue table then use defaults */
+							catlTileColor = (value.catlTileColor === "" ? "red" : value.catlTileColor);
+							catlTileIcon = (value.catlTileIcon === "" ? "myCategories.png" : value.catlTileIcon);
+							catlTitle = (value.catlTitle.length > 32 ? value.catlTitle.substring(0, 32) + "..." : value.catlTitle);
+
+							tiles = tiles
+								+ "<li id=\"ele_catalogue_" + key + "\" class=\"tile\" style=\"background-color: " + catlTileColor + ";\">"
+								+ "<div class=\"tileIcon\" style=\"background-image: url('styles/tiles/" + catlTileIcon + "');\"></div>"
+								+ "<div class=\"tileTitle\">" + catlTitle + "</div>"
+								+ "</li>";
+						}
+					});
+				}
+				$("#tiles_catalogue").html(tiles);
+			};
+			var _failCatalogue = function (xhr, result, statusText) {
+				alert("Error loading Catalogue!" + " ..." + result);
+				alert(statusText);
+			};
+			return {
+				catalogue: function () {
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					$vc.ws("catalogue", parm, _doneCatalogue, _failCatalogue);
+				}
+			};
+		}();
+		$(function () { /* grab the selected tile number from the end of the parentElement id that was tapped */
+			$("#content_catalogue").on("click", function (event) {
+				var tileId = event.target.parentElement.id;
+				var idStartsAt = tileId.lastIndexOf("_") + 1;
+				var tileLength = tileId.length;
+				var tileNo = right(tileId, tileLength - idStartsAt); /* the last 1 or 2 characters are the tile number */
+				$vc.sessionState.catalogue = parseInt(tileNo); /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+				$(":mobile-pagecontainer").pagecontainer("change", "#page_programs");
+				//				$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+			});
+		});
+
+
+		// programs
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_programs") {
+				$vc.programs.programs();/* generate dynamic program tiles each visit */
+			};
+		});
+		$vc.programs = function () {
+			var _donePrograms = function (data, result, xhr) {
+				$vc.fn.console("success programs");
+				$vc.programsState = data;
+				$vc.fn.putData();
+
+				if (data == null) {
+					$vc.fn.popup("There are no Programs available to review!");
+				} else {
+					if ($vc.sessionState.contentSource == "ecommerce" || $vc.sessionState.contentSource == "assigned" || $vc.sessionState.contentSource == "ecom-assigned") { /* get tiles color and icon from catalogue object */
+						var catlTileIcon = "myCategories.png";
+						/* default tile color to secondary color ... hack */
+						$('<span id="getSecondaryColor" class="secondaryColor"></span>').appendTo('body');
+						var catlTileColor = $("#getSecondaryColor").css("color");
+						$("#getSecondaryColor").remove();
+
+					} else { /* get tiles color and icon from catalogue object */
+						var catlTileIcon = $vc.catalogueState[$vc.sessionState.catalogue].catlTileIcon;
+						var catlTileColor = $vc.catalogueState[$vc.sessionState.catalogue].catlTileColor;
+					};
+
+					var tiles = "", title, completed;
+					if (data.length == 1 && $vc.sessionState.showSoloProgram) { /* if there's only one program then just render modules - UNLESS we want to show a single program */
+						$vc.sessionState.program = 0 /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+						$vc.sessionState.progId = data[0].progId;
+						$vc.sessionState.progNo = data[0].progNo;
+
+						$vc.sessionState.currPage = $vc.sessionState.prevPage;
+						$vc.fn.putData();
+						$(":mobile-pagecontainer").pagecontainer("change", "#page_modules");
+					} else {
+						$.each(data, function (key, value) {
+							if (value.progCompleted.length > 0) {
+								completed = " checked-tile";
+							} else {
+								completed = ""
+							};
+							if (value.progTitle2.indexOf($vc.sessionState.custId) == 0) { /* see if there is a custom title */
+								title = value.progTitle2.substr(9, 128)
+							} else {
+								title = value.progTitle1;
+							};
+
+							/* if program colors and icons are not setup on the catalogue table then use defaults */
+							catlTileColor = (catlTileColor === "" ? "red" : catlTileColor);
+							catlTileIcon = (catlTileIcon === "" ? "myCategories.png" : catlTileIcon);
+							title = (title.length > 32 ? title.substring(0, 32) + "..." : title);
+
+							tiles = tiles
+								+ "<li id=\"ele_programs_" + key + "\" class=\"tile" + completed + "\" style=\"background-color: " + catlTileColor + ";\">"
+								+ "<div class=\"tileIcon\" style=\"background-image: url('styles/tiles/" + catlTileIcon + "');\"></div>"
+								+ "<div class=\"tileTitle\">" + title + "</div>"
+								+ "</li>";
+						});
+						$("#tiles_programs").html(tiles);
+						$vc.fn.popupClose();
+					};
+				};
+			};
+
+			var _failPrograms = function (xhr, result, statusText) {
+				alert("Error Loading Programs!");
+			};
+			return {
+				programs: function () {
+					//alert($vc.sessionState.prevPage + " _programs");
+
+					/* get programs from ecommerce */
+					if ($vc.sessionState.contentSource == "ecommerce") {
+						var parm = {};
+						parm.custId = $vc.sessionState.custId;
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programsEcommerce", parm, _donePrograms, _failPrograms);
+					}
+					/* get programs from assigned on member table */
+					else if ($vc.sessionState.contentSource == "assigned") {
+						var parm = {};
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programsAssigned", parm, _donePrograms, _failPrograms);
+					}
+					/* get programs from ecommerce and/or assigned on member table*/
+					else if ($vc.sessionState.contentSource == "ecom-assigned") {
+						var parm = {};
+						parm.custId = $vc.sessionState.custId;
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programsEcomAssigned", parm, _donePrograms, _failPrograms);
+					}
+					/* get programs from catalogue */
+					else {
+						/* extract the catlNo from catalogueState using parameterState.catalogue which is the tile number */
+						$vc.sessionState.catlNo = $vc.catalogueState[$vc.sessionState.catalogue].catlNo;
+						/* show video icon for each theme */
+						$("#ele_programs_videoIcon").show();
+						var parm = {};
+						parm.custId = $vc.sessionState.custId;
+						parm.catlNo = $vc.sessionState.catlNo;
+						parm.membNo = $vc.sessionState.membNo;
+						$vc.ws("programs", parm, _donePrograms, _failPrograms);
+					};
+				}
+			};
+		}();
+		$(function () { /* grab the selected tile number from the end of the parentElement id that was tapped */
+			$("#content_programs").on("click", function (event) {
+				var tileId = event.target.parentElement.id;
+				var idStartsAt = tileId.lastIndexOf("_") + 1;
+				var tileLength = tileId.length;
+				var tileNo = right(tileId, tileLength - idStartsAt); /* the last 1 or 2 characters are the tile number */
+				$vc.sessionState.program = parseInt(tileNo); /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+				$vc.sessionState.progId = $vc.programsState[$vc.sessionState.program].progId;
+				$vc.sessionState.progNo = $vc.programsState[$vc.sessionState.program].progNo;
+
+				$(":mobile-pagecontainer").pagecontainer("change", "#page_modules");
+
+				//			$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+
+			});
+		});
+
+
+		// modules
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") == "page_modules") {
+				$vc.modules.modules();
+			};
+		});
+		$vc.modules = function () {
+			var _done = function (data, result, xhr) {
+				$vc.modulesState = data;
+				$vc.sessionState.module = 1; /* we need to grab this value to determine which tile icon/color to use in subsequent levels */
+				$vc.sessionState.modsId = data[0].modsId;
+				$vc.sessionState.modsNo = data[0].modsNo;
+
+
+
+				$(":mobile-pagecontainer").pagecontainer("change", "#page_content");
+			};
+			return {
+				modules: function () { /* this is used for ecommerce and assigned */
+
+					$vc.sessionState.catlNo = $vc.catalogueState[$vc.sessionState.catalogue].catlNo;
+					$vc.sessionState.progId = $vc.programsState[$vc.sessionState.program].progId;
+
+					var parm = {};
+					parm.custId = $vc.sessionState.custId;
+					parm.catlNo = $vc.sessionState.catlNo;
+					parm.progId = $vc.sessionState.progId;
+					parm.membNo = $vc.sessionState.membNo;
+
+					$vc.ws("modules", parm, _done);
+
+				}
+			};
+		}();
+
+
+
+		// content
+		$(document).on("pagecontainerbeforeshow", function (event, ui) {
+			if ($.mobile.activePage.attr("id") === "page_content") {
+				alert("opening blank");
+
+
+				window.open("about:blank", "myContent");
+				$vc.content.getModuleData();
+			}
+		});
+		$vc.content = function () {
+			var _done = function (data, result, xhr) {
+				//				$vc.content.renderModule();
+
+				alert("to launch");
+				window.open("http://stagingweb.vubiz.com/Gold/vuSCORM/SCOContainer.aspx?vCustId=CFIB5288&vMods_No=13307&vProg_No=4950&vMemb_No=1692969&vLang=en&app=V8&jumpto=&fluid=1&close=1&certificate=0&vModId=", "myContent");
+
+
+			};
+			return {
+				getModuleData: function () {
+					var parm = {};
+					parm.modsId = $vc.sessionState.prevPage === "page_historyProgram" ? $vc.sessionState.historyModsId : $vc.sessionState.modsId;
+
+					//					window.open("about:blank", "myContent");
+
+					//$vc.ws("module", parm, _done);
+
+					var request = $.ajax({
+						type: "POST",
+						dataType: "json",
+						asynch: false,
+						url: "/vubizWs/v8client.asmx/module",
+						data: parm,
+						success: function () { _done() }
+					});
+
+
+
+
+
+
+
+
+
+
+
+
+
+				},
+				renderModule: function () {
+					//	alert("to launch");
+
+					window.open("http://stagingweb.vubiz.com/Gold/vuSCORM/SCOContainer.aspx?vCustId=CFIB5288&vMods_No=13307&vProg_No=4950&vMemb_No=1692969&vLang=en&app=V8&jumpto=&fluid=1&close=1&certificate=0&vModId=", "myContent");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				}
+			};
+		}();
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "pageId": "home",
+    "pageName": "Welcome to the Ecommerce Simulators"
+  },
+  {
+    "pageId": "xml",
+    "pageName": "Simulate an XML Transactions"
+  },
+  {
+    "pageId": "url",
+    "pageName": "Simulate a URL Posting"
+  }
+]

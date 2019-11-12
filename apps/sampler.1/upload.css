@@ -1,0 +1,9 @@
+﻿.ajax-file-upload {
+  font-family: 'Courier New';
+  text-transform: uppercase;
+}
+
+#dragandrophandler {
+  margin: 30px 0;
+  font-size: 150%;
+}

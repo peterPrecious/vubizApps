@@ -1,0 +1,33 @@
+﻿
+/* 
+  If grabbing custId from URL or localStorage then render logo by
+  adding this HTML snippet as first line in the home page: <div class="vubz"></div>   
+  The class will be replaced by the custID logic
+
+  This is not used by V8 which is profile driven
+*/
+
+.vubz, .ergp, .cchs_en, .cchs_fr, .cfib, .fcei, 
+
+.sqi, .ffi, .gnl, .mort,.high
+
+
+{ float: right; display: inline-block; background-size: contain; width: 200px; height: 200px; margin: 0 0 20px 20px; background-repeat: no-repeat; }
+
+.vubz { background-image: url('http://vubiz.com/V5/Images/Logos/vubz.jpg'); }
+
+.ergp { background-image: url('http://vubiz.com/V5/Images/Logos/empl.jpg'); }
+
+.cchs_en { background-image: url('http://vubiz.com/V5/Images/Logos/cchs_en.jpg'); }
+
+.cchs_fr { background-image: url('http://vubiz.com/V5/Images/Logos/cchs_fr.jpg'); }
+
+.cfib { background-image: url('http://vubiz.com/V5/Images/Logos/cfib_en.jpg'); }
+
+.fcei { background-image: url('http://vubiz.com/V5/Images/Logos/cfib_fr.jpg'); }
+
+.sqi { background-image: url('/vubizApps/styles/logos/sqi.png'); }
+.ffi { background-image: url('/vubizApps/styles/logos/ffi.png'); }
+.gnl { background-image: url('/vubizApps/styles/logos/gnl.png'); }
+.mort { background-image: url('/vubizApps/styles/logos/mort.png'); }
+.high { background-image: url('/vubizApps/styles/logos/high.png'); }

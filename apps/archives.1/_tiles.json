@@ -1,0 +1,50 @@
+﻿[
+    {
+        "tilePage": "mgr",
+        "tileNo": "1",
+        "tileTitle": "Find a Learner",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/myCategories.png",
+        "tileClass": "manager"
+    },
+    {
+        "tilePage": "mgr",
+        "tileNo": "2",
+        "tileTitle": "Restore (De-archive)<br />Entire Account",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/alert.png",
+        "tileClass": "manager"
+    },
+    {
+        "tilePage": "mgr",
+        "tileNo": "99",
+        "tileTitle": "Sign Out",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/signInOut.png",
+        "tileClass": "manager"
+    },
+    {
+        "tilePage": "adm",
+        "tileNo": "1",
+        "tileTitle": "Find a Learner",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/myCategories.png",
+        "tileClass": "manager"
+    },
+    {
+        "tilePage": "adm",
+        "tileNo": "2",
+        "tileTitle": "Restore (De-archive)<br />Entire Account",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/alert.png",
+        "tileClass": "manager"
+    },
+    {
+        "tilePage": "adm",
+        "tileNo": "99",
+        "tileTitle": "Sign Out",
+        "tileColor": "#00941a",
+        "tileIcon": "styles/tiles/signInOut.png",
+        "tileClass": "manager"
+    }
+]

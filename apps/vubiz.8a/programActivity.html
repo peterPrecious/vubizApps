@@ -1,0 +1,31 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <h2>Tap on the Title to change the Sort Order</h2>
+
+  <table class="$$_table">
+    <thead>
+      <tr>
+        <th style="text-align:left; width:60%;"><a onclick="$vc.$$.activity(1)" href="#">Program Title</a></th>
+        <th style="text-align:center; width:20%;"><a onclick="$vc.$$.activity(2)" href="#">Number<br />Started</a></th>
+        <th style="text-align:center; width:20%;"><a onclick="$vc.$$.activity(3)" href="#">Number<br />Completed</a></th>
+      </tr>
+    </thead>
+    <tbody id="ele_$$_tbody"></tbody>
+  </table>
+
+</div>
+
+<style>
+  #content_$$ a {
+    text-decoration: none;
+  }
+
+    #content_$$ a:hover {
+      text-decoration: underline;
+    }
+
+  #content_$$ td:nth-child(2), #content_$$ td:nth-child(3) {
+    text-align: center;
+  }
+</style>

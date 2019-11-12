@@ -1,0 +1,107 @@
+﻿
+<div id="content_$$" data-role="main" class="ui-content">
+
+  <h2 class="$$_title" style="display:none;">This displays learners whose last name starts with the selected initial.</h2>
+
+  <div class="$$_type" style="text-align:center; display:none;">
+    <h2>This displays learners (members or employees) whose last name starts with the selected initial.</h2>
+    <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+      <label><input class="$$_type" type="radio" name="$$_type" id="$$_type_M" value="M">Members</label>
+      <label><input class="$$_type" type="radio" name="$$_type" id="$$_type_E" value="E">Employees</label>
+    </fieldset>
+  </div>
+
+  <div style="text-align:center; margin-bottom:20px;">
+    <a class="ui-btn ui-mini ui-btn-inline" href="#page_learner">Add a Learner</a>
+    <a class="ui-btn ui-mini ui-btn-inline" href="#" onclick="$('#$$_hide').toggle()">More info...</a>
+  </div>
+  <h3 id="$$_hide" style="display:none; margin-bottom:20px;">
+    Any learner whose last name does NOT start with A-Z can be accessed using the ? tile.
+  </h3>
+
+  <ul class="$$_tileSet">
+    <li class="$$_tile">A</li>
+    <li class="$$_tile">B</li>
+    <li class="$$_tile">C</li>
+    <li class="$$_tile">D</li>
+    <li class="$$_tile">E</li>
+    <li class="$$_tile">F</li>
+    <li class="$$_tile">G</li>
+    <li class="$$_tile">H</li>
+    <li class="$$_tile">I</li>
+    <li class="$$_tile">J</li>
+    <li class="$$_tile">K</li>
+    <li class="$$_tile">L</li>
+    <li class="$$_tile">M</li>
+    <li class="$$_tile">N</li>
+    <li class="$$_tile">O</li>
+    <li class="$$_tile">P</li>
+    <li class="$$_tile">Q</li>
+    <li class="$$_tile">R</li>
+    <li class="$$_tile">S</li>
+    <li class="$$_tile">T</li>
+    <li class="$$_tile">U</li>
+    <li class="$$_tile">V</li>
+    <li class="$$_tile">W</li>
+    <li class="$$_tile">X</li>
+    <li class="$$_tile">Y</li>
+    <li class="$$_tile">Z</li>
+    <li class="$$_tile">?</li>
+  </ul>
+
+  <table class="$$_table">
+    <thead>
+      <tr>
+        <th style="text-align:left; width:30%;">Email</th>
+        <th style="text-align:left; width:20%;">First Name</th>
+        <th style="text-align:left; width:20%;">Last Name</th>
+        <th style="text-align:left; width:20%;">Password</th>
+        <th style="text-align:center; width:05%;">Active</th>
+        <th style="text-align:center; width:05%;">Edit</th>
+      </tr>
+    </thead>
+    <tbody id="ele_$$_tbody"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          <div class="logoTcO noPhone"><img id="img_$$_logo"></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+</div>
+
+<style>
+  .$$_tileSet {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+    .$$_tileSet .$$_tile {
+      display: table-row;
+      vertical-align: top;
+      margin: 0 8px 8px 0;
+      padding: 5px 5px 2px 5px;
+      width: 20px;
+      height: 20px;
+      border-style: outset;
+      border-width: 1px;
+      display: inline-block;
+      cursor: pointer;
+      text-align: center;
+      color: #4c8be8;
+    }
+
+  .$$_members, .$$_employees {
+    padding: 3px;
+    border-style: outset;
+    border-width: 1px;
+    cursor: pointer;
+    color: #4c8be8;
+  }
+  /*.$$_table tbody tr td { height: 0px; }*/
+</style>
