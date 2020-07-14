@@ -1,8 +1,8 @@
 ﻿<%@ Page
   Language="C#"
   AutoEventWireup="true"
-  CodeBehind="Credentials.aspx.cs"
-  Inherits="vubiz.apps.credentials" %>
+  CodeBehind="CredentialsX.aspx.cs"
+  Inherits="vubiz.apps.credentialsX" %>
 
 <!DOCTYPE html>
 
@@ -11,6 +11,10 @@
   <title>CFIB-FCEI Credentials for Learning Centre</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<%--  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>--%>
+
   <script src="scripts/jquery.min.js"></script>
 
   <link href="styles/basic.min.css" rel="stylesheet" />
@@ -29,7 +33,6 @@
 
     input:not(button) { height: 22px; border-radius: 4px; }
     input[type="submit"] { height: 30px; padding: 0 40px; }
-    input[type="checkbox"] { padding-left: 0; margin-left: 0; margin-right: 6px; vertical-align: middle; width: 20px; height: 20px; }
 
     .panStatus { margin: 25px auto; padding: 20px; width: 80%; height: 80px; border-bottom: 2px solid red; font-size: 1.1em; color: red; text-align: center; }
 
@@ -40,8 +43,6 @@
     input, a { margin: 5px 1px 3px 0px; border: 1px solid rgba(81, 203, 238, 1); }
       input:focus, a:focus { box-shadow: 0 0 5px grey; }
       input:not(focus), a:not(focus) { box-shadow: 0 0 5px white; }
-        
-
   </style>
   <script src="scripts/$urls.min.js"></script>
   <script src="scripts/$formManagerAsp.min.js"></script>
@@ -62,27 +63,7 @@
         $("#txtCfibId").focus();
       }
 
-      // when clicking the free checkbox
-      $("#chkGenerateId").change(function () {
-        if (this.checked) {
-          $("#txtCfibId").val("");
-        }
-      })
-
-      $("#txtCfibId").blur(function () {
-        var data = $(this).val();
-        if (data.length > 0) {
-          $("#chkGenerateId").prop("checked", false)
-        }
-      })
-
-
-
     })
-
-
-
-
   </script>
 </head>
 
@@ -96,10 +77,7 @@
         <asp:Image ID="logo" runat="server" />
       </div>
       <h1>
-        <asp:Literal ID="litHeader" runat="server">Authentication Service for CFIB Members and their Employees to access the CFIB Learning Centre.</asp:Literal>
-        <br />
-        <br />
-        <asp:Literal ID="litHeader2" runat="server">For non-CFIB members and to support you during the COVID-19 virus pandemic, please follow the instructions below for free access to exclusive Vubiz courses.</asp:Literal>
+        <asp:Literal ID="litHeader" runat="server">Authentication Service for CFIB Members and their Employees to access the CFIB Learning Centre</asp:Literal>
       </h1>
 
       <asp:Panel CssClass="panStatus" runat="server" Visible="false" ID="panStatus">
@@ -113,20 +91,16 @@
       <div id="inputElements">
         <table>
           <tr>
-            <%--
-            <td colspan="2" style="font-weight: bold; font-style: italic; padding-bottom: 30px;">
+            <%--            <td colspan="2" style="font-weight: bold; font-style: italic; padding-bottom: 30px;">
               <asp:Literal ID="litNotice" runat="server">
-						  As of December 1, 2018 the transition to WHMIS 2015 will be complete. If you are still taking the current WHMIS 1988 and 2015 Combines course please complete it prior to November 30th. As of Friday, November 30th there will be a new course titled WHMIS 2015 – An Overview available in the Learning Centre.
+						As of December 1, 2018 the transition to WHMIS 2015 will be complete. If you are still taking the current WHMIS 1988 and 2015 Combines course please complete it prior to November 30th. As of Friday, November 30th there will be a new course titled WHMIS 2015 – An Overview available in the Learning Centre.
               </asp:Literal><hr />
-            </td>
-            --%>
+            </td>--%>
           </tr>
           <tr>
             <td>
               <h3 style="text-align: left; margin-top: 0; margin-bottom: 30px;">
-                <%--
-                <asp:Literal ID="litRegister" runat="server">Create an account for your company. Only one CFIB member can register per company.</asp:Literal>&nbsp;--%>
-                <asp:Literal ID="litRegister" runat="server">Create an account for your company. Only one person can register per company.</asp:Literal>&nbsp;
+                <asp:Literal ID="litRegister" runat="server">Create an account for your company. Only one CFIB member can register per company.</asp:Literal>&nbsp;
 							<asp:Literal ID="litWarning" runat="server">All fields are mandatory.</asp:Literal>
               </h3>
             </td>
@@ -139,78 +113,67 @@
             <td>
               <div id="registerSection">
 
-                <%--                
-                <label><asp:Literal ID="cfibId" runat="server">CFIB Member Id: (ie 01234567)</asp:Literal></label>--%>
-                <label>
-                  <asp:Literal ID="cfibId" runat="server" Text="Enter your CFIB Member ID (ie 01234567) OR if you are not a member, select the checkbox to generate a temporary Non-CFIB Member ID which you can use during the COVID-19 virus pandemic:" />
-                </label>
-                <div style="padding-left: 20px; padding-bottom: 10px;">
-                  <asp:TextBox runat="server" ID="txtCfibId"></asp:TextBox><br />
-                  <asp:CheckBox ID="chkGenerateId" Checked="false" 
-                    Text="Click here for non-CFIB member access to support you during the COVID-19 pandemic." 
-                    runat="server" />
+                <label><asp:Literal ID="cfibId" runat="server">CFIB Member Id: (ie 01234567)</asp:Literal></label>
+                <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
+                  <asp:TextBox runat="server" ID="txtCfibId" Width="250px"></asp:TextBox>
                 </div>
 
-                <%--                
-                <label><asp:Literal ID="companyName" runat="server">CFIB Member Company Name:</asp:Literal></label>--%>
-                <label>
-                  <asp:Literal ID="companyName" runat="server">Company Name:</asp:Literal></label>
 
+
+                <label><asp:Literal ID="companyName" runat="server">CFIB Member Company Name:</asp:Literal></label>
                 <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtCompanyName" Width="250px"></asp:TextBox>
                 </div>
 
-                <%--
-                <label><asp:Literal ID="companyPhoneNumber" runat="server">CFIB Member Phone Number:</asp:Literal></label>--%>
-                <label>
-                  <asp:Literal ID="companyPhoneNumber" runat="server">Phone Number:</asp:Literal></label>
+                <label><asp:Literal ID="companyPhoneNumber" runat="server">CFIB Member Phone Number:</asp:Literal></label>
                 <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtCmpanyPhoneNumber" Width="250px"></asp:TextBox>
                 </div>
 
-                <label>
-                  <%--              <asp:Literal ID="companyPostalCode" runat="server">CFIB Member Postal Code:</asp:Literal></label>--%>
-                  <asp:Literal ID="companyPostalCode" runat="server">Postal Code:</asp:Literal>
-                </label>
+                <label><asp:Literal ID="companyPostalCode" runat="server">CFIB Member Postal Code:</asp:Literal></label>
                 <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtCompanyPostalCode" Width="250px"></asp:TextBox>
                 </div>
 
+
                 <label>
-                  <asp:Literal ID="email1" runat="server">Email Address (unique identifier):</asp:Literal></label>
+                  <asp:Literal ID="email1" runat="server">Email Address: (unique identifier)</asp:Literal></label>
                 <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtMembEmail1" Width="250px"></asp:TextBox>
                 </div>
-
                 <label>
-                  <asp:Literal ID="password1" runat="server">Password (you can change later):</asp:Literal></label>
+                  <asp:Literal ID="password1" runat="server">Password: (you can change later)</asp:Literal></label>
                 <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtMembPassword1" Width="250px"></asp:TextBox>
                 </div>
-
                 <label>
                   <asp:Literal ID="firstName" runat="server">First Name:</asp:Literal></label>
                 <div style="padding-left: 20px; padding-bottom: 10px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtMembFirstName" Width="250px"></asp:TextBox>
                 </div>
-
                 <label>
                   <asp:Literal ID="lastName" runat="server">Last Name:</asp:Literal></label>
                 <div style="padding-left: 20px; width: 300px;">
                   <asp:TextBox runat="server" ID="txtMembLastName" Width="250px"></asp:TextBox>
                 </div>
+
+
+
+
                 <div class="icons" style="padding: 10px 0 0 110px; width: 250px;">
                   <asp:LinkButton
                     ID="register"
+                    PostBackUrl="?section=registerSection"
                     OnClick="register_Click"
                     CssClass="buttonx"
-                    PostBackUrl="?section=registerSection"
-                    runat="server">Register</asp:LinkButton>
+                    Text="Register"
+                    runat="server"></asp:LinkButton>
+                  <%--type="input"--%>
                 </div>
-
               </div>
             </td>
             <td>
+
               <div id="signInSection">
                 <label>
                   <asp:Literal ID="email2" runat="server">Email Address:</asp:Literal></label>

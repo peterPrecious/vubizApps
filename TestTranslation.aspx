@@ -1,7 +1,7 @@
 ﻿<%@ Page
   Language="C#"
   AutoEventWireup="true"
-  CodeBehind="Errors.aspx.cs"
+  CodeBehind="TestTranslation.aspx.cs"
   Inherits="vubiz.apps.Errors" %>
 
 <!DOCTYPE html>

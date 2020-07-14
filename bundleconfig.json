@@ -160,17 +160,5 @@
     "inputFiles": [
       "scripts/$formManager.js"
     ]
-  },
-  {
-    "outputFileName": "scripts/$formManagerAsp.min.js",
-    "inputFiles": [
-      "scripts/$formManagerAsp.js"
-    ]
-  },
-  {
-    "outputFileName": "scripts/jquery.min.js",
-    "inputFiles": [
-      "scripts/jquery.js"
-    ]
   }
 ]
