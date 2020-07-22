@@ -1,5 +1,4 @@
-﻿
-$(document).bind("pagebeforeshow", function () {
+﻿$(document).bind("pagebeforeshow", function () {
   if ($.mobile.activePage.attr("id") === "page_$$") {
     $("#footer_$$_title").html($vc.sessionState.appId + " | $$");
     $("#img_$$_logo").attr("src", "styles/logos/" + $vc.profileState.logo);
@@ -24,21 +23,25 @@ $vc.$$ = function () {
     restart: function () {
       $(".$$_setLearners").show();
       $(".$$_getLearners").hide();
+
+      $("#$$_guests_0").prop("checked", true).checkboxradio("refresh");
+      $("#$$_guests_0").trigger("click");
     },
+
     setLearners: function () {
       $.mobile.loading("show");
       var parm = {};
       parm.custId = $vc.sessionState.custId;
+      parm.guests = $("#$$_guests_0").is(":checked") ? 0 : 1;
       parm.membNo = $vc.sessionState.membNo;
       parm.lang = $vc.sessionState.lang;
       parm.fileName = "learnerReport";
       parm.url = "/vubizWs/v8server.asmx/";
       parm.dataType = "text";
-      $vc.ws("learnerReport2", parm, _doneSetLearners, _failLearners);
+      $vc.ws("learnerReport2a", parm, _doneSetLearners, _failLearners);
     }
   };
 }();
-
 
 $(".$$_setLearners").on("click", function () {
   $(".$$_setLearners").hide();

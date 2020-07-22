@@ -1,0 +1,20 @@
+﻿
+h1, .c1 { color: lighten(@secondary, 10%); }
+h2, .c2 { color: @secondary; }
+h3, .c3 { color: darken(@secondary, 10%); }
+
+.primaryColor { color: @primary; }
+.primaryBackground { background-color: @primary; }
+
+.secondaryColor { color: @secondary; }
+.secondaryBackground { background-color: @secondary; }
+
+.iconColorName { background-color: @iconColorName !important; }
+
+.ui-header, .ui-footer { border: 1px solid @primary !important; }
+
+.ui-footer { color: @primary !important; } /* this is used to hide the page name and link to the sessions */
+
+.ui-page { margin: 2% 3% 3% 2%; width: 96% !important; box-shadow: 3px 3px 10px @primary; border-radius: 0px; border:1px solid @primary !important; }
+
+a, .popup { color: @iconColorName; }

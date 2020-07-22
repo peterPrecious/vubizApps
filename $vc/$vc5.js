@@ -69,7 +69,7 @@ $vc.fn = function () {
       i++; $vc.startState.custAcctId = hidden[i];
       i++; $vc.startState.custGuid = hidden[i];
       i++; $vc.startState.custId = hidden[i];
-      i++; $vc.startState.debug = hidden[i] === "y" ? true : false;    /* debug=y or n */
+      i++; $vc.startState.debug = hidden[i] === "y" ? true : false;     /* debug=y or n */
       i++; $vc.startState.host = hidden[i];                             /* server host */
       i++; $vc.startState.lang = hidden[i];                             /* used for apps specific properties and for lang package - default "en" */
       i++; $vc.startState.membEmail = hidden[i];

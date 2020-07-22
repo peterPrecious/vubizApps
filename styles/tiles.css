@@ -3,6 +3,8 @@
   text-align: center;
   padding: 0 !important;
   margin: 20px 0 0 30px !important;
+  position: relative;
+  z-index: 100;
 }
 
   .tileSet .tile {
@@ -35,6 +37,7 @@
       color: white;
       text-align: right;
       vertical-align: bottom;
+      line-height:20px;
     }
 
     .tileSet .tile:hover {

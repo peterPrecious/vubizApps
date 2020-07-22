@@ -227,9 +227,12 @@ namespace vubiz.apps
 
       #endregion
 
+
+
       #region base64 parms
       // other than profile, first check for base64 parms else regular parms
       string parms = function.getParm("parms", "");
+      
       if (parms != "")
       {
         parms = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(parms));
@@ -247,8 +250,10 @@ namespace vubiz.apps
             if (parms3[0].ToLower() == "membno") { membNo = parms3[1].ToString(); }
             if (parms3[0].ToLower() == "pageid") { pageId = parms3[1].ToString(); }
             if (parms3[0].ToLower() == "lang") { lang = parms3[1].ToString(); }
-            if (parms3[0].ToLower() == "membguid") { membGuid = parms3[1].ToString(); } // added Jan 25, 2018
+            if (parms3[0].ToLower() == "membguid") { membGuid = parms3[1].ToString(); }   // added Jan 25, 2018
             if (parms3[0].ToLower() == "returnurl") { returnUrl = parms3[1].ToString(); } // added Dec 11, 2018
+            if (parms3[0].ToLower() == "startpage") { startPage = parms3[1].ToString(); } // added Jul 22, 2020
+
           }
         }
       }
@@ -459,7 +464,8 @@ namespace vubiz.apps
       if (membMemo.Length > 0) parmCount++;
       if (returnUrl.Length > 0) parmCount++;
       if (storeId.Length > 0) parmCount++;
-      if (lang.Length > 0) parmCount++; // added May 30, 2018
+      if (lang.Length > 0) parmCount++;             // added May 30, 2018
+      if (startPage.Length > 0) parmCount++;        // added Jul 22, 2020
 
       if (peterDebug) sbAppDebug.Append("<br /><br />" + "appTiles: " + appTiles);
       if (peterDebug) sbAppDebug.Append("<br /><br />" + "starting tileState");
@@ -525,7 +531,7 @@ namespace vubiz.apps
       sbAppData.Append(membNo + "|");
       sbAppData.Append(pageId + "|");
       sbAppData.Append(parmCount + "|");
-      sbAppData.Append(appProfileDefault + "|");
+      sbAppData.Append(appProfileDefault + "|");   // not out of order, used in $vc5.js as profileDefault
       sbAppData.Append(profileUrl + "|");
       sbAppData.Append(profile + "|");
       sbAppData.Append(returnUrl + "|");

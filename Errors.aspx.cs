@@ -30,7 +30,7 @@ namespace vubiz.apps
       string errorId = function.getParm("errorId", "?");
       string errorParm = function.getParm("errorParm", "?");
 
-      Literal1.Text = tran("Houston, we have a problem...", lang);
+      ErrorDetails.Text = tran("Houston, we have a problem...", lang);
 
 
       switch (errorId)
@@ -98,7 +98,7 @@ namespace vubiz.apps
       else
       {
         // this instantiates the translate object
-        Translate translate = new Translate();
+        // Translate translate = new Translate();
 
         // grab the translated phrase
         JSON = v8server.translate(phraseIn, lang);
@@ -107,7 +107,7 @@ namespace vubiz.apps
         // if there is no translated value...
         if (phraseEx == null || phraseEx.Length == 0)
         {
-          phraseEx = translate.translatePhrase(phraseIn, lang);           // get one from MS Translator 
+          phraseEx = Translate.translatePhrase(phraseIn, lang);           // get one from MS Translator 
           JSON = v8server.translateUpdate(phraseIn, lang, phraseEx);      // update the translation table
         }
         return phraseEx;

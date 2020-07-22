@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>vubiz.apps</RootNamespace>
     <AssemblyName>vubiz.apps</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -26,6 +26,12 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.11.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="dotnet-bundle, Version=3.2.449.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\BundlerMinifier.Core.3.2.449\lib\net452\dotnet-bundle.exe</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Microsoft.CSharp.dll</HintPath>
     </Reference>
@@ -33,13 +39,11 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NUglify, Version=1.5.10.0, Culture=neutral, PublicKeyToken=15bc7810aec21b5e, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUglify.1.5.10\lib\net40\NUglify.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="NUglify, Version=1.6.4.0, Culture=neutral, PublicKeyToken=15bc7810aec21b5e, processorArchitecture=MSIL">
+      <HintPath>packages\NUglify.1.6.4\lib\net40\NUglify.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
@@ -48,6 +52,14 @@
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.5.0.0-preview.6.20305.6\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -163,7 +175,10 @@
     <Content Include="apps\vubiz.8\guestSetup.html" />
     <Content Include="apps\vubiz.8\historyPrograms2.js" />
     <Content Include="apps\vubiz.8\historyPrograms2.html" />
+    <Content Include="apps\vubiz.8\home - Copy.html" />
     <Content Include="launch.aspx" />
+    <Content Include="Properties\PublishProfiles\cloudWeb.pubxml.user" />
+    <Content Include="Properties\PublishProfiles\staging.pubxml.user" />
     <Content Include="quickLinks\v8\default.aspx" />
     <Content Include="quickLinks\v8\index.html" />
     <Content Include="scripts\%24formManagerAsp.js" />
@@ -198,6 +213,7 @@
     <Content Include="styles\check.gif" />
     <Content Include="styles\favicon.ico" />
     <Content Include="styles\icons\cancel.png" />
+    <Content Include="styles\icons\find.png" />
     <Content Include="styles\icons\next.png" />
     <Content Include="styles\icons\textAreaDelete.png" />
     <Content Include="apps\isGovernment.1\organizations.js" />
@@ -463,10 +479,11 @@
     <Content Include="apps\nopAccount\_pages.json" />
     <Content Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
     <None Include="bundleconfig.json" />
+    <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\cloudWeb.pubxml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\stagingweb.pubxml" />
+    <None Include="Properties\PublishProfiles\staging.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -674,7 +691,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\BuildBundlerMinifier.2.8.391\build\BuildBundlerMinifier.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildBundlerMinifier.2.8.391\build\BuildBundlerMinifier.targets'))" />
+    <Error Condition="!Exists('packages\BuildBundlerMinifier.3.2.449\build\BuildBundlerMinifier.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\BuildBundlerMinifier.3.2.449\build\BuildBundlerMinifier.targets'))" />
   </Target>
+  <Import Project="packages\BuildBundlerMinifier.3.2.449\build\BuildBundlerMinifier.targets" Condition="Exists('packages\BuildBundlerMinifier.3.2.449\build\BuildBundlerMinifier.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -8,6 +8,9 @@
     <Setting Name="vubiz_apps_sim_Exchange" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://localhost/webservice/vuecommerce.asmx</Value>
     </Setting>
+    <Setting Name="vubiz_apps_cfib_handshakeAuthentication" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.cfib-fcei.ca/webservices/handshakeAuthentication.asmx</Value>
+    </Setting>
     <Setting Name="vubiz_apps_simulate_Exchange" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost/webservice/vuecommerce.asmx</Value>
     </Setting>
