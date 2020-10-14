@@ -120,9 +120,9 @@ $(function () {
       }
 
       /* test for enabled cookies by setting and reading a cookie */
-      document.cookie = "testcookie";
-      cookies = (document.cookie.indexOf("testcookie") !== -1);
-      if (cookies) {
+      //document.cookie = "testcookie";
+      //cookies = (document.cookie.indexOf("testcookie") !== -1);
+      if (navigator.cookieEnabled) {
         $("#cookiesOk").show(); $("#cookiesNo").hide();
       } else {
         $("#cookiesOk").hide(); $("#cookiesNo").show();
